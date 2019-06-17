@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DODO>
+  <Categories>
+    <Category>
+      <Name>Category1</Name>
+      <Id>1</Id>
+      <Questions>
+        <Question>
+          <Id>1</Id>
+          <Text>What is Python Academy?</Text>
+          <SubQuestions>
+            <Type>CheckBox</Type>
+            <SubQuestion>
+              <Id>1</Id>
+              <Parent>1</Parent>
+              <Text>SubQuestion1</Text>
+            </SubQuestion>
+            <SubQuestion>
+              <Id>2</Id>
+              <Parent>1</Parent>
+              <Text>SubQuestion2</Text>
+            </SubQuestion>
+          </SubQuestions>
+          <Answers>
+            <Answer>
+              <Id>1</Id>
+              <Text>Academy to provide hands on experience for Python. from 1</Text>
+            </Answer>
+            <Answer>
+              <Id>2</Id>
+              <Text>Academy to provide hands on experience for Python. from 2</Text>
+            </Answer>
+            <Answer>
+              <Id>1,2</Id>
+              <Text>Academy to provide hands on experience for Python. from 1, 2</Text>
+            </Answer>
+          </Answers>
+        </Question>
+        <Question>
+          <Id>2</Id>
+          <Text>What is the duration of Python Academy?</Text>
+          <SubQuestions />
+          <Answers>
+            <Answer>
+              <Id>2</Id>
+              <Text>Academy is for 3 weeks.</Text>
+            </Answer>
+          </Answers>
+        </Question>
+        <Question>
+          <Id>3</Id>
+          <Text>Who will be benefited from Python Academy?</Text>
+          <SubQuestions />
+          <Answers>
+            <Answer>
+              <Id>3</Id>
+              <Text>Who wants to learn python and wants to automate repetitive task.</Text>
+            </Answer>
+          </Answers>
+        </Question>
+      </Questions>
+    </Category>
+    <Category>
+      <Name>Category2</Name>
+      <Id>2</Id>
+      <Questions>
+        <Question>
+          <Id>4</Id>
+          <Text>Who can join the Python Academy? What are the pre-requisites for joining Python Academy?</Text>
+          <SubQuestions />
+          <Answers>
+            <Answer>
+              <Id>4</Id>
+              <Text>Who has basic programing knowledge.</Text>
+            </Answer>
+          </Answers>
+        </Question>
+        <Question>
+          <Id>5</Id>
+          <Text>When is the Python Academy starting?</Text>
+          <SubQuestions />
+          <Answers>
+            <Answer>
+              <Id>5</Id>
+              <Text>1st July,2019</Text>
+            </Answer>
+          </Answers>
+        </Question>
+        <Question>
+          <Id>6</Id>
+          <Text>How many hours do I need to spend in Python Academy?</Text>
+          <SubQuestions />
+          <Answers>
+            <Answer>
+              <Id>6</Id>
+              <Text>6 hour for 3 days</Text>
+            </Answer>
+          </Answers>
+        </Question>
+      </Questions>
+    </Category>
+    <Category>
+      <Name>Category3</Name>
+      <Id>3</Id>
+      <Questions>
+        <Question>
+          <Id>7</Id>
+          <Text>How do I join Python Academy?</Text>
+          <SubQuestions />
+          <Answers>
+            <Answer>
+              <Id>7</Id>
+              <Text>By using this registration link :</Text>
+            </Answer>
+          </Answers>
+        </Question>
+        <Question>
+          <Id>8</Id>
+          <Text>Is this an online or classroom training?</Text>
+          <SubQuestions />
+          <Answers>
+            <Answer>
+              <Id>8</Id>
+              <Text>Classroom training</Text>
+            </Answer>
+          </Answers>
+        </Question>
+        <Question Id="9">
+          <Id>9</Id>
+          <Text>I know C/C++/Java/some other programming language. Will Python Academy be beneficial for me?</Text>
+          <SubQuestions />
+          <Answers>
+            <Answer>
+              <Id>9</Id>
+              <Text>Yes, as it is basic langauge for machine learning</Text>
+            </Answer>
+          </Answers>
+        </Question>
+      </Questions>
+    </Category>
+  </Categories>
+</DODO>

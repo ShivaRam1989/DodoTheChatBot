@@ -1,0 +1,17 @@
+﻿<Window x:Class="DoDo.Views.ChatSessionView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoDo"
+        mc:Ignorable="d"
+        Title="Ask Dodo" Height="450" Width="800">
+    <Grid>
+        <ListBox Name="mybox" HorizontalAlignment="Left" Height="100" Margin="86,65,0,0" VerticalAlignment="Top" Width="350" SelectionChanged="ListBox_SelectionChanged" >
+        </ListBox>
+        <TextBox Name="Results" HorizontalAlignment="Left" Height="97" Margin="86,216,0,0" TextWrapping="Wrap" Text="Result" VerticalAlignment="Top" Width="362"/>
+        <ListBox Name="RelativeQQ" HorizontalAlignment="Left" Height="300" Margin="522,52,0,0" VerticalAlignment="Top" Width="246" SelectionChanged="RelativeQQ_SelectionChanged"/>
+        <TextBox Name ="RelativeResults" HorizontalAlignment="Left" Height="61" Margin="62,325,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="426" Visibility="Hidden"/>
+
+    </Grid>
+</Window>

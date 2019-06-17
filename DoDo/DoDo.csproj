@@ -67,6 +67,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Mock\Mocker.cs" />
+    <Compile Include="Models\DoDoModels.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="Views\ChatSessionView.xaml.cs">
       <DependentUpon>ChatSessionView.xaml</DependentUpon>
@@ -100,7 +102,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace DoDo.ViewModels
 {
+    //Base
     public class BaseViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;

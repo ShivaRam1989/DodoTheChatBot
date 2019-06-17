@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
 using DoDo.Mock;
+using DoDo.ViewModels;
+
 namespace DoDo.Views
 {
     /// <summary>
@@ -14,7 +16,7 @@ namespace DoDo.Views
         public ChatSessionView()
         {
             InitializeComponent();
-            this.DataContext = Mocker.GetMockModels();
+            this.DataContext = new MockViewModel();
         }
 
 

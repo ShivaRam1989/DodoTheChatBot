@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoDo.Views;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,14 @@ namespace DoDo
     /// </summary>
     public partial class App : Application
     {
+
+        ChatSessionView cView = new ChatSessionView();
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            cView.Show();
+        }
+
+
+
     }
 }

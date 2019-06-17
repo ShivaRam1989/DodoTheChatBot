@@ -70,6 +70,7 @@
     <Compile Include="Mock\Mocker.cs" />
     <Compile Include="Models\DoDoModels.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\MockViewModel.cs" />
     <Compile Include="Views\ChatSessionView.xaml.cs">
       <DependentUpon>ChatSessionView.xaml</DependentUpon>
       <SubType>Code</SubType>

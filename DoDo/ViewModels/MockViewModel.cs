@@ -38,6 +38,20 @@ namespace DoDo.ViewModels
             }
         }
 
+        private Question selectedQuestion;
+        public Question SelectedQuestion
+        {
+            get
+            {
+                return selectedQuestion;
+            }
+            set
+            {
+                selectedQuestion = value;
+                OnPropertyChanged("SelectedQuestion");
+            }
+        }
+
         private ObservableCollection<Question> selectedCategoryQuestions;
         public ObservableCollection<Question> SelectedCategoryQuestions
         {

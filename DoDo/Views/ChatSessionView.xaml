@@ -29,17 +29,24 @@
                 <ColumnDefinition />
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <StackPanel Grid.Column="0">
-                <ListBox x:Name="listboxFolder1" Grid.Row="1" BorderThickness="0" ItemsSource="{Binding SelectedCategoryQuestions}">
+            <StackPanel Grid.Column="0" Orientation="Vertical">
+                <ListBox x:Name="listboxQ" Grid.Row="1" BorderThickness="0"   ItemsSource="{Binding SelectedCategoryQuestions}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Name}"/>
+                            <TextBlock Text="{Binding Text}"/>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-
             </StackPanel>
-            <StackPanel></StackPanel>
+            <StackPanel Grid.Column="1">
+                <ListBox x:Name="listboxSQ" Grid.Row="1" BorderThickness="0" ItemsSource="{Binding SelectedCategoryQuestions}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Text}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
         </Grid>
 
     </Grid>

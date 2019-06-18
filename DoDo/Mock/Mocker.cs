@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using System.Xml.Serialization;
 using DoDo.Models;
 namespace DoDo.Mock
@@ -43,7 +44,8 @@ namespace DoDo.Mock
         {
             List<Category> categories = null;
             XmlSerializer serializer = new XmlSerializer(typeof(DODO), new XmlRootAttribute("DODO"));
-            using (TextReader reader = new StreamReader(@"C:\MIProjects_new\Git\DodoTheChatBot\DoDo\Data.xml"))
+            string directoryName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            using (TextReader reader = new StreamReader(Path.Combine(directoryName, "Data.xml")))
             {
                 categories = ((DODO)serializer.Deserialize(reader)).Categories;
             }

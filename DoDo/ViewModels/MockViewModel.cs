@@ -11,8 +11,7 @@ namespace DoDo.ViewModels
         public MockViewModel()
         {
             CategorySelectedCommand = new RelayCommand(SelectCommand);
-            SelectedCategory = Categories[0].Name;
-            SelectedCategoryQuestions = new ObservableCollection<Question>(Categories[0].Questions);
+            SelectedCategory = Categories[0];
 
         }
 
@@ -24,8 +23,8 @@ namespace DoDo.ViewModels
             }
         }
 
-        private string selectedCategory;
-        public string SelectedCategory
+        private Category selectedCategory;
+        public Category SelectedCategory
         {
             get
             {
@@ -34,6 +33,7 @@ namespace DoDo.ViewModels
             set
             {
                 selectedCategory = value;
+                SelectedCategoryQuestions = value.Questions;
                 OnPropertyChanged("SelectedCategory");
             }
         }
@@ -52,8 +52,93 @@ namespace DoDo.ViewModels
             }
         }
 
-        private ObservableCollection<Question> selectedCategoryQuestions;
-        public ObservableCollection<Question> SelectedCategoryQuestions
+        public string QuestionText
+        {
+            get
+            {
+                if (SelectedQuestion != null)
+                {
+                    return SelectedQuestion.Text;
+                }
+                else
+                {
+                    return "";
+                }
+            }
+        }
+
+
+
+        public string SelectedQuestionAnswer
+        {
+            get
+            {
+                if (SelectedQuestion != null)
+                {
+                    if (SelectedQuestion.Answers.Count > 1)
+                    {
+                        return SelectedQuestion.Answers[0].Text;
+                    }
+                    else
+                    {
+                        return selectedQuestion.Answers[0].Text;
+                    }
+                }
+                else
+                {
+                    return "";
+                }
+            }
+        }
+
+        private bool answerVisibility;
+        public bool AnswerVisibility
+        {
+            get
+            {
+                return answerVisibility;
+            }
+            set
+            {
+                answerVisibility = value;
+                OnPropertyChanged("AnswerVisibility");
+
+            }
+        }
+
+        private bool prevQVisibility;
+        public bool PrevQVisibility
+        {
+            get
+            {
+                return prevQVisibility;
+            }
+            set
+            {
+                prevQVisibility = value;
+                OnPropertyChanged("PrevQVisibility");
+
+            }
+        }
+
+        private bool selecteQVisibility;
+        public bool SelecteQVisibility
+        {
+            get
+            {
+                return selecteQVisibility;
+            }
+            set
+            {
+                selecteQVisibility = value;
+                OnPropertyChanged("SelecteQVisibility");
+
+            }
+        }
+
+
+        private List<Question> selectedCategoryQuestions;
+        public List<Question> SelectedCategoryQuestions
         {
             get
             {
@@ -73,8 +158,8 @@ namespace DoDo.ViewModels
         private  void SelectCommand(object parms)
         {
             Category category = (Category)parms;
-            SelectedCategory = category.Name;
-            SelectedCategoryQuestions = new ObservableCollection<Question>(category.Questions);
+            SelectedCategory = category;
+            SelectedCategoryQuestions = new List<Question>(category.Questions);
         }
 
 

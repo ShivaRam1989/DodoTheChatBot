@@ -13,7 +13,7 @@ namespace DoDo.ViewModels
             CategorySelectedCommand = new RelayCommand(SelectCommand);
             SelectedCategory = Categories[0];
             GridColumn = 0;
-
+            AnswerPointerSymbolPosition = "0,55,0,0";
         }
 
         public List<Category> Categories
@@ -51,6 +51,12 @@ namespace DoDo.ViewModels
             set
             {
                 selectedQuestion = value;
+                int selectedQuestionIndex = 0;
+                if (value != null)
+                {
+                    selectedQuestionIndex = SelectedCategoryQuestions.FindIndex(x => x.Text == value.Text);
+                }
+                AnswerPointerSymbolPosition = "0," + (selectedQuestionIndex + 1) * 55 + ",0,0";
                 if (SelectedQuestion != null)
                 {
                     if (SelectedQuestion.Answers.Count > 1)
@@ -72,6 +78,20 @@ namespace DoDo.ViewModels
             }
         }
 
+        private string answerPointerSymbolPosition;
+        public string AnswerPointerSymbolPosition
+        {
+            get
+            {
+                return answerPointerSymbolPosition;
+            }
+            set
+            {
+                answerPointerSymbolPosition = value;
+                OnPropertyChanged("AnswerPointerSymbolPosition");
+
+            }
+        }
 
         private string _selectedQuestionAnswerDisplay;
         public string SelectedQuestionAnswerDisplay {

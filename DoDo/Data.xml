@@ -2,7 +2,7 @@
 <DODO>
   <Categories>
     <Category>
-      <Name>Category1</Name>
+      <Name>About Python Learning Academy</Name>
       <Id>1</Id>
       <Questions>
         <Question>
@@ -61,7 +61,7 @@
       </Questions>
     </Category>
     <Category>
-      <Name>Category2</Name>
+      <Name>Eligibility</Name>
       <Id>2</Id>
       <Questions>
         <Question>

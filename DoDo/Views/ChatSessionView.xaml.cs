@@ -19,8 +19,9 @@ namespace DoDo.Views
             this.DataContext = new MockViewModel();
         }
 
-
-        
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -117,6 +117,21 @@ namespace DoDo.ViewModels
 
             }
         }
+        private string searchedText;
+        public string SearchedText
+        {
+            get
+            {
+                return searchedText;
+            }
+            set
+            {
+                searchedText = value;
+                OnPropertyChanged("SearchedText");
+
+            }
+        }
+        
 
         private int gridColumn;
         public int GridColumn
@@ -133,17 +148,17 @@ namespace DoDo.ViewModels
             }
         }
 
-        private bool selecteQVisibility;
-        public bool SelecteQVisibility
+        private bool isPopupOpen;
+        public bool IsPopupOpen
         {
             get
             {
-                return selecteQVisibility;
+                return isPopupOpen;
             }
             set
             {
-                selecteQVisibility = value;
-                OnPropertyChanged("SelecteQVisibility");
+                isPopupOpen = value;
+                OnPropertyChanged("IsPopupOpen");
 
             }
         }

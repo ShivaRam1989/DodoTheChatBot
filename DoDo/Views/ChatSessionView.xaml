@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DoDo" 
+        xmlns:xceed="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d" Height="720" Width="1080"
         x:Name="dodoControl" Background="Black" Foreground="White" WindowStyle="None" WindowState="Maximized" ResizeMode="NoResize">
     <DockPanel x:Name="RootWindow">
@@ -57,8 +58,26 @@
 
                         </ListBox>
                         <StackPanel Grid.Row="2">
-                            <TextBox Height="30"></TextBox>
-                            <Button Margin="10" Style="{StaticResource PlainBigButton}" Height="20"  Content="Know More"></Button>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                            <xceed:WatermarkTextBox HorizontalAlignment="Stretch" Watermark="Type your question" Text="{Binding SearchedText}"></xceed:WatermarkTextBox>
+                                <MediaElement LoadedBehavior="Play" Grid.Column="1" Source="/Images/mic.gif" Width="40" Height="40" >
+                                    
+                                </MediaElement>
+                            </Grid>
+                            <ToggleButton x:Name="toggleKnowMore" Margin="10" Width="200" Height="20"  Content="Know More" Style="{DynamicResource ToggleButtonStyle}">
+                                
+                            </ToggleButton>
+                            <Popup StaysOpen="False" PlacementTarget="{Binding ElementName=toggleKnowMore}" Placement="Top" Height="80" Width="300" IsOpen="{Binding ElementName=toggleKnowMore,Path=IsChecked}">
+                                <Grid Background="Black" Opacity="0.7">
+                                <TextBlock Margin="20" TextWrapping="Wrap" Foreground="Red" FontSize="14" FontWeight="Bold">
+                                    Please contact the person sitting in the LEAD Python Learning Academy Booth
+                                </TextBlock>
+                                </Grid>
+                            </Popup>
                         </StackPanel>
                     </Grid>
                 </Border>

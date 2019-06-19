@@ -9,6 +9,7 @@
                 <ResourceDictionary Source="Resources/ConverterResources.xaml"/>
                 <ResourceDictionary Source="Resources/ButtonStyle.xaml"/>
                 <ResourceDictionary Source="Resources/ListBoxStyleDictionary.xaml"/>
+                <ResourceDictionary Source="Resources/ToggleButton.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

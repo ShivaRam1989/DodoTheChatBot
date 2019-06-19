@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Windows.Input;
 using DoDo.Commands;
 using System.Collections.ObjectModel;
+using DoDo.Speech;
 
 namespace DoDo.ViewModels
 {
     public class MockViewModel : BaseViewModel
     {
+        SpeechSynthezier speechSynthezier = new SpeechSynthezier();
         public MockViewModel()
         {
             CategorySelectedCommand = new RelayCommand(SelectCommand);
@@ -67,6 +69,8 @@ namespace DoDo.ViewModels
                     {
                         SelectedQuestionAnswerDisplay = selectedQuestion.Answers[0].Text;
                     }
+
+                    speechSynthezier.Speak(SelectedQuestionAnswerDisplay);
                 }
                 else
                 {
@@ -95,7 +99,7 @@ namespace DoDo.ViewModels
 
         private string _selectedQuestionAnswerDisplay;
         public string SelectedQuestionAnswerDisplay {
-            get => _selectedQuestionAnswerDisplay;
+            get { return _selectedQuestionAnswerDisplay; }
             set
             {
                 _selectedQuestionAnswerDisplay = value;

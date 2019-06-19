@@ -12,6 +12,7 @@ namespace DoDo.ViewModels
         {
             CategorySelectedCommand = new RelayCommand(SelectCommand);
             SelectedCategory = Categories[0];
+            GridColumn = 0;
 
         }
 
@@ -34,6 +35,8 @@ namespace DoDo.ViewModels
             {
                 selectedCategory = value;
                 SelectedCategoryQuestions = value.Questions;
+                GridColumn = 0;
+                AnswerVisibility = false;
                 OnPropertyChanged("SelectedCategory");
             }
         }
@@ -48,46 +51,35 @@ namespace DoDo.ViewModels
             set
             {
                 selectedQuestion = value;
-                OnPropertyChanged("SelectedQuestion");
-            }
-        }
-
-        public string QuestionText
-        {
-            get
-            {
-                if (SelectedQuestion != null)
-                {
-                    return SelectedQuestion.Text;
-                }
-                else
-                {
-                    return "";
-                }
-            }
-        }
-
-
-
-        public string SelectedQuestionAnswer
-        {
-            get
-            {
                 if (SelectedQuestion != null)
                 {
                     if (SelectedQuestion.Answers.Count > 1)
                     {
-                        return SelectedQuestion.Answers[0].Text;
+                        SelectedQuestionAnswerDisplay = SelectedQuestion.Answers[0].Text;
                     }
                     else
                     {
-                        return selectedQuestion.Answers[0].Text;
+                        SelectedQuestionAnswerDisplay = selectedQuestion.Answers[0].Text;
                     }
                 }
                 else
                 {
-                    return "";
+                    SelectedQuestionAnswerDisplay = "";
                 }
+                AnswerVisibility = true;
+                GridColumn = 1;
+                OnPropertyChanged("SelectedQuestion");
+            }
+        }
+
+
+        private string _selectedQuestionAnswerDisplay;
+        public string SelectedQuestionAnswerDisplay {
+            get => _selectedQuestionAnswerDisplay;
+            set
+            {
+                _selectedQuestionAnswerDisplay = value;
+                OnPropertyChanged("SelectedQuestionAnswerDisplay");
             }
         }
 
@@ -106,17 +98,17 @@ namespace DoDo.ViewModels
             }
         }
 
-        private bool prevQVisibility;
-        public bool PrevQVisibility
+        private int gridColumn;
+        public int GridColumn
         {
             get
             {
-                return prevQVisibility;
+                return gridColumn;
             }
             set
             {
-                prevQVisibility = value;
-                OnPropertyChanged("PrevQVisibility");
+                gridColumn = value;
+                OnPropertyChanged("GridColumn");
 
             }
         }
@@ -155,6 +147,8 @@ namespace DoDo.ViewModels
 
 
         public ICommand CategorySelectedCommand { get; set; }
+      
+
         private  void SelectCommand(object parms)
         {
             Category category = (Category)parms;

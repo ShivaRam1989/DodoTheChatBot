@@ -14,11 +14,9 @@ namespace DoDo
     /// </summary>
     public partial class App : Application
     {
-
-        ChatSessionView cView = new ChatSessionView();
         protected override void OnStartup(StartupEventArgs e)
         {
-            cView.Show();
+            this.StartupUri = new System.Uri("Views/ChatSessionView.xaml", System.UriKind.Relative);
         }
 
 

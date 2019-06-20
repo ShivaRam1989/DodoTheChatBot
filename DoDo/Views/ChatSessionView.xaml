@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DoDo" 
         xmlns:xceed="http://schemas.xceed.com/wpf/xaml/toolkit"
-        mc:Ignorable="d" Height="720" Width="1080"
+        mc:Ignorable="d" Height="1080" Width="1920"
         x:Name="dodoControl" Background="Black" Foreground="White" WindowStyle="None" WindowState="Maximized" ResizeMode="NoResize">
     <DockPanel x:Name="RootWindow" MouseLeftButtonDown="RootWindow_MouseDown">
         <DockPanel Background="White" x:Name="TitleBar" DockPanel.Dock="Top">

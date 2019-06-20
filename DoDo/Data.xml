@@ -255,34 +255,34 @@
       <Questions>
         <Question>
           <Id>1</Id>
-          <Text>Who will nominate me</Text>
+          <Text>Who will nominate me?</Text>
           <SubQuestions />
           <Answers>
             <Answer>
               <Id>1</Id>
-              <Text>You need to discuss with your manager first and then he\she will nominate you based on the slots availability</Text>
+              <Text>You need to discuss with your manager first and then he\she will nominate you based on the slots availability.</Text>
             </Answer>
           </Answers>
         </Question>
         <Question>
           <Id>2</Id>
-          <Text>Can i nominate myself</Text>
+          <Text>Can i nominate myself?</Text>
           <SubQuestions/>
           <Answers>
             <Answer>
               <Id>1</Id>
-              <Text>No, Only your manager can do that</Text>
+              <Text>No, Only your manager can do that.</Text>
             </Answer>
           </Answers>
         </Question>
         <Question>
           <Id>3</Id>
-          <Text>When nominations open</Text>
+          <Text>When nominations open?</Text>
           <SubQuestions/>
           <Answers>
             <Answer>
               <Id>1</Id>
-              <Text>Soon a mail will be broadcasted to everyone once everything is finalized</Text>
+              <Text>Soon a mail will be broadcasted to everyone once everything is finalized.</Text>
             </Answer>
           </Answers>
         </Question>

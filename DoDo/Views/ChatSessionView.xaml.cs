@@ -12,11 +12,13 @@ namespace DoDo.Views
     {
         public static Dictionary<int, string> questions = new Dictionary<int, string>();
         public static Dictionary<int, string> answers = new Dictionary<int, string>();
-       
+
         public ChatSessionView()
         {
             InitializeComponent();
             this.DataContext = new MockViewModel();
+            
+            Loaded += Window_Loaded;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -28,5 +30,12 @@ namespace DoDo.Views
         {
             this.DragMove();
         }
+
+        public void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            IdleScreenView idleScreenView = new IdleScreenView();
+            idleScreenView.Show();
+        }
+
     }
 }

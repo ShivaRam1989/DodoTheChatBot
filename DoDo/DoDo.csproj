@@ -146,6 +146,9 @@
     <Compile Include="Speech\SpeechRecognize.cs" />
     <Compile Include="Speech\SpeechSynthezier.cs" />
     <Compile Include="Speech\Speech.cs" />
+    <Compile Include="Views\IdleScreenView.xaml.cs">
+      <DependentUpon>IdleScreenView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Test.xaml.cs">
       <DependentUpon>Test.xaml</DependentUpon>
     </Compile>
@@ -182,6 +185,10 @@
       <DependentUpon>ChatSessionView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\IdleScreenView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Test.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -239,6 +246,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\lean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Win32_API\Win32_API.csproj">
+      <Project>{19ff3114-84e4-4690-84d1-dc50829b875d}</Project>
+      <Name>Win32_API</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\robo1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Grpc.Core.1.18.0\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.1.18.0\build\net45\Grpc.Core.targets')" />

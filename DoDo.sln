@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoDo", "DoDo\DoDo.csproj", "{5CA68094-CB43-4330-8B0E-470A80FC1AF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win32_API", "Win32_API\Win32_API.csproj", "{19FF3114-84E4-4690-84D1-DC50829B875D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5CA68094-CB43-4330-8B0E-470A80FC1AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CA68094-CB43-4330-8B0E-470A80FC1AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CA68094-CB43-4330-8B0E-470A80FC1AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19FF3114-84E4-4690-84D1-DC50829B875D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19FF3114-84E4-4690-84D1-DC50829B875D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19FF3114-84E4-4690-84D1-DC50829B875D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19FF3114-84E4-4690-84D1-DC50829B875D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

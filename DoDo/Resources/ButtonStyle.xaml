@@ -24,8 +24,8 @@
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
-        <Setter Property="Width" Value="200"/>
-        <Setter Property="Height" Value="100"/>
+        <Setter Property="Width" Value="250"/>
+        <Setter Property="Height" Value="80"/>
         <Setter Property="SnapsToDevicePixels" Value="True"/>
         <Setter Property="Template">
             <Setter.Value>

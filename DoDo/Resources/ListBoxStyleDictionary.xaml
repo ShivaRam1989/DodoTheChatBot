@@ -10,7 +10,12 @@
     </Style>
     <DataTemplate x:Key="ListItemTempelate">
         <Grid>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Center" Text="{Binding Text}"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Center" Text="{Binding Id}"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Center" Text="{Binding Text}"/>
         </Grid>
     </DataTemplate>
     <Style x:Key="ListBoxItemStyle" TargetType="{x:Type ListBoxItem}">

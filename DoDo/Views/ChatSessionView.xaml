@@ -7,8 +7,8 @@
         xmlns:xceed="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d" Height="720" Width="1080"
         x:Name="dodoControl" Background="Black" Foreground="White" WindowStyle="None" WindowState="Maximized" ResizeMode="NoResize">
-    <DockPanel x:Name="RootWindow">
-        <DockPanel Background="#FFD1D1D1" x:Name="TitleBar" DockPanel.Dock="Top">
+    <DockPanel x:Name="RootWindow" MouseLeftButtonDown="RootWindow_MouseDown">
+        <DockPanel Background="White" x:Name="TitleBar" DockPanel.Dock="Top">
             <Button Style="{StaticResource PlainBigButton}" Height="20" Width="20" Content="X"
                     Click="Button_Click"                 
                     DockPanel.Dock="Right" />
@@ -25,7 +25,14 @@
                     <ColumnDefinition Width="65*"/>
                     <ColumnDefinition Width="35*"/>
                 </Grid.ColumnDefinitions>
-                <ItemsControl Grid.Column="0" Margin="30" x:Name="tStack" Grid.Row="0" ItemsSource="{Binding Path=Categories}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Border Background="#FFD1D1D1" Grid.Row="0" >
+                    <TextBlock Padding="15,10,0,15" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Stretch" Height="50" TextWrapping="Wrap" Text="Kindly select one category to get list of related questions" Foreground="Maroon"/>
+                </Border>
+                <ItemsControl Grid.Row="1" Grid.Column="0" Margin="10" x:Name="tStack" ItemsSource="{Binding Path=Categories}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
@@ -37,6 +44,7 @@
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
+                <Image Grid.Row="2" Grid.Column="1" Source="/Images/python.png"></Image>
             </Grid>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
@@ -47,27 +55,27 @@
                 <Border Margin="0,5,5,5" BorderBrush="#FFF67979" BorderThickness="2" CornerRadius="10">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="15*"/>
                             <RowDefinition Height="70*"/>
-                            <RowDefinition Height="20*"/>
+                            <RowDefinition Height="15*"/>
                         </Grid.RowDefinitions>
                         <Border Background="#FFD1D1D1" Grid.Row="0" CornerRadius="10,10,0,0" >
-                            <TextBlock Padding="15,10,0,15" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Stretch" Height="50" Text="Kindly select an option to get more details" Foreground="Maroon"/>
+                            <TextBlock Padding="15,0,0,15" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Stretch" Height="50" TextWrapping="Wrap" Text="Kindly select the question or spell the number of question from the listed questions in the below list box to get more details." Foreground="Maroon"/>
                         </Border>
                         <ListBox Grid.Row="1" Style="{DynamicResource ListBoxStyle}" ItemContainerStyle="{DynamicResource ListBoxItemStyle}" ItemTemplate="{DynamicResource ListItemTempelate}" Grid.Column="0" x:Name="listboxQ" SelectedItem="{Binding SelectedQuestion}"  ItemsSource="{Binding SelectedCategoryQuestions}">
 
                         </ListBox>
                         <StackPanel Grid.Row="2">
-                            <Grid>
+                            <!--<Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="40"/>
                                 </Grid.ColumnDefinitions>
                             <xceed:WatermarkTextBox HorizontalAlignment="Stretch" Watermark="Type your question" Text="{Binding SearchedText}"></xceed:WatermarkTextBox>
-                                <MediaElement LoadedBehavior="Play" Grid.Column="1" Source="/Images/mic.gif" Width="40" Height="40" >
+                                <ToggleButton Grid.Column="1" IsChecked="{Binding IsVoiceEnabled}" Width="40" Height="40" >
                                     
-                                </MediaElement>
-                            </Grid>
+                                </ToggleButton>
+                            </Grid>-->
                             <ToggleButton x:Name="toggleKnowMore" Margin="10" Width="200" Height="20"  Content="Know More" Style="{DynamicResource ToggleButtonStyle}">
                                 
                             </ToggleButton>
@@ -92,7 +100,12 @@
                         <TextBlock Margin="20,20,20,20" FontWeight="Bold" Foreground="White" FontSize="16" TextWrapping="Wrap" Text="{Binding SelectedQuestionAnswerDisplay}"></TextBlock>
                     </StackPanel>
                 </Border>
-
+            </Grid>
+            <Grid Grid.Row="3">
+                <DockPanel>
+                <Image DockPanel.Dock="Left" Source="/Images/lean.png" />
+                    <Image DockPanel.Dock="Right"  Source="/Images/black.png" ></Image>
+                </DockPanel>
             </Grid>
         </Grid>
     </DockPanel>

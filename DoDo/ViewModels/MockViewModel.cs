@@ -4,20 +4,28 @@ using System.Windows.Input;
 using DoDo.Commands;
 using System.Collections.ObjectModel;
 using DoDo.Speech;
+using System.Threading;
 
 namespace DoDo.ViewModels
 {
     public class MockViewModel : BaseViewModel
     {
         SpeechSynthezier speechSynthezier = new SpeechSynthezier();
+        SpeechRecognize speechRecognize;
+        SpeechRecognize speechRecognizeForsearch;
+        Subscription<Speech.Speech> subscription;
         public MockViewModel()
         {
             CategorySelectedCommand = new RelayCommand(SelectCommand);
             SelectedCategory = Categories[0];
             GridColumn = 0;
             AnswerPointerSymbolPosition = "0,55,0,0";
+            subscription = EventAggregator.getInstance().Subscribe<Speech.Speech>(SubscribedMessage);
         }
-
+        private void SubscribedMessage(Speech.Speech spokenText)
+        {
+            speechSynthezier.Speak(spokenText.TextSpoken);
+        }
         public List<Category> Categories
         {
             get
@@ -152,17 +160,27 @@ namespace DoDo.ViewModels
             }
         }
 
-        private bool isPopupOpen;
-        public bool IsPopupOpen
+        private bool isVoiceEnabled;
+        public bool IsVoiceEnabled
         {
             get
             {
-                return isPopupOpen;
+                return isVoiceEnabled;
             }
             set
             {
-                isPopupOpen = value;
-                OnPropertyChanged("IsPopupOpen");
+                if(value)
+                {
+                    List<string> list = new List<string>();
+                    list.Add("eligibility");
+                    speechRecognizeForsearch = new SpeechRecognize(list);
+                }
+                else
+                {
+                    speechRecognizeForsearch.Stop();
+                }
+                isVoiceEnabled = value;
+                OnPropertyChanged("IsVoiceEnabled");
 
             }
         }
@@ -186,15 +204,15 @@ namespace DoDo.ViewModels
 
 
         public ICommand CategorySelectedCommand { get; set; }
-      
 
+
+        public ICommand VoiceClick { get; set; }
         private  void SelectCommand(object parms)
         {
             Category category = (Category)parms;
             SelectedCategory = category;
             SelectedCategoryQuestions = new List<Question>(category.Questions);
         }
-
 
 
     }

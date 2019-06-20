@@ -5,6 +5,7 @@ using DoDo.Commands;
 using System.Collections.ObjectModel;
 using DoDo.Speech;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace DoDo.ViewModels
 {
@@ -77,8 +78,7 @@ namespace DoDo.ViewModels
                     {
                         SelectedQuestionAnswerDisplay = selectedQuestion.Answers[0].Text;
                     }
-
-                    speechSynthezier.Speak(SelectedQuestionAnswerDisplay);
+                    Task.Run(()=>{ SpeakTask(); });
                 }
                 else
                 {
@@ -88,6 +88,11 @@ namespace DoDo.ViewModels
                 GridColumn = 1;
                 OnPropertyChanged("SelectedQuestion");
             }
+        }
+
+        private void SpeakTask()
+        {
+            speechSynthezier.Speak(SelectedQuestionAnswerDisplay);
         }
 
         private string answerPointerSymbolPosition;

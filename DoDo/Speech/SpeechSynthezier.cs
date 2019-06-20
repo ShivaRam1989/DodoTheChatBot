@@ -21,12 +21,15 @@ namespace DoDo.Speech
         }
         public void Speak(string textToSpeak)
         {
-            var current = talker.GetCurrentlySpokenPrompt();
+            //var current = talker.GetCurrentlySpokenPrompt();
 
-            if (current != null)
-                talker.SpeakAsyncCancel(current);
-            talker.Volume = 100;
+            //if (current != null)
+            //{
+            //    talker.SpeakAsyncCancel(current);
+            //}
             talker.SpeakAsync(textToSpeak);
+            talker.Volume = 100;
+
         }
     }
 }

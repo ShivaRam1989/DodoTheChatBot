@@ -196,6 +196,7 @@ namespace DoDo.ViewModels
             set
             {
                 selectedCategoryQuestions = value;
+                SelectedQuestion = value[0];
                 OnPropertyChanged("SelectedCategoryQuestions");
             }
         }

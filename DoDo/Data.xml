@@ -24,7 +24,7 @@
           <Answers>
             <Answer>
               <Id>1</Id>
-              <Text>This academy is for learning Python from speakers who have expertise in Python. As a part of this academy limited people will get training from basci level to advance level.</Text>
+              <Text>This academy is for learning Python from speakers who have expertise in Python. We accommodate 80% of all the requests received and they will get training from basic level to advance level.</Text>
             </Answer>
             <Answer>
               <Id>2</Id>
@@ -59,12 +59,12 @@
           </Answers>
         </Question>
         <Question>
-          <Id>7</Id>
+          <Id>4</Id>
           <Text>Is Python Learning Academy for limited people?</Text>
           <SubQuestions />
           <Answers>
             <Answer>
-              <Id>7</Id>
+              <Id>1</Id>
               <Text>Yes it is for limited people</Text>
             </Answer>
           </Answers>
@@ -76,34 +76,34 @@
       <Id>2</Id>
       <Questions>
         <Question>
-          <Id>4</Id>
+          <Id>1</Id>
           <Text>Who can join the Python Academy? </Text>
           <SubQuestions />
           <Answers>
             <Answer>
-              <Id>4</Id>
+              <Id>1</Id>
               <Text>Anyone who is keen to learn python and have basic understanding if programming.</Text>
             </Answer>
           </Answers>
         </Question>
         <Question>
-          <Id>7</Id>
+          <Id>2</Id>
           <Text>How do I join this Python Learning Academy?</Text>
           <SubQuestions />
           <Answers>
             <Answer>
-              <Id>7</Id>
+              <Id>1</Id>
               <Text>A mail will be sent out to all the managers with nominations link , one can approach their managers to get them registered to this or they might be choosen by their manager</Text>
             </Answer>
           </Answers>
         </Question>
-        <Question Id="9">
-          <Id>9</Id>
+        <Question>
+          <Id>3</Id>
           <Text>I know C/C++/Java/some other programming language. Will Python Academy be beneficial for me?</Text>
           <SubQuestions />
           <Answers>
             <Answer>
-              <Id>9</Id>
+              <Id>1</Id>
               <Text>Yes, having a programming language knowledge will definitely help you , but one need not to be an expert in it to join this</Text>
             </Answer>
           </Answers>
@@ -115,34 +115,34 @@
       <Id>3</Id>
       <Questions>
         <Question>
-          <Id>6</Id>
+          <Id>1</Id>
           <Text>How many hours do I need to spend in Python Academy?</Text>
           <SubQuestions />
           <Answers>
             <Answer>
-              <Id>6</Id>
+              <Id>1</Id>
               <Text>Each session will take around 1- 2 hours and will be planned for every 10 days.</Text>
             </Answer>
           </Answers>
         </Question>
         <Question>
-          <Id>6</Id>
+          <Id>2</Id>
           <Text>When is this academy planned ?</Text>
           <SubQuestions />
           <Answers>
             <Answer>
-              <Id>6</Id>
+              <Id>2</Id>
               <Text>This academy will start by the first week of July , the details about exact date will be given soon</Text>
             </Answer>
           </Answers>
         </Question>
         <Question>
-          <Id>6</Id>
+          <Id>3</Id>
           <Text>Where will be these sessions held ?</Text>
           <SubQuestions />
           <Answers>
             <Answer>
-              <Id>6</Id>
+              <Id>1</Id>
               <Text>This academy will be conducted at every site level in India , for Hyderabad location it will be in Nalanda</Text>
             </Answer>
           </Answers>
@@ -154,34 +154,34 @@
       <Id>3</Id>
       <Questions>
         <Question>
-          <Id>5</Id>
+          <Id>1</Id>
           <Text>What are the pre-requisites for joining Python Academy?</Text>
           <SubQuestions />
           <Answers>
             <Answer>
-              <Id>5</Id>
+              <Id>1</Id>
               <Text>One should have minimum programming knowledge and basic knowledge about automation , why it is needed . How python or any such language help in automating things</Text>
             </Answer>
           </Answers>
         </Question>
         <Question>
-          <Id>6</Id>
+          <Id>2</Id>
           <Text>Do i need to bring my own laptop ?</Text>
           <SubQuestions />
           <Answers>
             <Answer>
-              <Id>6</Id>
+              <Id>1</Id>
               <Text>If you have a laptop , it would be great. Or else we will try to provide one</Text>
             </Answer>
           </Answers>
         </Question>
         <Question>
-          <Id>6</Id>
+          <Id>3</Id>
           <Text>Do i need to install any softwares ?</Text>
           <SubQuestions />
           <Answers>
             <Answer>
-              <Id>6</Id>
+              <Id>1</Id>
               <Text>No , all the set up process will be explained in the academy itself</Text>
             </Answer>
           </Answers>
@@ -193,18 +193,18 @@
       <Id>1</Id>
       <Questions>
         <Question>
-          <Id>8</Id>
+          <Id>1</Id>
           <Text>Is this an online or classroom training ?</Text>
           <SubQuestions />
           <Answers>
             <Answer>
-              <Id>8</Id>
+              <Id>1</Id>
               <Text>It will be a interactive classroom training sessions </Text>
             </Answer>
           </Answers>
         </Question>
         <Question>
-          <Id>1</Id>
+          <Id>2</Id>
           <Text>Is it completely theoretical </Text>
           <SubQuestions/>
           <Answers>
@@ -215,35 +215,74 @@
           </Answers>
         </Question>
         <Question>
-          <Id>2</Id>
+          <Id>3</Id>
           <Text>Will there be any communitee where i can ask if i have any doubts related to this academy?</Text>
           <SubQuestions />
           <Answers>
             <Answer>
-              <Id>2</Id>
+              <Id>1</Id>
               <Text>Yes , there will be python academy communitee dedicated to provide solutions or answer your queries</Text>
             </Answer>
           </Answers>
         </Question>
         <Question>
-          <Id>3</Id>
+          <Id>4</Id>
           <Text>Will these sessions recorded ?</Text>
           <SubQuestions />
           <Answers>
             <Answer>
-              <Id>3</Id>
+              <Id>1</Id>
               <Text>Yes , they will be recorde and the link for the recording will be given after evry session</Text>
             </Answer>
           </Answers>
         </Question>
         <Question>
-          <Id>7</Id>
+          <Id>5</Id>
           <Text>How is it different from all the availble online courses</Text>
           <SubQuestions />
           <Answers>
             <Answer>
-              <Id>7</Id>
+              <Id>1</Id>
               <Text>Unlike online course it will be interactive and more focussed on explaing the real world uses cases and will be give hands on experience too</Text>
+            </Answer>
+          </Answers>
+        </Question>
+      </Questions>
+    </Category>
+    <Category>
+      <Name>Nominations</Name>
+      <Id>1</Id>
+      <Questions>
+        <Question>
+          <Id>1</Id>
+          <Text>Who will nominate me</Text>
+          <SubQuestions />
+          <Answers>
+            <Answer>
+              <Id>1</Id>
+              <Text>You need to discuss with your manager first and then he\she will nominate you based on the slots availability</Text>
+            </Answer>
+          </Answers>
+        </Question>
+        <Question>
+          <Id>2</Id>
+          <Text>Can i nominate myself</Text>
+          <SubQuestions/>
+          <Answers>
+            <Answer>
+              <Id>1</Id>
+              <Text>No, Only your manager can do that</Text>
+            </Answer>
+          </Answers>
+        </Question>
+        <Question>
+          <Id>3</Id>
+          <Text>When nominations open</Text>
+          <SubQuestions/>
+          <Answers>
+            <Answer>
+              <Id>1</Id>
+              <Text>Soon a mail will be broadcasted to everyone once everything is finalized</Text>
             </Answer>
           </Answers>
         </Question>

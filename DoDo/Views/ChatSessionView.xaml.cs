@@ -36,6 +36,11 @@ namespace DoDo.Views
             IdleScreenView idleScreenView = new IdleScreenView();
             idleScreenView.Show();
         }
+        private void launchVideo_Click(object sender, RoutedEventArgs e)
+        {
+            MediaPlayer mediaPlayer = new MediaPlayer();
+            mediaPlayer.Show();
+        }
 
     }
 }

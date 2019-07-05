@@ -156,6 +156,7 @@
     <Compile Include="Views\IdleScreenView.xaml.cs">
       <DependentUpon>IdleScreenView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MediaPlayer.xaml.cs" />
     <Compile Include="Views\Test.xaml.cs">
       <DependentUpon>Test.xaml</DependentUpon>
     </Compile>
@@ -195,6 +196,10 @@
     <Page Include="Views\IdleScreenView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MediaPlayer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Test.xaml">
       <SubType>Designer</SubType>
@@ -287,6 +292,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="VideoNames.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\PushPollService\item1.disco" />

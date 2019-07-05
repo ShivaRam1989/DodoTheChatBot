@@ -20,7 +20,8 @@ namespace DoDo
         {
             //this.StartupUri = new System.Uri("Views/ChatSessionView.xaml", System.UriKind.Relative);
             //MessageBox.Show("Running");
-            Bootstrap();
+            //Bootstrap();
+            LaunchApp();
         }
 
         public void LaunchApp() {

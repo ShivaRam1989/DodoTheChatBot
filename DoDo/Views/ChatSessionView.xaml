@@ -76,7 +76,12 @@
                                     
                                 </ToggleButton>
                             </Grid>-->
-                            <ToggleButton x:Name="toggleKnowMore" Margin="10" Width="200" Height="20"  Content="Know More" Style="{DynamicResource ToggleButtonStyle}">
+							<Button x:Name="launchVideo"
+									Click="launchVideo_Click"
+									Width="200"
+									Height="20"
+									Content="Launch Video"></Button>
+							<ToggleButton x:Name="toggleKnowMore" Margin="10" Width="200" Height="20"  Content="Know More" Style="{DynamicResource ToggleButtonStyle}">
                                 
                             </ToggleButton>
                             <Popup StaysOpen="False" PlacementTarget="{Binding ElementName=toggleKnowMore}" Placement="Top" Height="80" Width="300" IsOpen="{Binding ElementName=toggleKnowMore,Path=IsChecked}">

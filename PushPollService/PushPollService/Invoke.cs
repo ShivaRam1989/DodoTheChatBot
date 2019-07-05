@@ -10,6 +10,7 @@ namespace PushPollService
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple)]
     public class Invoke : IContract
     {
+
         public string GetConnectionConfirmation()
         {
             return "Connection confirmed";
@@ -17,13 +18,21 @@ namespace PushPollService
 
         public LaunchControl LaunchToggle(LaunchControl control)
         {
+            SendToWPFClient(control);
             return control == LaunchControl.Start ? LaunchControl.Stop:LaunchControl.Start;
         }
 
-        public void MyMethod()
+        public IContractCallback callback
         {
-            IContractCallback callbackInstance = OperationContext.Current.GetCallbackChannel<IContractCallback>();
-            callbackInstance.OnCallback();
+            get
+            {
+                return OperationContext.Current.GetCallbackChannel<IContractCallback>();
+            }
+        }
+
+        public void SendToWPFClient(LaunchControl control)
+        {
+            callback.MyMethod(control);
         }
     }
 }

@@ -16,16 +16,13 @@ namespace PushPollService
 
         [OperationContract]
         LaunchControl LaunchToggle(LaunchControl control);
-
-        [OperationContract()]
-        void MyMethod();
-
     }
 
     public interface IContractCallback
     {
-        [OperationContract]
-        void OnCallback();
+
+        [OperationContract()]
+        void MyMethod(LaunchControl launchControl);
     }
 
     [DataContract(Name ="LaunchControl")]

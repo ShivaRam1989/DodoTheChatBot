@@ -32,17 +32,17 @@ namespace DoDo
             IContractCallback contractCallback = new CallBk();
             InstanceContext cntxt = new InstanceContext(contractCallback);
             ContractClient client = new ContractClient(cntxt, "WSDualHttpBinding_IContract");
-            MessageBox.Show(client.GetConnectionConfirmation());
-            client.MyMethod();
+            MessageBox.Show("test",client.GetConnectionConfirmation(),MessageBoxButton.OKCancel);
+ 
         }
 
     }
 
     public class CallBk : IContractCallback
     {
-        public void OnCallback()
+        public void MyMethod(LaunchControl launchControl)
         {
-            MessageBox.Show("Callback 1st call");
+            MessageBox.Show("Called");
         }
     }
 }

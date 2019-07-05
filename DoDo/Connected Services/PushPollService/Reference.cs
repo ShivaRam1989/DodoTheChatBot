@@ -38,19 +38,13 @@ namespace DoDo.PushPollService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/LaunchToggle", ReplyAction="http://tempuri.org/IContract/LaunchToggleResponse")]
         System.Threading.Tasks.Task<DoDo.PushPollService.LaunchControl> LaunchToggleAsync(DoDo.PushPollService.LaunchControl control);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/MyMethod", ReplyAction="http://tempuri.org/IContract/MyMethodResponse")]
-        void MyMethod();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/MyMethod", ReplyAction="http://tempuri.org/IContract/MyMethodResponse")]
-        System.Threading.Tasks.Task MyMethodAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface IContractCallback {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/OnCallback", ReplyAction="http://tempuri.org/IContract/OnCallbackResponse")]
-        void OnCallback();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/MyMethod", ReplyAction="http://tempuri.org/IContract/MyMethodResponse")]
+        void MyMethod(DoDo.PushPollService.LaunchControl launchControl);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -95,14 +89,6 @@ namespace DoDo.PushPollService {
         
         public System.Threading.Tasks.Task<DoDo.PushPollService.LaunchControl> LaunchToggleAsync(DoDo.PushPollService.LaunchControl control) {
             return base.Channel.LaunchToggleAsync(control);
-        }
-        
-        public void MyMethod() {
-            base.Channel.MyMethod();
-        }
-        
-        public System.Threading.Tasks.Task MyMethodAsync() {
-            return base.Channel.MyMethodAsync();
         }
     }
 }

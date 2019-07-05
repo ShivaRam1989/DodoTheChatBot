@@ -14,7 +14,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using System.Runtime.InteropServices;
-using Win32_API;
 
 namespace DoDo.Views
 {
@@ -54,10 +53,7 @@ namespace DoDo.Views
 
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            if (Win32.GetIdleTime() > 45000)
-            {
-                this.Show();
-            }
+
 
         }
 

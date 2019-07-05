@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "keen-topic-245811",
+  "private_key_id": "38c6a29251515edd15ad10e0238217405ea8e048",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCoI2SRS/QOXeKv\ng+zjb7DZdKvr0DVWmYmnM/F9rYxs/XnSaka0TXqYmqF6726UUZkyvEsq/UVSs89R\nFsPLdz1ch3/MzNzkMYvIIjsucI8P2lI4GHXErn0Z1t6Bhk1KSBfsnnEVAU3TdTqy\nFC7AvvpJRASG4JXIOHMAR0ZJhZRmmgc5bCo9DBXalQjsn/N2i3/9woKLUTf6wJIt\n7hkULaIds9IF/1tRg7d2zN0duatTt4pj8xYsk/l25RngMsdzlNDt3+bNEHshtZht\nnTRqrQjdFBwUWbF3muNalGP5cN0dzWUQY+YXI3iVEz3F3I4pUOPRuB71ZDavGtjk\n8qXA6e+hAgMBAAECggEAFNFcBW7qawB2HZ3nndHhi00aL7516jDktaR1ayaKp2B7\nfcFdm3un2R71LTHZxsizH5BnfK1C8O5VNhCr4aRz/yHCQbbgRys4x8jwO6vhVLjG\n+w3RQA7MK7+6ST56EZ9LQgdskCmbC5pdT/j2gHQs7Fcc+d+y/+k4WPGaOuZshUbr\nYMNl+TtqiMtTgCVDPe6iay5L4TOn0109KF+mKVLH2eQ1Q7kcsgFuFevcq3ysU8Er\n69BLkL68dOw1KYMWz2dXJXue4UaOS0v3f0Rvs2IKHcWglI8BdBAU9W3nWk+MRhlD\nZLLl4x4h83QY3n9hE0n/OUnx/28a11aZIDK798mwyQKBgQDrp6Fa0uKb1HL9fQDQ\niAT9QV417m3DbLv1WF/zBtDLoeduapDnnKtxL68bsR2/+bLJogdoVzxdZ8nP2RcV\neiOO1W8w+hScH02ywzFnqzIIIuO2ugoLddmgS375SJXosnxO7OhNA9I77oJ23MHx\nF/TFQzBa1X1HqGqq+STURQYe6QKBgQC2p4hWRT/RFaPGx0y351cR2QcK6ISiUeA0\nVy0gauo9GFWjS3l7HN6c7H1VjCGkOAtZWjNYpmJJWDBBNPPk2OghDLETDfh5NaQY\nV3ogwrjx/fPTm0aM1yimr6sPb8biDZdu2PmG3QNZKQjhrUZ+7un7lWgYAFWJHvGA\nqykgpsGH+QKBgCYcgyz0JC/9iOdUGxieluf6dWkVeWz8nd1NAJ+GP6hfM9WYqHy8\nysFQa+p3l48fq/mOGdKXIS0eBvZ1bpVLnoqQHB54o3KoYWGCze+tMTc9pUQ9DDjU\nQ3D4JL3eLlhm3VHKYLtr3clRhooAo+EA9dYdSqm2Ez/Ojgm+p2UpEJdZAoGAaVVf\n+HBjBw61rhKNGZkdyzsfJplEs98Hrud/LKy7fJQl/s+ttOPHNTPka4suc2emk9bC\nuaLqF2X2HgSNijHUXArXqydpXW0jvq3jzjS9N0C+dg+btej2lnnD6lkJlp9D7zbN\nX4rhPW++oXatqtHYua9FomG+8h6YIx2R0DSacvECgYEAiZzGqAW+fLIep9hv3fJj\nEPrTyh+NS/ARlgTB4B0s6I6OjuQk1clzNhtR9TTVHzp675DI/j9eO6ZbFTcBI9Np\nQ2rWbPZu1ocRzYWcD6ai5jtjd+3tH37jJQsvZFPrOZ7kBnNwwaK+mI101IP4mnbi\nunt9ADqrygPxJfKHerZoDus=\n-----END PRIVATE KEY-----\n",
+  "client_email": "shiva-ram-krishna@keen-topic-245811.iam.gserviceaccount.com",
+  "client_id": "116848886468285580143",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/shiva-ram-krishna%40keen-topic-245811.iam.gserviceaccount.com"
+}

@@ -11,9 +11,9 @@ namespace Launcher
 {
     public class CallBk : IContractCallback
     {
-        public void OnCallback()
+        public void MyMethod(LaunchControl launchControl)
         {
-            //Callback method is called
+            throw new NotImplementedException();
         }
     }
     public partial class Welcome : System.Web.UI.Page

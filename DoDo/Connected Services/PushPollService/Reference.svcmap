@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:9999/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="2e77382a-6d88-41b0-8ad6-0bf80ae89477" SourceId="1" SourceUrl="http://localhost:8080/?xsd=xsd2" />
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="1ceaf9dc-e247-429a-be24-2a9ca7e08aaf" SourceId="1" SourceUrl="http://localhost:8080/?disco" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="a32e8027-d681-4b23-8d5a-aabe9e00c9cd" SourceId="1" SourceUrl="http://localhost:8080/?xsd=xsd1" />
-    <MetadataFile FileName="Invoke.wsdl" MetadataType="Wsdl" ID="bd2cb05c-cee8-491e-899f-77123c5ebf7a" SourceId="1" SourceUrl="http://localhost:8080/?wsdl" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="3ef943ed-2f86-46f7-a0dc-a41e19f1a359" SourceId="1" SourceUrl="http://localhost:8080/?xsd=xsd0" />
+    <MetadataFile FileName="item1.disco" MetadataType="Disco" ID="21d3dbc2-f813-43a0-9a2f-a2428e056dc3" SourceId="1" SourceUrl="http://localhost:9999/?disco" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="2de1a39f-a9a9-4e48-aeb8-081ff922b5dd" SourceId="1" SourceUrl="http://localhost:9999/?xsd=xsd2" />
+    <MetadataFile FileName="item31.xsd" MetadataType="Schema" ID="87a50bfd-3ac7-4e43-a32d-9e2b2cf6ffaa" SourceId="1" SourceUrl="http://localhost:9999/?xsd=xsd1" />
+    <MetadataFile FileName="Invoke1.wsdl" MetadataType="Wsdl" ID="245e0444-a612-47df-9c4f-21111e7d8e31" SourceId="1" SourceUrl="http://localhost:9999/?wsdl" />
+    <MetadataFile FileName="item32.xsd" MetadataType="Schema" ID="1f61421a-127d-428c-9725-316293a67b72" SourceId="1" SourceUrl="http://localhost:9999/?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

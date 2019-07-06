@@ -38,12 +38,12 @@ namespace WebApplication1
                 IContractCallback contractCallback = new CallBk();
                 InstanceContext cntxt = new InstanceContext(contractCallback);
                 client = new ContractClient(cntxt, "WSDualHttpBinding_IContract");
-                lbl_confirmation.Text = client.GetConnectionConfirmation();
+                //lbl_confirmation.Text = client.GetConnectionConfirmation();
             }
-            catch (Exception exception)
+            catch (Exception )
             {
-                lbl_confirmation.Text = exception.Message;
-                app.Visible = false;
+                //lbl_confirmation.Text = exception.Message;
+                //app.Visible = false;
             }
 
         }
@@ -56,7 +56,7 @@ namespace WebApplication1
 
         private void toggleLaunch()
         {
-            btn_launch.Text = toggleState.ToString();
+            //btn_launch.Text = toggleState.ToString();
         }
     }
 }

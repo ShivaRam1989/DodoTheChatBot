@@ -11,7 +11,7 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
-            height: 999px;
+            background-size: contain;
         }
 
 

@@ -7,12 +7,13 @@ using System.Text;
 
 namespace PushPollService
 {
-    [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple)]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single,ConcurrencyMode =ConcurrencyMode.Multiple)]
     public class Invoke : IContract
     {
-
+        IContractCallback callback;
         public string GetConnectionConfirmation()
         {
+            callback= OperationContext.Current.GetCallbackChannel<IContractCallback>();
             return "Connection confirmed";
         }
 
@@ -20,14 +21,6 @@ namespace PushPollService
         {
             SendToWPFClient(control);
             return control == LaunchControl.Start ? LaunchControl.Stop:LaunchControl.Start;
-        }
-
-        public IContractCallback callback
-        {
-            get
-            {
-                return OperationContext.Current.GetCallbackChannel<IContractCallback>();
-            }
         }
 
         public void SendToWPFClient(LaunchControl control)

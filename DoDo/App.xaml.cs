@@ -20,8 +20,8 @@ namespace DoDo
         {
             //this.StartupUri = new System.Uri("Views/ChatSessionView.xaml", System.UriKind.Relative);
             //MessageBox.Show("Running");
-            //Bootstrap();
-            LaunchApp();
+            Bootstrap();
+           // LaunchApp();
         }
 
         public void LaunchApp() {
@@ -32,9 +32,18 @@ namespace DoDo
         {
             IContractCallback contractCallback = new CallBk();
             InstanceContext cntxt = new InstanceContext(contractCallback);
-            ContractClient client = new ContractClient(cntxt, "WSDualHttpBinding_IContract");
+            ContractClient client = new ContractClient(cntxt);
             MessageBox.Show("test",client.GetConnectionConfirmation(),MessageBoxButton.OKCancel);
- 
+            client.LaunchToggleAsync(LaunchControl.Start);
+        }
+
+    }
+    
+    public class callbackclient:DuplexClientBase<IContract>
+    {
+        public callbackclient(InstanceContext instanceContext):base(instanceContext)
+        {
+
         }
 
     }

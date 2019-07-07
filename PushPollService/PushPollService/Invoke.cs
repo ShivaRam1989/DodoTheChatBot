@@ -10,10 +10,15 @@ namespace PushPollService
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single,ConcurrencyMode =ConcurrencyMode.Multiple)]
     public class Invoke : IContract
     {
-        IContractCallback callback;
+
+        public static IContractCallback callback = null;
+
         public string GetConnectionConfirmation()
         {
-            callback= OperationContext.Current.GetCallbackChannel<IContractCallback>();
+            if (callback != null)
+            {
+                callback = OperationContext.Current.GetCallbackChannel<IContractCallback>();
+            }
             return "Connection confirmed";
         }
 

@@ -14,7 +14,7 @@ namespace DoDo.Mock
         //static SubQuestion sQ5 = new SubQuestion { Id = "5", Name = "SubQuestion5", Parent = 3 };
         //static SubQuestion sQ6 = new SubQuestion { Id = "6", Name = "SubQuestion6", Parent = 3 };
 
-
+           public static string debugPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
 
         //static Question question1 = new Question { Id = "1", Name = "Question1", SubQuestions = new List<SubQuestion> { sQ1, sQ2 } };
@@ -44,8 +44,8 @@ namespace DoDo.Mock
         {
             List<Category> categories = null;
             XmlSerializer serializer = new XmlSerializer(typeof(DODO), new XmlRootAttribute("DODO"));
-            string directoryName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            using (TextReader reader = new StreamReader(Path.Combine(directoryName, "Data.xml")))
+            //string directoryName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            using (TextReader reader = new StreamReader(Path.Combine(debugPath, "Data.xml")))
             {
                 categories = ((DODO)serializer.Deserialize(reader)).Categories;
             }

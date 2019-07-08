@@ -78,7 +78,7 @@ namespace DoDo.ViewModels
                     {
                         SelectedQuestionAnswerDisplay = selectedQuestion.Answers[0].Text;
                     }
-                    Task.Run(()=>{ SpeakTask(); });
+                    Task.Run(() => { SpeakTask(); });
                 }
                 else
                 {
@@ -111,7 +111,8 @@ namespace DoDo.ViewModels
         }
 
         private string _selectedQuestionAnswerDisplay;
-        public string SelectedQuestionAnswerDisplay {
+        public string SelectedQuestionAnswerDisplay
+        {
             get { return _selectedQuestionAnswerDisplay; }
             set
             {
@@ -148,7 +149,7 @@ namespace DoDo.ViewModels
 
             }
         }
-        
+
 
         private int gridColumn;
         public int GridColumn
@@ -174,11 +175,9 @@ namespace DoDo.ViewModels
             }
             set
             {
-                if(value)
+                if (value)
                 {
-                    List<string> list = new List<string>();
-                    list.Add("eligibility");
-                    speechRecognizeForsearch = new SpeechRecognize(list);
+                    speechRecognizeForsearch = new SpeechRecognize();
                 }
                 else
                 {
@@ -213,7 +212,7 @@ namespace DoDo.ViewModels
 
 
         public ICommand VoiceClick { get; set; }
-        private  void SelectCommand(object parms)
+        private void SelectCommand(object parms)
         {
             Category category = (Category)parms;
             SelectedCategory = category;

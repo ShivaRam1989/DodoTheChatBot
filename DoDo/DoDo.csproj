@@ -198,8 +198,8 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MediaPlayer.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
     <Page Include="Views\Test.xaml">
       <SubType>Designer</SubType>
@@ -224,7 +224,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\PushPollService\Invoke.wsdl" />
+    <None Include="Connected Services\PushPollService\Invoke.wsdl">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\PushPollService\item.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -241,7 +243,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\418aYpSJ4rL.jpg" />
@@ -276,7 +280,12 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="VideoNames.txt" />
+    <EmbeddedResource Include="Videos\Charting DiscussionDec1318.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Videos\OfficeTools.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\PushPollService\" />

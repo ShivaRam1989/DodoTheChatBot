@@ -26,6 +26,31 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="PlayVideo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="videoDetails" nillable="true" type="q2:Item" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="actionType" type="q3:ActionType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PlayVideoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OpenPPT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="pptDetails" nillable="true" type="q4:Item" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OpenPPTResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="MyMethod">
     <xs:complexType>
       <xs:sequence>

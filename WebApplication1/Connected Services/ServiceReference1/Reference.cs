@@ -94,6 +94,46 @@ namespace WebApplication1.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Item", Namespace="http://schemas.datacontract.org/2004/07/PushPollService")]
+    [System.SerializableAttribute()]
+    public partial class Item : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ActionType", Namespace="http://schemas.datacontract.org/2004/07/PushPollService")]
+    public enum ActionType : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Play = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Pause = 1,
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IContract", CallbackContract=typeof(WebApplication1.ServiceReference1.IContractCallback))]
     public interface IContract {
@@ -113,6 +153,12 @@ namespace WebApplication1.ServiceReference1 {
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface IContractCallback {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/PlayVideo", ReplyAction="http://tempuri.org/IContract/PlayVideoResponse")]
+        void PlayVideo(WebApplication1.ServiceReference1.Item videoDetails, WebApplication1.ServiceReference1.ActionType actionType);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/OpenPPT", ReplyAction="http://tempuri.org/IContract/OpenPPTResponse")]
+        void OpenPPT(WebApplication1.ServiceReference1.Item pptDetails);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/MyMethod", ReplyAction="http://tempuri.org/IContract/MyMethodResponse")]
         void MyMethod(WebApplication1.ServiceReference1.LaunchControl control, WebApplication1.ServiceReference1.MetaData metaData);

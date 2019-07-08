@@ -21,9 +21,8 @@ namespace DoDo
             Bootstrap();
         }
 
-        public void LaunchApp()
-        {
-            this.StartupUri = new System.Uri("Views/ChatSessionView.xaml", System.UriKind.Relative);
+        public void LaunchApp() {
+          // this.StartupUri = new System.Uri("Views/ChatSessionView.xaml", System.UriKind.Relative);           
         }
 
         public void Bootstrap()
@@ -38,14 +37,27 @@ namespace DoDo
 
     public class CallBk : IContractCallback
     {
-        public void MyMethod(LaunchControl control, MetaData metaData)
+        public void MyMethod(LaunchControl control)
         {
-            MessageBox.Show(" Initiate control :- "
-                + control.ToString()
-                + " Video ID :- "
-                + metaData.VideoId
-                + " Time Interval:- "
-                + metaData.Interval);
+            MediaPlayer mediaPlayer = new MediaPlayer();
+
+            //switch ("category")
+            //{
+            //    case "mp4":
+                    mediaPlayer.PlayVideo("OfficeTools.mp4");
+                   // mediaPlayer.StopVideo();
+            //        break;
+
+            //}
+            MessageBox.Show("Callback 1st call");
+        }
+
+        public void OpenPPT(Item pptDetails)
+        {
+        }
+
+        public void PlayVideo(Item videoDetails, ActionType actionType)
+        {
         }
     }
 

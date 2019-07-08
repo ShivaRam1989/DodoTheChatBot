@@ -15,14 +15,14 @@ namespace PushPollService
         string GetConnectionConfirmation();
 
         [OperationContract]
-        void LaunchToggle(LaunchControl control);
+        void LaunchToggle(LaunchControl control, MetaData metaData);
     }
 
     public interface IContractCallback
     {
 
         [OperationContract()]
-        void MyMethod(LaunchControl control);
+        void MyMethod(LaunchControl control, MetaData metaData);
     }
 
     [DataContract(Name ="LaunchControl")]
@@ -31,6 +31,22 @@ namespace PushPollService
         [EnumMember]
         Start,
         [EnumMember]
-        Stop
+        Stop,
+        [EnumMember]
+        Play,
+        [EnumMember]
+        Pause,
+        [EnumMember]
+        Hop
+    }
+
+    [DataContract(Name = "MetaData")]
+    public class MetaData
+    {
+        [DataMember]
+        public string VideoId { get; set; }
+        [DataMember]
+        public int Interval { get; set; }
+
     }
 }

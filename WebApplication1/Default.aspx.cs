@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.ServiceModel;
 using System.Web;
@@ -11,7 +12,7 @@ namespace WebApplication1
 {
     public class CallBk : IContractCallback
     {
-        public void MyMethod(LaunchControl control)
+        public void MyMethod(LaunchControl control, MetaData metaData)
         {
             //throw new NotImplementedException();
         }
@@ -29,9 +30,12 @@ namespace WebApplication1
 
         protected void btn_launch_Click(object sender, EventArgs e)
         {
-            client.LaunchToggle(launchControl);
+            client.LaunchToggle(launchControl, new MetaData()
+            {
+                VideoId = ConfigurationManager.AppSettings["defaultVideoId"],
+                Interval = Convert.ToInt32(ConfigurationManager.AppSettings["defaultTimeInterval"])
+            });
             launchControl = LaunchControl.Start;
-            btn_launch.Enabled = false;
         }
     }
 }

@@ -10,6 +10,7 @@
 
 namespace WebApplication1.ServiceReference1 {
     using System.Runtime.Serialization;
+    using System;
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
@@ -21,6 +22,76 @@ namespace WebApplication1.ServiceReference1 {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         Stop = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Play = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Pause = 3,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Hop = 4,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MetaData", Namespace="http://schemas.datacontract.org/2004/07/PushPollService")]
+    [System.SerializableAttribute()]
+    public partial class MetaData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IntervalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VideoIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Interval {
+            get {
+                return this.IntervalField;
+            }
+            set {
+                if ((this.IntervalField.Equals(value) != true)) {
+                    this.IntervalField = value;
+                    this.RaisePropertyChanged("Interval");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string VideoId {
+            get {
+                return this.VideoIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VideoIdField, value) != true)) {
+                    this.VideoIdField = value;
+                    this.RaisePropertyChanged("VideoId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -34,17 +105,17 @@ namespace WebApplication1.ServiceReference1 {
         System.Threading.Tasks.Task<string> GetConnectionConfirmationAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/LaunchToggle", ReplyAction="http://tempuri.org/IContract/LaunchToggleResponse")]
-        void LaunchToggle(WebApplication1.ServiceReference1.LaunchControl control);
+        void LaunchToggle(WebApplication1.ServiceReference1.LaunchControl control, WebApplication1.ServiceReference1.MetaData metaData);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/LaunchToggle", ReplyAction="http://tempuri.org/IContract/LaunchToggleResponse")]
-        System.Threading.Tasks.Task LaunchToggleAsync(WebApplication1.ServiceReference1.LaunchControl control);
+        System.Threading.Tasks.Task LaunchToggleAsync(WebApplication1.ServiceReference1.LaunchControl control, WebApplication1.ServiceReference1.MetaData metaData);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface IContractCallback {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/MyMethod", ReplyAction="http://tempuri.org/IContract/MyMethodResponse")]
-        void MyMethod(WebApplication1.ServiceReference1.LaunchControl control);
+        void MyMethod(WebApplication1.ServiceReference1.LaunchControl control, WebApplication1.ServiceReference1.MetaData metaData);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -83,12 +154,12 @@ namespace WebApplication1.ServiceReference1 {
             return base.Channel.GetConnectionConfirmationAsync();
         }
         
-        public void LaunchToggle(WebApplication1.ServiceReference1.LaunchControl control) {
-            base.Channel.LaunchToggle(control);
+        public void LaunchToggle(WebApplication1.ServiceReference1.LaunchControl control, WebApplication1.ServiceReference1.MetaData metaData) {
+            base.Channel.LaunchToggle(control, metaData);
         }
         
-        public System.Threading.Tasks.Task LaunchToggleAsync(WebApplication1.ServiceReference1.LaunchControl control) {
-            return base.Channel.LaunchToggleAsync(control);
+        public System.Threading.Tasks.Task LaunchToggleAsync(WebApplication1.ServiceReference1.LaunchControl control, WebApplication1.ServiceReference1.MetaData metaData) {
+            return base.Channel.LaunchToggleAsync(control, metaData);
         }
     }
 }

@@ -38,9 +38,14 @@ namespace DoDo
 
     public class CallBk : IContractCallback
     {
-        public void MyMethod(LaunchControl control)
+        public void MyMethod(LaunchControl control, MetaData metaData)
         {
-            MessageBox.Show("Initiate control:- " + control.ToString());
+            MessageBox.Show(" Initiate control :- "
+                + control.ToString()
+                + " Video ID :- "
+                + metaData.VideoId
+                + " Time Interval:- "
+                + metaData.Interval);
         }
     }
 

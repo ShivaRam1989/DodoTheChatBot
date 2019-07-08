@@ -17,6 +17,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="control" type="q1:LaunchControl" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="metaData" nillable="true" type="q2:MetaData" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -28,7 +29,8 @@
   <xs:element name="MyMethod">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="control" type="q2:LaunchControl" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="control" type="q3:LaunchControl" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="metaData" nillable="true" type="q4:MetaData" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

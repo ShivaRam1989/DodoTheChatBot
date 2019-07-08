@@ -22,14 +22,14 @@ namespace PushPollService
             return "Connection confirmed";
         }
 
-        public void LaunchToggle(LaunchControl control)
+        public void LaunchToggle(LaunchControl control, MetaData metaData)
         {
-            SendToWPFClient(control);    
+            SendToWPFClient(control, metaData);    
         }
 
-        public void SendToWPFClient(LaunchControl control)
+        public void SendToWPFClient(LaunchControl control, MetaData metaData)
         {
-            callback.MyMethod(control);
+            callback.MyMethod(control, metaData);
         }
     }
 }

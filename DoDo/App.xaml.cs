@@ -19,7 +19,6 @@ namespace DoDo
         protected override void OnStartup(StartupEventArgs e)
         {
             Bootstrap();
-            //LaunchApp();
         }
 
         public void LaunchApp()
@@ -32,18 +31,9 @@ namespace DoDo
             IContractCallback contractCallback = new CallBk();
             InstanceContext cntxt = new InstanceContext(contractCallback);
             ContractClient client = new ContractClient(cntxt);
-            MessageBox.Show("test", client.GetConnectionConfirmation(), MessageBoxButton.OKCancel);
-            client.LaunchToggleAsync(LaunchControl.Start);
+            MessageBox.Show(client.GetConnectionConfirmation(),"Status Check", MessageBoxButton.OKCancel);
+            //client.LaunchToggleAsync(LaunchControl.Start);
         }
-    }
-
-    public class callbackclient : DuplexClientBase<IContract>
-    {
-        public callbackclient(InstanceContext instanceContext) : base(instanceContext)
-        {
-
-        }
-
     }
 
     public class CallBk : IContractCallback

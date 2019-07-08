@@ -34,18 +34,10 @@
     </style>
 </head>
 <body class="styleBody">
-    <div >
-      <button class="btn" id="btn_launch" onclick="btn_launch_Click">LAUNCH</button>
-       </div>
-   <%-- <form id="form1" runat="server">
+    <form id="form1" runat="server">
         <div>
-            <asp:Label ID="lbl_confirmation" runat="server"></asp:Label>
-            <br />
-            <br />
+            <asp:Button class="btn" ID="btn_launch" runat="server" Text="LAUNCH" OnClick="btn_launch_Click" />
         </div>
-        <div id="app" runat="server">
-            <asp:Button ID="btn_launch" runat="server" Text="Start" OnClick="btn_launch_Click" />
-        </div>
-    </form>--%>
+    </form>
 </body>
 </html>

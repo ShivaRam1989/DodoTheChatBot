@@ -11,52 +11,27 @@ namespace WebApplication1
 {
     public class CallBk : IContractCallback
     {
-        public void MyMethod(LaunchControl launchControl)
+        public void MyMethod(LaunchControl control)
         {
             //throw new NotImplementedException();
         }
     }
-
-    //protected void btn_launch_Click(object sender, EventArgs e)
-    //{
-    //    toggleState = client.LaunchToggle(toggleState);
-    //    toggleLaunch();
-    //}
-
-    //private void toggleLaunch()
-    //{
-    //    btn_launch.Text = toggleState.ToString();
-    //}
     public partial class _Default : Page
     {
         private ContractClient client;
-        private static LaunchControl toggleState;
+        private static LaunchControl launchControl;
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
-            {
-                IContractCallback contractCallback = new CallBk();
-                InstanceContext cntxt = new InstanceContext(contractCallback);
-                client = new ContractClient(cntxt, "WSDualHttpBinding_IContract");
-                //lbl_confirmation.Text = client.GetConnectionConfirmation();
-            }
-            catch (Exception )
-            {
-                //lbl_confirmation.Text = exception.Message;
-                //app.Visible = false;
-            }
-
+            IContractCallback contractCallback = new CallBk();
+            InstanceContext cntxt = new InstanceContext(contractCallback);
+            client = new ContractClient(cntxt, "WSDualHttpBinding_IContract");
         }
 
         protected void btn_launch_Click(object sender, EventArgs e)
         {
-            toggleState = client.LaunchToggle(toggleState);
-            toggleLaunch();
-        }
-
-        private void toggleLaunch()
-        {
-            //btn_launch.Text = toggleState.ToString();
+            client.LaunchToggle(launchControl);
+            launchControl = LaunchControl.Start;
+            btn_launch.Enabled = false;
         }
     }
 }

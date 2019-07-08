@@ -224,9 +224,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\PushPollService\DoDo.PushPollService.LaunchControl.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\PushPollService\Invoke.wsdl" />
     <None Include="Connected Services\PushPollService\item.xsd">
       <SubType>Designer</SubType>

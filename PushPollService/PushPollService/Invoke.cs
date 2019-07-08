@@ -15,17 +15,16 @@ namespace PushPollService
 
         public string GetConnectionConfirmation()
         {
-            if (callback != null)
+            if (callback == null)
             {
                 callback = OperationContext.Current.GetCallbackChannel<IContractCallback>();
             }
             return "Connection confirmed";
         }
 
-        public LaunchControl LaunchToggle(LaunchControl control)
+        public void LaunchToggle(LaunchControl control)
         {
-            SendToWPFClient(control);
-            return control == LaunchControl.Start ? LaunchControl.Stop:LaunchControl.Start;
+            SendToWPFClient(control);    
         }
 
         public void SendToWPFClient(LaunchControl control)

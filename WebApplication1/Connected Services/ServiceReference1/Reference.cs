@@ -34,17 +34,17 @@ namespace WebApplication1.ServiceReference1 {
         System.Threading.Tasks.Task<string> GetConnectionConfirmationAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/LaunchToggle", ReplyAction="http://tempuri.org/IContract/LaunchToggleResponse")]
-        WebApplication1.ServiceReference1.LaunchControl LaunchToggle(WebApplication1.ServiceReference1.LaunchControl control);
+        void LaunchToggle(WebApplication1.ServiceReference1.LaunchControl control);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/LaunchToggle", ReplyAction="http://tempuri.org/IContract/LaunchToggleResponse")]
-        System.Threading.Tasks.Task<WebApplication1.ServiceReference1.LaunchControl> LaunchToggleAsync(WebApplication1.ServiceReference1.LaunchControl control);
+        System.Threading.Tasks.Task LaunchToggleAsync(WebApplication1.ServiceReference1.LaunchControl control);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface IContractCallback {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/MyMethod", ReplyAction="http://tempuri.org/IContract/MyMethodResponse")]
-        void MyMethod(WebApplication1.ServiceReference1.LaunchControl launchControl);
+        void MyMethod(WebApplication1.ServiceReference1.LaunchControl control);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -83,11 +83,11 @@ namespace WebApplication1.ServiceReference1 {
             return base.Channel.GetConnectionConfirmationAsync();
         }
         
-        public WebApplication1.ServiceReference1.LaunchControl LaunchToggle(WebApplication1.ServiceReference1.LaunchControl control) {
-            return base.Channel.LaunchToggle(control);
+        public void LaunchToggle(WebApplication1.ServiceReference1.LaunchControl control) {
+            base.Channel.LaunchToggle(control);
         }
         
-        public System.Threading.Tasks.Task<WebApplication1.ServiceReference1.LaunchControl> LaunchToggleAsync(WebApplication1.ServiceReference1.LaunchControl control) {
+        public System.Threading.Tasks.Task LaunchToggleAsync(WebApplication1.ServiceReference1.LaunchControl control) {
             return base.Channel.LaunchToggleAsync(control);
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoDo.Mock;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,46 +22,45 @@ namespace DoDo.Views
     /// </summary>
     public partial class MediaPlayer : Window
     {
-        //MediaPlayer mediaPlayer = new MediaPlayer();
         public MediaPlayer()
         {
             InitializeComponent();
         }
 
-        private void PlayVideo_Click(object sender, RoutedEventArgs e)
+        public void PlayVideo(string videoName)
         {
-            using (StreamReader sr = new StreamReader(@"C:\Users\mgopidi\Desktop\DodoTheChatBot-master\DodoTheChatBot-master\DoDo\VideoFileNames.txt")) {
-
-                //TODO: this part can be moved out as the file names here are static ;
-                // File names can also be a static variable.
-                String line = sr.ReadLine();
-                string[] paths = line.Split(',');
-                Dictionary<string, string> videoNames = new Dictionary<string, string>();
-                for (int i = 0; i < paths.Length; i++) {
-                   videoNames.Add((i+1).ToString(), paths[i]);
-                }
-
-                string selectedValue = VideoNumber.Text;
-                string selectedVideo = string.Empty;
-                videoNames.TryGetValue(selectedValue,out selectedVideo);
-                DodoMediaPlayer.Source = new Uri(selectedVideo);
-                DodoMediaPlayer.Play();
-            }               
-        }
-        
-        private void StopVideo_Click(object sender, RoutedEventArgs e)
-        {
-            DodoMediaPlayer.Stop();
+            string videoPath = System.IO.Path.Combine(Mocker.debugPath, "Videos", videoName);
+            DodoMediaPlayer.Source = new Uri(videoPath);
+            this.Show();
+            DodoMediaPlayer.Play();
         }
 
-        private void PauseVideo_Click(object sender, RoutedEventArgs e)
+        public void StopVideo()
         {
-            DodoMediaPlayer.Pause();
+            if (DodoMediaPlayer.Source != null) {
+                DodoMediaPlayer.Stop();
+            }
         }
 
-        private void PositionVideo_Click(object sender, RoutedEventArgs e)
+        public void PauseVideo()
         {
-            DodoMediaPlayer.Position = TimeSpan.FromMinutes(Convert.ToDouble(MoveToPosition.Text));
+            if (DodoMediaPlayer.CanPause)
+            {
+                DodoMediaPlayer.Pause();
+            }
+        }
+
+        public void PositionVideo()
+        {
+            if (DodoMediaPlayer.Source != null)
+            {
+                DodoMediaPlayer.Position = TimeSpan.FromMinutes(Convert.ToDouble(10));
+            }
+        }
+
+        private void DodoMediaPlayer_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

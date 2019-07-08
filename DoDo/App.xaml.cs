@@ -25,7 +25,7 @@ namespace DoDo
         }
 
         public void LaunchApp() {
-            this.StartupUri = new System.Uri("Views/ChatSessionView.xaml", System.UriKind.Relative);
+          // this.StartupUri = new System.Uri("Views/ChatSessionView.xaml", System.UriKind.Relative);           
         }
 
         public void Bootstrap()
@@ -43,6 +43,16 @@ namespace DoDo
     {
         public void OnCallback()
         {
+            MediaPlayer mediaPlayer = new MediaPlayer();
+
+            //switch ("category")
+            //{
+            //    case "mp4":
+                    mediaPlayer.PlayVideo("OfficeTools.mp4");
+                   // mediaPlayer.StopVideo();
+            //        break;
+
+            //}
             MessageBox.Show("Callback 1st call");
         }
     }

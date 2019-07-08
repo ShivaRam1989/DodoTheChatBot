@@ -288,5 +288,15 @@
         </Question>
       </Questions>
     </Category>
+    <Category>
+      <Name>Charting DiscussionDec1318.mp4</Name>
+      <Id>1</Id>
+      <Type>mp4</Type>
+    </Category>
+    <Category>
+      <Name>OfficeTools.mp4</Name>
+      <Id>2</Id>
+      <Type>mp4</Type>
+    </Category>
   </Categories>
 </DODO>

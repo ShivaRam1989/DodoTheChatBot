@@ -31,7 +31,7 @@ namespace WebApplication1
         {
             client.LaunchToggle(launchControl);
             launchControl = LaunchControl.Start;
-            btn_launch.Enabled = false;
+           // btn_launch.Enabled = false;
         }
     }
 }

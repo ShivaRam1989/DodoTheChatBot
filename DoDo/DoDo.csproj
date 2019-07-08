@@ -276,9 +276,6 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="VideoNames.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\PushPollService\" />
   </ItemGroup>
   <ItemGroup>

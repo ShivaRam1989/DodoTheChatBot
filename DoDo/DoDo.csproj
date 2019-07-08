@@ -224,9 +224,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\PushPollService\DoDo.PushPollService.LaunchControl.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\PushPollService\Invoke.wsdl" />
     <None Include="Connected Services\PushPollService\item.xsd">
       <SubType>Designer</SubType>
@@ -273,16 +270,13 @@
     <Resource Include="Images\lean.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Win32_API\Win32_API.csproj">
-      <Project>{19ff3114-84e4-4690-84d1-dc50829b875d}</Project>
-      <Name>Win32_API</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\robo1.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="VideoNames.txt" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\PushPollService\" />

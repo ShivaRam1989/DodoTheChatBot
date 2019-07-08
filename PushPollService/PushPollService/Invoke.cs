@@ -7,23 +7,29 @@ using System.Text;
 
 namespace PushPollService
 {
-    [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple)]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single,ConcurrencyMode =ConcurrencyMode.Multiple)]
     public class Invoke : IContract
     {
+
+        public static IContractCallback callback = null;
+
         public string GetConnectionConfirmation()
         {
+            if (callback == null)
+            {
+                callback = OperationContext.Current.GetCallbackChannel<IContractCallback>();
+            }
             return "Connection confirmed";
         }
 
-        public LaunchControl LaunchToggle(LaunchControl control)
+        public void LaunchToggle(LaunchControl control)
         {
-            return control == LaunchControl.Start ? LaunchControl.Stop:LaunchControl.Start;
+            SendToWPFClient(control);    
         }
 
-        public void MyMethod()
+        public void SendToWPFClient(LaunchControl control)
         {
-            IContractCallback callbackInstance = OperationContext.Current.GetCallbackChannel<IContractCallback>();
-            callbackInstance.OnCallback();
+            callback.MyMethod(control);
         }
     }
 }

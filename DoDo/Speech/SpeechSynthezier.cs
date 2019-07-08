@@ -27,7 +27,8 @@ namespace DoDo.Speech
             //{
             //    talker.SpeakAsyncCancel(current);
             //}
-            talker.SpeakAsync(textToSpeak);
+            talker.SetOutputToWaveFile(@"C:\Audio.wav");
+            talker.Speak(textToSpeak);
             talker.Volume = 100;
 
         }

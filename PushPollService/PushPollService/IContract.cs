@@ -15,17 +15,14 @@ namespace PushPollService
         string GetConnectionConfirmation();
 
         [OperationContract]
-        LaunchControl LaunchToggle(LaunchControl control);
-
-        [OperationContract()]
-        void MyMethod();
-
+        void LaunchToggle(LaunchControl control);
     }
 
     public interface IContractCallback
     {
-        [OperationContract]
-        void OnCallback();
+
+        [OperationContract()]
+        void MyMethod(LaunchControl control);
     }
 
     [DataContract(Name ="LaunchControl")]

@@ -18,10 +18,7 @@ namespace DoDo
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            //this.StartupUri = new System.Uri("Views/ChatSessionView.xaml", System.UriKind.Relative);
-            //MessageBox.Show("Running");
-            //Bootstrap();
-            LaunchApp();
+            Bootstrap();
         }
 
         public void LaunchApp() {
@@ -32,16 +29,15 @@ namespace DoDo
         {
             IContractCallback contractCallback = new CallBk();
             InstanceContext cntxt = new InstanceContext(contractCallback);
-            ContractClient client = new ContractClient(cntxt, "WSDualHttpBinding_IContract");
-            MessageBox.Show(client.GetConnectionConfirmation());
-            client.MyMethod();
+            ContractClient client = new ContractClient(cntxt);
+            MessageBox.Show(client.GetConnectionConfirmation(),"Status Check", MessageBoxButton.OKCancel);
+            //client.LaunchToggleAsync(LaunchControl.Start);
         }
-
     }
 
     public class CallBk : IContractCallback
     {
-        public void OnCallback()
+        public void MyMethod(LaunchControl control)
         {
             MediaPlayer mediaPlayer = new MediaPlayer();
 
@@ -56,4 +52,5 @@ namespace DoDo
             MessageBox.Show("Callback 1st call");
         }
     }
+
 }

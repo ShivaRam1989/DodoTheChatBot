@@ -34,23 +34,17 @@ namespace DoDo.PushPollService {
         System.Threading.Tasks.Task<string> GetConnectionConfirmationAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/LaunchToggle", ReplyAction="http://tempuri.org/IContract/LaunchToggleResponse")]
-        DoDo.PushPollService.LaunchControl LaunchToggle(DoDo.PushPollService.LaunchControl control);
+        void LaunchToggle(DoDo.PushPollService.LaunchControl control);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/LaunchToggle", ReplyAction="http://tempuri.org/IContract/LaunchToggleResponse")]
-        System.Threading.Tasks.Task<DoDo.PushPollService.LaunchControl> LaunchToggleAsync(DoDo.PushPollService.LaunchControl control);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/MyMethod", ReplyAction="http://tempuri.org/IContract/MyMethodResponse")]
-        void MyMethod();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/MyMethod", ReplyAction="http://tempuri.org/IContract/MyMethodResponse")]
-        System.Threading.Tasks.Task MyMethodAsync();
+        System.Threading.Tasks.Task LaunchToggleAsync(DoDo.PushPollService.LaunchControl control);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface IContractCallback {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/OnCallback", ReplyAction="http://tempuri.org/IContract/OnCallbackResponse")]
-        void OnCallback();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/MyMethod", ReplyAction="http://tempuri.org/IContract/MyMethodResponse")]
+        void MyMethod(DoDo.PushPollService.LaunchControl control);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -89,20 +83,12 @@ namespace DoDo.PushPollService {
             return base.Channel.GetConnectionConfirmationAsync();
         }
         
-        public DoDo.PushPollService.LaunchControl LaunchToggle(DoDo.PushPollService.LaunchControl control) {
-            return base.Channel.LaunchToggle(control);
+        public void LaunchToggle(DoDo.PushPollService.LaunchControl control) {
+            base.Channel.LaunchToggle(control);
         }
         
-        public System.Threading.Tasks.Task<DoDo.PushPollService.LaunchControl> LaunchToggleAsync(DoDo.PushPollService.LaunchControl control) {
+        public System.Threading.Tasks.Task LaunchToggleAsync(DoDo.PushPollService.LaunchControl control) {
             return base.Channel.LaunchToggleAsync(control);
-        }
-        
-        public void MyMethod() {
-            base.Channel.MyMethod();
-        }
-        
-        public System.Threading.Tasks.Task MyMethodAsync() {
-            return base.Channel.MyMethodAsync();
         }
     }
 }

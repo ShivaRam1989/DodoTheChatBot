@@ -51,6 +51,14 @@ namespace DoDo
             //}
             MessageBox.Show("Callback 1st call");
         }
+
+        public void OpenPPT(Item pptDetails)
+        {
+        }
+
+        public void PlayVideo(Item videoDetails, ActionType actionType)
+        {
+        }
     }
 
 }

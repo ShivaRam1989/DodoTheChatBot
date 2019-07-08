@@ -14,33 +14,72 @@ namespace DoDo.Speech
     {
         SpeechRecognitionEngine speechRecognitionEngine = null;
 
+
+
+
         #region ctor
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class.
         /// </summary>
-        public SpeechRecognize(List<string> texts)
+        public SpeechRecognize()
         {
 
             try
             {
                 speechRecognitionEngine = createSpeechEngine("en-US");
-                // hook to events
-                // speechRecognitionEngine.AudioLevelUpdated += new EventHandler<AudioLevelUpdatedEventArgs>(engine_AudioLevelUpdated);
-                speechRecognitionEngine.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(engine_SpeechRecognized);
+                speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Hi Dodo"))); // load a "test" grammar
+                speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Hey Dodo"))); // load a "test" grammar
+                speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Hello Dodo"))); // load a "test" grammar
 
-                // load dictionary
-                loadGrammarAndCommands(texts);
+                speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Thank you"))); // load a "test" grammar
+                speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Play the video"))); // load a "test" grammar
 
-                // use the system's default microphone
-                speechRecognitionEngine.SetInputToDefaultAudioDevice();
 
-                // start listening
-                speechRecognitionEngine.RecognizeAsync(RecognizeMode.Multiple);
+
+                speechRecognitionEngine.SpeechRecognized += _recognizeSpeechAndWriteToConsole_SpeechRecognized; // if speech is recognized, call the specified method
+
+
+                speechRecognitionEngine.SpeechRecognitionRejected += _recognizeSpeechAndWriteToConsole_SpeechRecognitionRejected; // if recognized speech is rejected, call the specified method
+
+                speechRecognitionEngine.SetInputToDefaultAudioDevice(); // set the input to the default audio device
+
+                speechRecognitionEngine.RecognizeAsync(RecognizeMode.Multiple); // recognize speech asynchronous
             }
             catch (Exception ex)
             {
-                
+
+            }
+        }
+
+
+        static void _recognizeSpeechAndWriteToConsole_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        {
+            switch (e.Result.Text)
+            {
+                case "Hi Cube":
+                case "Hey Cube":
+                case "Hello Cube":
+
+                    break;
+                case "Thank you":
+                    break;
+                case "Play the video":
+                    break;
+                default:
+                    break;
+
+            }
+
+
+        }
+
+        static void _recognizeSpeechAndWriteToConsole_SpeechRecognitionRejected(object sender, SpeechRecognitionRejectedEventArgs e)
+        {
+            Console.WriteLine("Speech rejected. Did   mean:");
+            foreach (RecognizedPhrase r in e.Result.Alternates)
+            {
+                Console.WriteLine("    " + r.Text);
             }
         }
 
@@ -81,7 +120,7 @@ namespace DoDo.Speech
             try
             {
                 Choices choices = new Choices();
-                foreach(string text in texts)
+                foreach (string text in texts)
                 {
                     choices.Add(text);
                 }
@@ -103,7 +142,7 @@ namespace DoDo.Speech
         {
             try
             {
-                    return command;
+                return command;
             }
             catch (Exception)
             {
@@ -123,7 +162,7 @@ namespace DoDo.Speech
         void engine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             Speech speech = new Speech();
-            speech.TextSpoken=getKnownTextOrExecute(e.Result.Text);
+            speech.TextSpoken = getKnownTextOrExecute(e.Result.Text);
             EventAggregator.getInstance().Publish(speech);
         }
 

@@ -15,6 +15,14 @@ namespace WebApplication1
         {
             //throw new NotImplementedException();
         }
+
+        public void OpenPPT(Item pptDetails)
+        {
+        }
+
+        public void PlayVideo(Item videoDetails, ActionType actionType)
+        {
+        }
     }
     public partial class _Default : Page
     {

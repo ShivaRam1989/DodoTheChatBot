@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin.aspx" />
     <None Include="Connected Services\ServiceReference1\Invoke.wsdl" />
     <None Include="Connected Services\ServiceReference1\item.disco" />
     <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
@@ -116,7 +117,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Admin.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />

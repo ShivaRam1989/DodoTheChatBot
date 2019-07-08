@@ -37,19 +37,14 @@ namespace DoDo
 
     public class CallBk : IContractCallback
     {
-        public void MyMethod(LaunchControl control)
+        public void MyMethod(LaunchControl control,MetaData metaData)
         {
-            MediaPlayer mediaPlayer = new MediaPlayer();
-
-            //switch ("category")
-            //{
-            //    case "mp4":
-                    mediaPlayer.PlayVideo("OfficeTools.mp4");
-                   // mediaPlayer.StopVideo();
-            //        break;
-
-            //}
-            MessageBox.Show("Callback 1st call");
+            MessageBox.Show(" Initiate control :- "
+                + control.ToString()
+                + " Video ID :- "
+                + metaData.VideoId
+                + " Time Interval:- "
+                + metaData.Interval);
         }
 
         public void OpenPPT(Item pptDetails)
@@ -58,6 +53,16 @@ namespace DoDo
 
         public void PlayVideo(Item videoDetails, ActionType actionType)
         {
+            MediaPlayer mediaPlayer = new MediaPlayer();
+
+            //switch ("category")
+            //{
+            //    case "mp4":
+            mediaPlayer.PlayVideo("OfficeTools.mp4");
+            // mediaPlayer.StopVideo();
+            //        break;
+
+            //}
         }
     }
 

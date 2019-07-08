@@ -17,4 +17,15 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="MetaData" nillable="true" type="tns:MetaData" />
+  <xs:complexType name="Item">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="Item" nillable="true" type="tns:Item" />
+  <xs:simpleType name="ActionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Play" />
+      <xs:enumeration value="Pause" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ActionType" nillable="true" type="tns:ActionType" />
 </xs:schema>

@@ -55,4 +55,33 @@ namespace DoDo.Models
 
         public string Text { get; set; }
     }
+
+    [Serializable]
+    public class VideoDataAccess
+    {
+        public List<VideoDetails> VideoCollection { get; set; }
+    }
+
+    [Serializable]
+    public class PptDataAccess
+    {
+        public List<PptDetails> PptCollection { get; set; }
+    }
+
+    [Serializable]
+    public class VideoDetails
+    {
+        public string Id { get; set; }
+
+        public string Name { get; set; }
+
+    }
+    [Serializable]
+    public class PptDetails
+    {
+        public string Id { get; set; }
+
+        public string Name { get; set; }
+
+    }
 }

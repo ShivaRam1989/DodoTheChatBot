@@ -31,7 +31,7 @@ namespace DoDo.ViewModels
         {
             get
             {
-                return Mock.Mocker.GetMockModels();
+                return null;
             }
         }
 

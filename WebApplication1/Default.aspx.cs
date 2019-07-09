@@ -42,7 +42,7 @@ namespace WebApplication1
         {
             client.LaunchToggleAsync(launchControl, new MetaData()
             {
-                VideoId = ConfigurationManager.AppSettings["defaultVideoId"],
+                VideoId = "1",
                 Interval = ConfigurationManager.AppSettings["defaultTimeInterval"]
             });
             launchControl = LaunchControl.Start;

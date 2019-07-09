@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/IISHost" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/IISHost" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="LaunchControl">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Start" />
+      <xs:enumeration value="Stop" />
+      <xs:enumeration value="Play" />
+      <xs:enumeration value="Pause" />
+      <xs:enumeration value="Hop" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LaunchControl" nillable="true" type="tns:LaunchControl" />
+  <xs:complexType name="MetaData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Interval" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PptId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VideoId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MetaData" nillable="true" type="tns:MetaData" />
+</xs:schema>

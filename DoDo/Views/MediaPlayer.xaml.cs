@@ -60,7 +60,7 @@ namespace DoDo.Views
 
         private void DodoMediaPlayer_MediaEnded(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
     }
 }

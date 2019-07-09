@@ -40,17 +40,27 @@ namespace DoDo.Mock
 
         //static Category c2 = new Category() { Id = "2", Name = "Category2", Questions = new List<Question> { question4, question5, question6 } };
 
-        public static List<Category> GetMockModels()
+        public static List<VideoDetails> GetMockModelsForVideo()
         {
-            List<Category> categories = null;
-            XmlSerializer serializer = new XmlSerializer(typeof(DODO), new XmlRootAttribute("DODO"));
+            List<VideoDetails> videoOrPptDetails = null;
+            XmlSerializer serializer = new XmlSerializer(typeof(VideoDataAccess), new XmlRootAttribute("VideoDataAccess"));
             //string directoryName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            using (TextReader reader = new StreamReader(Path.Combine(debugPath, "Data.xml")))
+            using (TextReader reader = new StreamReader(Path.Combine(debugPath, "VideoCollection.xml")))
             {
-                categories = ((DODO)serializer.Deserialize(reader)).Categories;
+                videoOrPptDetails = ((VideoDataAccess)serializer.Deserialize(reader)).VideoCollection;
             }
-            return categories;
-
+            return videoOrPptDetails;
+        }
+        public static List<PptDetails> GetMockModelsForPpt()
+        {
+            List<PptDetails> pptDetails = null;
+            XmlSerializer serializer = new XmlSerializer(typeof(PptDataAccess), new XmlRootAttribute("PptDataAccess"));
+            //string directoryName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            using (TextReader reader = new StreamReader(Path.Combine(debugPath, "PptCollection.xml")))
+            {
+                pptDetails = ((PptDataAccess)serializer.Deserialize(reader)).PptCollection;
+            }
+            return pptDetails;
         }
     }
 }

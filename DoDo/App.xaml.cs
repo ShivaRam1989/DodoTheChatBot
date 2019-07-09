@@ -53,7 +53,14 @@ namespace DoDo
 
         public void PlayVideo(MetaData metaData, LaunchControl control)
         {
+            Application.Current.Dispatcher.InvokeAsync((() => { Play(metaData); }));
+        }
+
+        public void Play(MetaData metaData)
+        {
+            
             MediaPlayer mediaPlayer = new MediaPlayer();
+
             mediaPlayer.PlayVideo(metaData.VideoId);
         }
     }

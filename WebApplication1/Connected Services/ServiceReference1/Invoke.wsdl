@@ -524,7 +524,7 @@
       <wsa10:EndpointReference>
         <wsa10:Address>http://localhost:9999/</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>snehangshu_nandan@ciqhyd.com</Upn>
+          <Upn>sgundu@ciqhyd.com</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>

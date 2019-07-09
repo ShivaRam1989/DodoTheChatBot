@@ -31,6 +31,14 @@
             height: 100px;
             width: 200px;
         }
+
+        .img {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            top: 45%;
+            left: 45%;
+        }
     </style>
 </head>
 <body class="styleBody">
@@ -38,6 +46,9 @@
         <div>
             <asp:Button class="btn" ID="btn_launch" runat="server" Text="LAUNCH" OnClick="btn_launch_Click" />
         </div>
+        <br/>
+        <br />
+        <asp:ImageButton ID="img_fun" class="img" runat="server" ImageUrl="~/Images/giphy.gif" OnClick="img_fun_Click" Visible="false"/>
     </form>
 </body>
 </html>

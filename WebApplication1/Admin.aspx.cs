@@ -41,7 +41,7 @@ namespace WebApplication1
         {
             if (txt_videoId.Text == "") { SetDefaultVideoId(); }
             launchControl = LaunchControl.Play;
-            client.LaunchToggle(launchControl, new MetaData()
+            client.LaunchToggleAsync(launchControl, new MetaData()
             {
                 VideoId = txt_videoId.Text
             });

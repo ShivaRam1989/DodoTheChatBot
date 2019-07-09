@@ -26,7 +26,10 @@ namespace SelfHost
         }
 
         private void StopService() {
-            host.Close();
+            if (host != null)
+            {
+                host.Close();
+            }
             btn_start.Enabled = true;
             btn_stop.Enabled = false;
             lbl_message.Text = "Service Stopped";

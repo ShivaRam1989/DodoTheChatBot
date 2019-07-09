@@ -17,12 +17,14 @@ namespace WebApplication1
             //throw new NotImplementedException();
         }
 
-        public void OpenPPT(Item pptDetails)
+        public void OpenPPT(MetaData metaData)
         {
+            //throw new NotImplementedException();
         }
 
-        public void PlayVideo(Item videoDetails, ActionType actionType)
+        public void PlayVideo(MetaData metaData, LaunchControl control)
         {
+            //throw new NotImplementedException();
         }
     }
     public partial class _Default : Page
@@ -38,10 +40,10 @@ namespace WebApplication1
 
         protected void btn_launch_Click(object sender, EventArgs e)
         {
-            client.LaunchToggle(launchControl, new MetaData()
+            client.LaunchToggleAsync(launchControl, new MetaData()
             {
                 VideoId = ConfigurationManager.AppSettings["defaultVideoId"],
-                Interval = Convert.ToInt32(ConfigurationManager.AppSettings["defaultTimeInterval"])
+                Interval = ConfigurationManager.AppSettings["defaultTimeInterval"]
             });
             launchControl = LaunchControl.Start;
         }

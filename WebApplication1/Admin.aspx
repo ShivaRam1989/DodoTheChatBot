@@ -30,6 +30,13 @@
             <asp:TextBox ID="txt_timeJump" runat="server" placeholder="Jump to Time"></asp:TextBox>
             <asp:Button ID="btn_timeJump" runat="server" Text="Click To Jump Time" OnClick="btn_timeJump_Click" />
         </div>
+                <br />
+        <div>
+            <b>
+                <asp:Label ID="lbl_ppt" runat="server" Text="PPT To Show"></asp:Label></b>
+            <asp:TextBox ID="txt_ppt" runat="server" placeholder="PPT Name/ID"></asp:TextBox>
+            <asp:Button ID="btn_ppt" runat="server" Text="Click To Show PPT" OnClick="btn_ppt_Click"/>
+        </div>
     </form>
 </body>
 </html>

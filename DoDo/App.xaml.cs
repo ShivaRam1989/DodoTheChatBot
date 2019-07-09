@@ -31,7 +31,6 @@ namespace DoDo
             InstanceContext cntxt = new InstanceContext(contractCallback);
             ContractClient client = new ContractClient(cntxt);
             MessageBox.Show(client.GetConnectionConfirmation(),"Status Check", MessageBoxButton.OKCancel);
-            //client.LaunchToggleAsync(LaunchControl.Start);
         }
     }
 
@@ -41,28 +40,21 @@ namespace DoDo
         {
             MessageBox.Show(" Initiate control :- "
                 + control.ToString()
-                + " Video ID :- "
+                + "    Video ID :- "
                 + metaData.VideoId
-                + " Time Interval:- "
+                + "    Time Interval:- "
                 + metaData.Interval);
         }
 
-        public void OpenPPT(Item pptDetails)
+        public void OpenPPT(MetaData metaData)
         {
+            MessageBox.Show("PPT To Open :-  " + metaData.PptId);
         }
 
-        public void PlayVideo(Item videoDetails, ActionType actionType)
+        public void PlayVideo(MetaData metaData, LaunchControl control)
         {
             MediaPlayer mediaPlayer = new MediaPlayer();
-
-            //switch ("category")
-            //{
-            //    case "mp4":
-            mediaPlayer.PlayVideo("OfficeTools.mp4");
-            // mediaPlayer.StopVideo();
-            //        break;
-
-            //}
+            mediaPlayer.PlayVideo(metaData.VideoId);
         }
     }
 

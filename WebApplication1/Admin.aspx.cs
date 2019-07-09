@@ -32,6 +32,11 @@ namespace WebApplication1
             txt_timeJump.Text = ConfigurationManager.AppSettings["defaultTimeInterval"];
         }
 
+        private void SetDefaultPptToShow()
+        {
+            txt_ppt.Text = ConfigurationManager.AppSettings["defaultPptId"];
+        }
+
         protected void btn_video_play_Click(object sender, EventArgs e)
         {
             if (txt_videoId.Text == "") { SetDefaultVideoId(); }
@@ -46,7 +51,7 @@ namespace WebApplication1
         {
             if (txt_videoId.Text == "") { SetDefaultVideoId(); }
             launchControl = LaunchControl.Pause;
-            client.LaunchToggle(launchControl, new MetaData()
+            client.LaunchToggleAsync(launchControl, new MetaData()
             {
                 VideoId = txt_videoId.Text
             });
@@ -56,7 +61,7 @@ namespace WebApplication1
         {
             if (txt_videoId.Text == "") { SetDefaultVideoId(); }
             launchControl = LaunchControl.Stop;
-            client.LaunchToggle(launchControl, new MetaData()
+            client.LaunchToggleAsync(launchControl, new MetaData()
             {
                 VideoId = txt_videoId.Text
             });
@@ -67,20 +72,29 @@ namespace WebApplication1
             if (txt_videoId.Text == "") { SetDefaultVideoId(); }
             if (txt_timeJump.Text == "") { SetDefaultTimeJump(); }
             launchControl = LaunchControl.Hop;
-            client.LaunchToggle(launchControl, new MetaData()
+            client.LaunchToggleAsync(launchControl, new MetaData()
             {
                 VideoId = txt_videoId.Text,
-                Interval = Convert.ToInt32(txt_timeJump.Text)
+                Interval = txt_timeJump.Text
             });
         }
 
         protected void btn_launch_Click(object sender, EventArgs e)
         {
             launchControl = LaunchControl.Start;
-            client.LaunchToggle(launchControl, new MetaData()
+            client.LaunchToggleAsync(launchControl, new MetaData()
             {
                 VideoId = ConfigurationManager.AppSettings["defaultVideoId"],
-                Interval = Convert.ToInt32(ConfigurationManager.AppSettings["defaultTimeInterval"])
+                Interval = ConfigurationManager.AppSettings["defaultTimeInterval"]
+            });
+        }
+
+        protected void btn_ppt_Click(object sender, EventArgs e)
+        {
+            if (txt_ppt.Text == "") { SetDefaultPptToShow(); }
+            client.ShowPptAsync(new MetaData()
+            {
+                PptId = txt_ppt.Text
             });
         }
     }

@@ -16,16 +16,19 @@ namespace PushPollService
 
         [OperationContract]
         void LaunchToggle(LaunchControl control, MetaData metaData);
+
+        [OperationContract]
+        void ShowPpt(MetaData metaData);
     }
 
     public interface IContractCallback
     {
 
         [OperationContract]
-        void PlayVideo(Item videoDetails, ActionType actionType);
+        void PlayVideo(MetaData metaData, LaunchControl control);
 
         [OperationContract]
-        void OpenPPT(Item pptDetails);
+        void OpenPPT(MetaData metaData);
 
         [OperationContract()]
         void MyMethod(LaunchControl control, MetaData metaData);
@@ -52,24 +55,9 @@ namespace PushPollService
         [DataMember]
         public string VideoId { get; set; }
         [DataMember]
-        public int Interval { get; set; }
+        public string Interval { get; set; }
+        [DataMember]
+        public string PptId { get; set; }
 
-    }
-
-    [DataContract(Name = "ActionType")]
-    public enum ActionType
-    {
-        [EnumMember]
-        Play,
-        [EnumMember]
-        Pause
-    }
-
-    [DataContract]
-    public class Item
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Type { get; set; }
     }
 }

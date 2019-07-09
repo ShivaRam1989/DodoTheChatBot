@@ -24,12 +24,28 @@ namespace PushPollService
 
         public void LaunchToggle(LaunchControl control, MetaData metaData)
         {
-            SendToWPFClient(control, metaData);    
+            switch (control)
+            {
+                case LaunchControl.Play:
+                    {
+                        callback.PlayVideo(metaData, control);
+                        break;
+                    }
+                case LaunchControl.Stop:
+                case LaunchControl.Pause:
+                case LaunchControl.Hop:
+                case LaunchControl.Start:
+                default:
+                    {
+                        callback.MyMethod(control, metaData);
+                        break;
+                    }
+            }
         }
 
-        public void SendToWPFClient(LaunchControl control, MetaData metaData)
+        public void ShowPpt(MetaData metaData)
         {
-            callback.MyMethod(control, metaData);
+            callback.OpenPPT(metaData);
         }
     }
 }

@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:9999/" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:9999/Invoke.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="3c55e62b-62b4-4a84-96ff-9f8c2fb05099" SourceId="1" SourceUrl="http://localhost:9999/?disco" />
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="5f0d2c7d-a7af-4b9a-8f37-c9475b1d5cdb" SourceId="1" SourceUrl="http://localhost:9999/?xsd=xsd2" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="509d1bcd-bfbd-4e22-a5d8-54d485863c78" SourceId="1" SourceUrl="http://localhost:9999/?xsd=xsd1" />
-    <MetadataFile FileName="Invoke.wsdl" MetadataType="Wsdl" ID="ec0e425a-839a-486a-95a1-538e7a52adc8" SourceId="1" SourceUrl="http://localhost:9999/?wsdl" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="ef440df0-614f-4bc5-b711-c1291e7996e5" SourceId="1" SourceUrl="http://localhost:9999/?xsd=xsd0" />
+    <MetadataFile FileName="Invoke.xsd" MetadataType="Schema" ID="e387a32f-63cd-40a7-a467-115235bb24e6" SourceId="1" SourceUrl="http://ii01-88lxqf2.ciqhyd.com:9999/Invoke.svc?xsd=xsd1" />
+    <MetadataFile FileName="Invoke.disco" MetadataType="Disco" ID="35feeb4d-1c34-460f-aaa2-449681acf5c3" SourceId="1" SourceUrl="http://ii01-88lxqf2.ciqhyd.com:9999/Invoke.svc?disco" />
+    <MetadataFile FileName="Invoke1.xsd" MetadataType="Schema" ID="e2b7e006-fcd6-47cd-b3c9-f34a11d594cb" SourceId="1" SourceUrl="http://ii01-88lxqf2.ciqhyd.com:9999/Invoke.svc?xsd=xsd2" />
+    <MetadataFile FileName="Invoke1.wsdl" MetadataType="Wsdl" ID="c00e7711-b761-419e-8a38-c44657beb765" SourceId="1" SourceUrl="http://ii01-88lxqf2.ciqhyd.com:9999/Invoke.svc?wsdl" />
+    <MetadataFile FileName="Invoke2.xsd" MetadataType="Schema" ID="7e89316c-8f80-4904-87f9-c704882751ea" SourceId="1" SourceUrl="http://ii01-88lxqf2.ciqhyd.com:9999/Invoke.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

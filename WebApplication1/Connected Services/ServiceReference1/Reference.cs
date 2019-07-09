@@ -14,7 +14,7 @@ namespace WebApplication1.ServiceReference1 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="LaunchControl", Namespace="http://schemas.datacontract.org/2004/07/PushPollService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LaunchControl", Namespace="http://schemas.datacontract.org/2004/07/IISHost")]
     public enum LaunchControl : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
@@ -35,7 +35,7 @@ namespace WebApplication1.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MetaData", Namespace="http://schemas.datacontract.org/2004/07/PushPollService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MetaData", Namespace="http://schemas.datacontract.org/2004/07/IISHost")]
     [System.SerializableAttribute()]
     public partial class MetaData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         

@@ -21,8 +21,9 @@ namespace DoDo
             Bootstrap();
         }
 
-        public void LaunchApp() {
-          // this.StartupUri = new System.Uri("Views/ChatSessionView.xaml", System.UriKind.Relative);           
+        public void LaunchApp()
+        {
+            // this.StartupUri = new System.Uri("Views/ChatSessionView.xaml", System.UriKind.Relative);           
         }
 
         public void Bootstrap()
@@ -30,15 +31,15 @@ namespace DoDo
             IContractCallback contractCallback = new CallBk();
             InstanceContext cntxt = new InstanceContext(contractCallback);
             ContractClient client = new ContractClient(cntxt);
-            MessageBox.Show(client.GetConnectionConfirmation(),"Status Check", MessageBoxButton.OKCancel);
+            MessageBox.Show(client.GetConnectionConfirmation(), "Status Check", MessageBoxButton.OKCancel);
         }
     }
 
     public class CallBk : IContractCallback
     {
-        public void MyMethod(LaunchControl control,MetaData metaData)
+        public void MyMethod(LaunchControl control, MetaData metaData)
         {
-            if(control==LaunchControl.Start)
+            if (control == LaunchControl.Start)
             {
                 PlayVideo(metaData, control);
             }
@@ -51,7 +52,7 @@ namespace DoDo
 
         public void PlayVideo(MetaData metaData, LaunchControl control)
         {
-            Application.Current.Dispatcher.InvokeAsync((() => { Play(metaData); }));
+            //Application.Current.Dispatcher.InvokeAsync((() => { Play(metaData); }));
         }
 
         public void MediaPlayerAction(MetaData metaData, LaunchControl action)
@@ -77,3 +78,4 @@ namespace DoDo
         }
 
     }
+}

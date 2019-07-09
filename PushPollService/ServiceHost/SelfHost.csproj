@@ -80,11 +80,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PushPollService\PushPollService.csproj">
-      <Project>{1729f042-5ba1-401c-8448-5c9025e479a1}</Project>
-      <Name>PushPollService</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

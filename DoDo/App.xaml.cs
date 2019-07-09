@@ -36,6 +36,16 @@ namespace DoDo
 
     public class CallBk : IContractCallback
     {
+        private static MediaPlayer mediaPlayer;
+
+        public CallBk()
+        {
+            if (mediaPlayer == null)
+            {
+                mediaPlayer = new MediaPlayer();
+            }
+        }
+
         public void MyMethod(LaunchControl control,MetaData metaData)
         {
             MessageBox.Show(" Initiate control :- "
@@ -51,9 +61,22 @@ namespace DoDo
             MessageBox.Show("PPT To Open :-  " + metaData.PptId);
         }
 
-        public void PlayVideo(MetaData metaData, LaunchControl control)
+        public void PeekVideo(MetaData metaData, LaunchControl control)
         {
-            MediaPlayer mediaPlayer = new MediaPlayer();
+            mediaPlayer.PositionVideo(metaData.Interval);
+        }
+
+        public void PauseVideo(MetaData metaData, LaunchControl control)
+        {
+            mediaPlayer.PauseVideo();
+        }
+        public void StopVideo(MetaData metaData, LaunchControl control)
+        {
+            mediaPlayer.StopVideo();
+        }
+
+        public void PlayVideo(MetaData metaData, LaunchControl control)
+        {            
             mediaPlayer.PlayVideo(metaData.VideoId);
         }
     }

@@ -139,6 +139,15 @@ namespace DoDo.PushPollService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/PlayVideo", ReplyAction="http://tempuri.org/IContract/PlayVideoResponse")]
         void PlayVideo(DoDo.PushPollService.MetaData metaData, DoDo.PushPollService.LaunchControl control);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/PeekVideo", ReplyAction="http://tempuri.org/IContract/PeekVideoResponse")]
+        void PeekVideo(DoDo.PushPollService.MetaData metaData, DoDo.PushPollService.LaunchControl control);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/StopVideo", ReplyAction="http://tempuri.org/IContract/StopVideoResponse")]
+        void StopVideo(DoDo.PushPollService.MetaData metaData, DoDo.PushPollService.LaunchControl control);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/PauseVideo", ReplyAction="http://tempuri.org/IContract/PauseVideoResponse")]
+        void PauseVideo(DoDo.PushPollService.MetaData metaData, DoDo.PushPollService.LaunchControl control);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/OpenPPT", ReplyAction="http://tempuri.org/IContract/OpenPPTResponse")]
         void OpenPPT(DoDo.PushPollService.MetaData metaData);
         

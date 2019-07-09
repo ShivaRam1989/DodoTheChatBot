@@ -22,9 +22,24 @@ namespace WebApplication1
             //throw new NotImplementedException();
         }
 
+        public void PauseVideo(MetaData metaData, LaunchControl control)
+        {
+           // throw new NotImplementedException();
+        }
+
+        public void PeekVideo(MetaData metaData, LaunchControl control)
+        {
+            //throw new NotImplementedException();
+        }
+
         public void PlayVideo(MetaData metaData, LaunchControl control)
         {
             //throw new NotImplementedException();
+        }
+
+        public void StopVideo(MetaData metaData, LaunchControl control)
+        {
+           // throw new NotImplementedException();
         }
     }
     public partial class _Default : Page

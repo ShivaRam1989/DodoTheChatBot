@@ -50,11 +50,11 @@ namespace DoDo.Views
             }
         }
 
-        public void PositionVideo()
+        public void PositionVideo(string peekTime)
         {
             if (DodoMediaPlayer.Source != null)
             {
-                DodoMediaPlayer.Position = TimeSpan.FromMinutes(Convert.ToDouble(10));
+                DodoMediaPlayer.Position = TimeSpan.FromMinutes(Convert.ToDouble(peekTime));
             }
         }
 

@@ -139,6 +139,15 @@ namespace WebApplication1.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/PlayVideo", ReplyAction="http://tempuri.org/IContract/PlayVideoResponse")]
         void PlayVideo(WebApplication1.ServiceReference1.MetaData metaData, WebApplication1.ServiceReference1.LaunchControl control);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/PeekVideo", ReplyAction="http://tempuri.org/IContract/PeekVideoResponse")]
+        void PeekVideo(WebApplication1.ServiceReference1.MetaData metaData, WebApplication1.ServiceReference1.LaunchControl control);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/StopVideo", ReplyAction="http://tempuri.org/IContract/StopVideoResponse")]
+        void StopVideo(WebApplication1.ServiceReference1.MetaData metaData, WebApplication1.ServiceReference1.LaunchControl control);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/PauseVideo", ReplyAction="http://tempuri.org/IContract/PauseVideoResponse")]
+        void PauseVideo(WebApplication1.ServiceReference1.MetaData metaData, WebApplication1.ServiceReference1.LaunchControl control);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/OpenPPT", ReplyAction="http://tempuri.org/IContract/OpenPPTResponse")]
         void OpenPPT(WebApplication1.ServiceReference1.MetaData metaData);
         

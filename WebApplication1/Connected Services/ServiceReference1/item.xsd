@@ -51,49 +51,10 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="PeekVideo">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="metaData" nillable="true" type="q6:MetaData" />
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="control" type="q7:LaunchControl" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="PeekVideoResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="StopVideo">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="metaData" nillable="true" type="q8:MetaData" />
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="control" type="q9:LaunchControl" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="StopVideoResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="PauseVideo">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="metaData" nillable="true" type="q10:MetaData" />
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="control" type="q11:LaunchControl" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="PauseVideoResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
   <xs:element name="OpenPPT">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="metaData" nillable="true" type="q12:MetaData" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="metaData" nillable="true" type="q6:MetaData" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -105,8 +66,8 @@
   <xs:element name="MyMethod">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="control" type="q13:LaunchControl" />
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="metaData" nillable="true" type="q14:MetaData" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="control" type="q7:LaunchControl" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/PushPollService" minOccurs="0" name="metaData" nillable="true" type="q8:MetaData" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

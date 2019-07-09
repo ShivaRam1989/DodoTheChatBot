@@ -31,21 +31,9 @@ namespace PushPollService
                         callback.PlayVideo(metaData, control);
                         break;
                     }
-                case LaunchControl.Hop:
-                    {
-                        callback.PeekVideo(metaData, control);
-                        break;
-                    }
                 case LaunchControl.Stop:
-                    {
-                        callback.StopVideo(metaData, control);
-                        break;
-                    }
                 case LaunchControl.Pause:
-                    {
-                        callback.PauseVideo(metaData, control);
-                        break;
-                    }
+                case LaunchControl.Hop:
                 case LaunchControl.Start:
                 default:
                     {

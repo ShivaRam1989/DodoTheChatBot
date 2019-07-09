@@ -28,20 +28,10 @@ namespace PushPollService
         void PlayVideo(MetaData metaData, LaunchControl control);
 
         [OperationContract]
-        void PeekVideo(MetaData metaData, LaunchControl control);
-
-        [OperationContract]
-        void StopVideo(MetaData metaData, LaunchControl control);
-
-        [OperationContract]
-        void PauseVideo(MetaData metaData, LaunchControl control);
-
-        [OperationContract]
         void OpenPPT(MetaData metaData);
 
         [OperationContract()]
         void MyMethod(LaunchControl control, MetaData metaData);
-
     }
 
     [DataContract(Name = "LaunchControl")]

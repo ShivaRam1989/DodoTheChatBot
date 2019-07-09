@@ -38,12 +38,10 @@ namespace DoDo
     {
         public void MyMethod(LaunchControl control,MetaData metaData)
         {
-            MessageBox.Show(" Initiate control :- "
-                + control.ToString()
-                + "    Video ID :- "
-                + metaData.VideoId
-                + "    Time Interval:- "
-                + metaData.Interval);
+            if(control==LaunchControl.Start)
+            {
+                PlayVideo(metaData, control);
+            }
         }
 
         public void OpenPPT(MetaData metaData)
@@ -56,13 +54,26 @@ namespace DoDo
             Application.Current.Dispatcher.InvokeAsync((() => { Play(metaData); }));
         }
 
-        public void Play(MetaData metaData)
+        public void MediaPlayerAction(MetaData metaData, LaunchControl action)
         {
-            
             MediaPlayer mediaPlayer = new MediaPlayer();
 
-            mediaPlayer.PlayVideo(metaData.VideoId);
-        }
-    }
+            switch (action)
+            {
+                case LaunchControl.Play:
+                    mediaPlayer.PlayVideo(metaData.VideoId);
+                    break;
+                //case LaunchControl.Hop:
+                //    mediaPlayer.PositionVideo(metaData.Interval);
+                //    break;
+                case LaunchControl.Pause:
+                    mediaPlayer.PauseVideo();
+                    break;
+                case LaunchControl.Stop:
+                    mediaPlayer.StopVideo();
+                    break;
+            }
 
-}
+        }
+
+    }

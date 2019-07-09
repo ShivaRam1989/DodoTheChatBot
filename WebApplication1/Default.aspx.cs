@@ -46,6 +46,14 @@ namespace WebApplication1
                 Interval = ConfigurationManager.AppSettings["defaultTimeInterval"]
             });
             launchControl = LaunchControl.Start;
+            img_fun.Visible = true;
+            btn_launch.Visible = false;
+        }
+
+        protected void img_fun_Click(object sender, ImageClickEventArgs e)
+        {
+            img_fun.Visible = false;
+            btn_launch.Visible = true;
         }
     }
 }

@@ -27,24 +27,7 @@ namespace DoDo.Speech
 
             try
             {
-                speechRecognitionEngine = createSpeechEngine("en-US");
-                speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Hi Dodo"))); // load a "test" grammar
-                speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Hey Dodo"))); // load a "test" grammar
-                speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Hello Dodo"))); // load a "test" grammar
-
-                speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Thank you"))); // load a "test" grammar
-                speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Play the video"))); // load a "test" grammar
-
-
-
-                speechRecognitionEngine.SpeechRecognized += _recognizeSpeechAndWriteToConsole_SpeechRecognized; // if speech is recognized, call the specified method
-
-
-                speechRecognitionEngine.SpeechRecognitionRejected += _recognizeSpeechAndWriteToConsole_SpeechRecognitionRejected; // if recognized speech is rejected, call the specified method
-
-                speechRecognitionEngine.SetInputToDefaultAudioDevice(); // set the input to the default audio device
-
-                speechRecognitionEngine.RecognizeAsync(RecognizeMode.Multiple); // recognize speech asynchronous
+                StartListening();
             }
             catch (Exception ex)
             {
@@ -52,6 +35,27 @@ namespace DoDo.Speech
             }
         }
 
+        public void StartListening()
+        {
+            speechRecognitionEngine = createSpeechEngine("en-US");
+            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Hi Dodo"))); // load a "test" grammar
+            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Hey Dodo"))); // load a "test" grammar
+            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Hello Dodo"))); // load a "test" grammar
+
+            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Thank you"))); // load a "test" grammar
+            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Play the video"))); // load a "test" grammar
+
+
+
+            speechRecognitionEngine.SpeechRecognized += _recognizeSpeechAndWriteToConsole_SpeechRecognized; // if speech is recognized, call the specified method
+
+
+            speechRecognitionEngine.SpeechRecognitionRejected += _recognizeSpeechAndWriteToConsole_SpeechRecognitionRejected; // if recognized speech is rejected, call the specified method
+
+            speechRecognitionEngine.SetInputToDefaultAudioDevice(); // set the input to the default audio device
+
+            speechRecognitionEngine.RecognizeAsync(RecognizeMode.Multiple); // recognize speech asynchronous
+        }
 
         static void _recognizeSpeechAndWriteToConsole_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {

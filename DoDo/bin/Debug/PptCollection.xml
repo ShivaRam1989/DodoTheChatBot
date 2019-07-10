@@ -3,23 +3,23 @@
   <PptCollection>
     <PptDetails>
       <Id>1</Id>
-      <Name>IC-PPT-V4.pptx</Name>
+      <Name>1_AzadPratika.pptx</Name>
     </PptDetails>
     <PptDetails>
       <Id>2</Id>
-      <Name>AutomationIncubatorRPA.pptx</Name>
+      <Name>2_RPA_CARE.pptx</Name>
     </PptDetails>
     <PptDetails>
       <Id>3</Id>
-      <Name>CARE.pptx</Name>
+      <Name>3_Guardx.pptx</Name>
     </PptDetails>
     <PptDetails>
       <Id>4</Id>
-      <Name>GuardX.pptx</Name>
+      <Name>4_MarketData.pptx</Name>
     </PptDetails>
     <PptDetails>
       <Id>5</Id>
-      <Name>MarketData.pptx</Name>
+      <Name>5_QA.pptx</Name>
     </PptDetails>
   </PptCollection>
 </PptDataAccess>

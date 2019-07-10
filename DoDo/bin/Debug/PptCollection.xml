@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PptDataAccess>
+  <PptCollection>
+    <PptDetails>
+      <Id>1</Id>
+      <Name>IC-PPT-V4.pptx</Name>
+    </PptDetails>
+    <PptDetails>
+      <Id>2</Id>
+      <Name>AutomationIncubatorRPA.pptx</Name>
+    </PptDetails>
+    <PptDetails>
+      <Id>3</Id>
+      <Name>CARE.pptx</Name>
+    </PptDetails>
+    <PptDetails>
+      <Id>4</Id>
+      <Name>GuardX.pptx</Name>
+    </PptDetails>
+    <PptDetails>
+      <Id>5</Id>
+      <Name>MarketData.pptx</Name>
+    </PptDetails>
+  </PptCollection>
+</PptDataAccess>
+

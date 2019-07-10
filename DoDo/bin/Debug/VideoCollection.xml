@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VideoDataAccess>
+  <VideoCollection>
+    <VideoDetails>
+      <Id>1</Id>
+      <Name>1_Entry.mp4</Name>
+    </VideoDetails>
+    <VideoDetails>
+      <Id>2</Id>
+      <Name>2_thanksazadtorpastart.mp4</Name>
+    </VideoDetails>
+    <VideoDetails>
+      <Id>3</Id>
+      <Name>3_RPAThanksToGaurdexVideoEnd.mp4</Name>
+    </VideoDetails>
+    <VideoDetails>
+      <Id>4</Id>
+      <Name>4_MarketDataStart.mp4</Name>
+    </VideoDetails>
+    <VideoDetails>
+      <Id>5</Id>
+      <Name>5_HiShivaToStartTechVideo.mp4</Name>
+    </VideoDetails>
+    <VideoDetails>
+      <Id>6</Id>
+      <Name>6_AnyQuestions.mp4</Name>
+    </VideoDetails>
+    <VideoDetails>
+      <Id>7</Id>
+      <Name>1_Entry.mp4</Name>
+    </VideoDetails>
+    <VideoDetails>
+      <Id>8</Id>
+      <Name>1_Entry.mp4</Name>
+    </VideoDetails>
+  </VideoCollection>
+</VideoDataAccess>
+

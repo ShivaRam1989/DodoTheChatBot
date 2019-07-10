@@ -12,9 +12,9 @@ namespace WebApplication1
 {
     public class CallBk : IContractCallback
     {
-        public void MyMethod(LaunchControl control, MetaData metaData)
+        public void AdminCommand(LaunchControl control)
         {
-            //throw new NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void OpenPPT(MetaData metaData)
@@ -40,12 +40,12 @@ namespace WebApplication1
 
         protected void btn_launch_Click(object sender, EventArgs e)
         {
-            client.LaunchToggleAsync(launchControl, new MetaData()
+            client.AdminCommandsAsync(launchControl, new MetaData()
             {
                 VideoId = "1",
                 Interval = ConfigurationManager.AppSettings["defaultTimeInterval"]
             });
-            launchControl = LaunchControl.Start;
+            launchControl = LaunchControl.Launch;
             img_fun.Visible = true;
             btn_launch.Visible = false;
         }

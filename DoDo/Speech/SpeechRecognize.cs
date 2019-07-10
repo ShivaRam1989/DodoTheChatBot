@@ -47,7 +47,7 @@ namespace DoDo.Speech
 
 
 
-            speechRecognitionEngine.SpeechRecognized += _recognizeSpeechAndWriteToConsole_SpeechRecognized; // if speech is recognized, call the specified method
+            speechRecognitionEngine.SpeechRecognized += engine_SpeechRecognized; // if speech is recognized, call the specified method
 
 
             speechRecognitionEngine.SpeechRecognitionRejected += _recognizeSpeechAndWriteToConsole_SpeechRecognitionRejected; // if recognized speech is rejected, call the specified method
@@ -61,9 +61,9 @@ namespace DoDo.Speech
         {
             switch (e.Result.Text)
             {
-                case "Hi Cube":
-                case "Hey Cube":
-                case "Hello Cube":
+                case "Hi Dodo":
+                case "Hey Dodo":
+                case "Hello Dodo":
 
                     break;
                 case "Thank you":

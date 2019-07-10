@@ -41,7 +41,7 @@ namespace WebApplication1
         {
             if (txt_videoId.Text == "") { SetDefaultVideoId(); }
             launchControl = LaunchControl.Play;
-            client.LaunchToggleAsync(launchControl, new MetaData()
+            client.AdminCommandsAsync(launchControl, new MetaData()
             {
                 VideoId = txt_videoId.Text
             });
@@ -51,7 +51,7 @@ namespace WebApplication1
         {
             if (txt_videoId.Text == "") { SetDefaultVideoId(); }
             launchControl = LaunchControl.Pause;
-            client.LaunchToggleAsync(launchControl, new MetaData()
+            client.AdminCommandsAsync(launchControl, new MetaData()
             {
                 VideoId = txt_videoId.Text
             });
@@ -61,7 +61,7 @@ namespace WebApplication1
         {
             if (txt_videoId.Text == "") { SetDefaultVideoId(); }
             launchControl = LaunchControl.Stop;
-            client.LaunchToggleAsync(launchControl, new MetaData()
+            client.AdminCommandsAsync(launchControl, new MetaData()
             {
                 VideoId = txt_videoId.Text
             });
@@ -72,7 +72,7 @@ namespace WebApplication1
             if (txt_videoId.Text == "") { SetDefaultVideoId(); }
             if (txt_timeJump.Text == "") { SetDefaultTimeJump(); }
             launchControl = LaunchControl.Hop;
-            client.LaunchToggleAsync(launchControl, new MetaData()
+            client.AdminCommandsAsync(launchControl, new MetaData()
             {
                 VideoId = txt_videoId.Text,
                 Interval = txt_timeJump.Text
@@ -81,8 +81,8 @@ namespace WebApplication1
 
         protected void btn_launch_Click(object sender, EventArgs e)
         {
-            launchControl = LaunchControl.Start;
-            client.LaunchToggleAsync(launchControl, new MetaData()
+            launchControl = LaunchControl.Launch;
+            client.AdminCommandsAsync(launchControl, new MetaData()
             {
                 VideoId = ConfigurationManager.AppSettings["defaultVideoId"],
                 Interval = ConfigurationManager.AppSettings["defaultTimeInterval"]
@@ -95,6 +95,28 @@ namespace WebApplication1
             client.ShowPptAsync(new MetaData()
             {
                 PptId = txt_ppt.Text
+            });
+        }
+
+        protected void Listen_Click(object sender, EventArgs e)
+        {
+            launchControl = LaunchControl.Listen;
+            client.AdminCommandsAsync(launchControl, new MetaData()
+            {
+                //dummy not using these
+                VideoId = ConfigurationManager.AppSettings["defaultVideoId"],
+                Interval = ConfigurationManager.AppSettings["defaultTimeInterval"]
+            });
+        }
+
+        protected void StopListen_Click(object sender, EventArgs e)
+        {
+            launchControl = LaunchControl.StopListen;
+            client.AdminCommandsAsync(launchControl, new MetaData()
+            {
+                //dummy not using these
+                VideoId = ConfigurationManager.AppSettings["defaultVideoId"],
+                Interval = ConfigurationManager.AppSettings["defaultTimeInterval"]
             });
         }
     }

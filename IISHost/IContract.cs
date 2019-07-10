@@ -9,14 +9,14 @@ using System.Text;
 namespace IISHost
 {
     [ServiceContract(CallbackContract = typeof(IContractCallback))]
-    [ServiceKnownType(typeof(LaunchControl))]
+    [ServiceKnownType(typeof(AdminCommand))]
     public interface IContract
     {
         [OperationContract]
         string GetConnectionConfirmation();
 
         [OperationContract]
-        void LaunchToggle(LaunchControl control, MetaData metaData);
+        void AdminCommands(AdminCommand control, MetaData metaData);
 
         [OperationContract]
         void ShowPpt(MetaData metaData);
@@ -26,28 +26,32 @@ namespace IISHost
     {
 
         [OperationContract]
-        void PlayVideo(MetaData metaData, LaunchControl control);
+        void PlayVideo(MetaData metaData, AdminCommand control);
 
         [OperationContract]
         void OpenPPT(MetaData metaData);
 
         [OperationContract()]
-        void MyMethod(LaunchControl control, MetaData metaData);
+        void AdminCommand(AdminCommand control);
     }
 
     [DataContract(Name = "LaunchControl")]
-    public enum LaunchControl
+    public enum AdminCommand
     {
         [EnumMember]
-        Start,
-        [EnumMember]
-        Stop,
+        Launch,
         [EnumMember]
         Play,
         [EnumMember]
         Pause,
         [EnumMember]
-        Hop
+        Stop,
+        [EnumMember]
+        Hop,
+        [EnumMember]
+        Listen,
+        [EnumMember]
+        StopListen
     }
 
     [DataContract(Name = "MetaData")]

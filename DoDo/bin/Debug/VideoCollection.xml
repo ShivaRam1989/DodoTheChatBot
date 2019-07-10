@@ -2,6 +2,10 @@
 <VideoDataAccess>
   <VideoCollection>
     <VideoDetails>
+      <Id>0</Id>
+      <Name>0_logolaunch.mp4</Name>
+    </VideoDetails>
+    <VideoDetails>
       <Id>1</Id>
       <Name>1_Entry.mp4</Name>
     </VideoDetails>
@@ -19,15 +23,15 @@
     </VideoDetails>
     <VideoDetails>
       <Id>5</Id>
-      <Name>5_HiShivaToStartTechVideo.mp4</Name>
+      <Name>5_HiShiva.mp4</Name>
     </VideoDetails>
     <VideoDetails>
       <Id>6</Id>
-      <Name>6_AnyQuestions.mp4</Name>
+      <Name>6_TechVideoPlay.mp4</Name>
     </VideoDetails>
     <VideoDetails>
       <Id>7</Id>
-      <Name>1_Entry.mp4</Name>
+      <Name>7_AnyQuestions.mp4</Name>
     </VideoDetails>
     <VideoDetails>
       <Id>8</Id>

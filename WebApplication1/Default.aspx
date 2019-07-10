@@ -48,7 +48,7 @@
         </div>
         <br/>
         <br />
-        <asp:ImageButton ID="img_fun" class="img" runat="server" ImageUrl="~/Images/giphy.gif" OnClick="img_fun_Click" Visible="false"/>
+        <asp:ImageButton ID="img_fun" class="img" runat="server" ImageUrl="~/Images/thankyou.gif" OnClick="img_fun_Click" Visible="false"/>
     </form>
 </body>
 </html>

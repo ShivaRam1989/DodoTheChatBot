@@ -18,19 +18,25 @@ namespace WebApplication1.ServiceReference1 {
     public enum LaunchControl : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Start = 0,
+        Launch = 0,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Stop = 1,
+        Play = 1,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Play = 2,
+        Pause = 2,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Pause = 3,
+        Stop = 3,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         Hop = 4,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Listen = 5,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        StopListen = 6,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -120,11 +126,11 @@ namespace WebApplication1.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/GetConnectionConfirmation", ReplyAction="http://tempuri.org/IContract/GetConnectionConfirmationResponse")]
         System.Threading.Tasks.Task<string> GetConnectionConfirmationAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/LaunchToggle", ReplyAction="http://tempuri.org/IContract/LaunchToggleResponse")]
-        void LaunchToggle(WebApplication1.ServiceReference1.LaunchControl control, WebApplication1.ServiceReference1.MetaData metaData);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/AdminCommands", ReplyAction="http://tempuri.org/IContract/AdminCommandsResponse")]
+        void AdminCommands(WebApplication1.ServiceReference1.LaunchControl control, WebApplication1.ServiceReference1.MetaData metaData);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/LaunchToggle", ReplyAction="http://tempuri.org/IContract/LaunchToggleResponse")]
-        System.Threading.Tasks.Task LaunchToggleAsync(WebApplication1.ServiceReference1.LaunchControl control, WebApplication1.ServiceReference1.MetaData metaData);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/AdminCommands", ReplyAction="http://tempuri.org/IContract/AdminCommandsResponse")]
+        System.Threading.Tasks.Task AdminCommandsAsync(WebApplication1.ServiceReference1.LaunchControl control, WebApplication1.ServiceReference1.MetaData metaData);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/ShowPpt", ReplyAction="http://tempuri.org/IContract/ShowPptResponse")]
         void ShowPpt(WebApplication1.ServiceReference1.MetaData metaData);
@@ -142,8 +148,8 @@ namespace WebApplication1.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/OpenPPT", ReplyAction="http://tempuri.org/IContract/OpenPPTResponse")]
         void OpenPPT(WebApplication1.ServiceReference1.MetaData metaData);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/MyMethod", ReplyAction="http://tempuri.org/IContract/MyMethodResponse")]
-        void MyMethod(WebApplication1.ServiceReference1.LaunchControl control, WebApplication1.ServiceReference1.MetaData metaData);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/AdminCommand", ReplyAction="http://tempuri.org/IContract/AdminCommandResponse")]
+        void AdminCommand(WebApplication1.ServiceReference1.LaunchControl control);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -182,12 +188,12 @@ namespace WebApplication1.ServiceReference1 {
             return base.Channel.GetConnectionConfirmationAsync();
         }
         
-        public void LaunchToggle(WebApplication1.ServiceReference1.LaunchControl control, WebApplication1.ServiceReference1.MetaData metaData) {
-            base.Channel.LaunchToggle(control, metaData);
+        public void AdminCommands(WebApplication1.ServiceReference1.LaunchControl control, WebApplication1.ServiceReference1.MetaData metaData) {
+            base.Channel.AdminCommands(control, metaData);
         }
         
-        public System.Threading.Tasks.Task LaunchToggleAsync(WebApplication1.ServiceReference1.LaunchControl control, WebApplication1.ServiceReference1.MetaData metaData) {
-            return base.Channel.LaunchToggleAsync(control, metaData);
+        public System.Threading.Tasks.Task AdminCommandsAsync(WebApplication1.ServiceReference1.LaunchControl control, WebApplication1.ServiceReference1.MetaData metaData) {
+            return base.Channel.AdminCommandsAsync(control, metaData);
         }
         
         public void ShowPpt(WebApplication1.ServiceReference1.MetaData metaData) {

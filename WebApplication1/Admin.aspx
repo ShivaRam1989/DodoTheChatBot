@@ -37,6 +37,8 @@
             <asp:TextBox ID="txt_ppt" runat="server" placeholder="PPT Name/ID"></asp:TextBox>
             <asp:Button ID="btn_ppt" runat="server" Text="Click To Show PPT" OnClick="btn_ppt_Click"/>
         </div>
+        <asp:Button ID="StartListening" runat="server" OnClick="Listen_Click" Text="Listen" />
+        <asp:Button ID="StopListen" runat="server" OnClick="StopListen_Click" Text="StopListen" />
     </form>
 </body>
 </html>

@@ -149,7 +149,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IContract_LaunchToggle_Input_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IContract_AdminCommands_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -172,7 +172,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IContract_LaunchToggle_output_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IContract_AdminCommands_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -333,7 +333,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IContract_MyMethod_output_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IContract_AdminCommand_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -356,7 +356,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IContract_MyMethod_Input_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IContract_AdminCommand_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -392,11 +392,11 @@
   <wsdl:message name="IContract_GetConnectionConfirmation_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetConnectionConfirmationResponse" />
   </wsdl:message>
-  <wsdl:message name="IContract_LaunchToggle_InputMessage">
-    <wsdl:part name="parameters" element="tns:LaunchToggle" />
+  <wsdl:message name="IContract_AdminCommands_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdminCommands" />
   </wsdl:message>
-  <wsdl:message name="IContract_LaunchToggle_OutputMessage">
-    <wsdl:part name="parameters" element="tns:LaunchToggleResponse" />
+  <wsdl:message name="IContract_AdminCommands_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdminCommandsResponse" />
   </wsdl:message>
   <wsdl:message name="IContract_ShowPpt_InputMessage">
     <wsdl:part name="parameters" element="tns:ShowPpt" />
@@ -416,20 +416,20 @@
   <wsdl:message name="IContract_OpenPPT_InputCallbackMessage">
     <wsdl:part name="parameters" element="tns:OpenPPTResponse" />
   </wsdl:message>
-  <wsdl:message name="IContract_MyMethod_OutputCallbackMessage">
-    <wsdl:part name="parameters" element="tns:MyMethod" />
+  <wsdl:message name="IContract_AdminCommand_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:AdminCommand" />
   </wsdl:message>
-  <wsdl:message name="IContract_MyMethod_InputCallbackMessage">
-    <wsdl:part name="parameters" element="tns:MyMethodResponse" />
+  <wsdl:message name="IContract_AdminCommand_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:AdminCommandResponse" />
   </wsdl:message>
   <wsdl:portType name="IContract">
     <wsdl:operation name="GetConnectionConfirmation">
       <wsdl:input wsaw:Action="http://tempuri.org/IContract/GetConnectionConfirmation" message="tns:IContract_GetConnectionConfirmation_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IContract/GetConnectionConfirmationResponse" message="tns:IContract_GetConnectionConfirmation_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="LaunchToggle">
-      <wsdl:input wsaw:Action="http://tempuri.org/IContract/LaunchToggle" message="tns:IContract_LaunchToggle_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IContract/LaunchToggleResponse" message="tns:IContract_LaunchToggle_OutputMessage" />
+    <wsdl:operation name="AdminCommands">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContract/AdminCommands" message="tns:IContract_AdminCommands_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContract/AdminCommandsResponse" message="tns:IContract_AdminCommands_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ShowPpt">
       <wsdl:input wsaw:Action="http://tempuri.org/IContract/ShowPpt" message="tns:IContract_ShowPpt_InputMessage" />
@@ -443,9 +443,9 @@
       <wsdl:output wsaw:Action="http://tempuri.org/IContract/OpenPPT" message="tns:IContract_OpenPPT_OutputCallbackMessage" />
       <wsdl:input wsaw:Action="http://tempuri.org/IContract/OpenPPTResponse" message="tns:IContract_OpenPPT_InputCallbackMessage" />
     </wsdl:operation>
-    <wsdl:operation name="MyMethod">
-      <wsdl:output wsaw:Action="http://tempuri.org/IContract/MyMethod" message="tns:IContract_MyMethod_OutputCallbackMessage" />
-      <wsdl:input wsaw:Action="http://tempuri.org/IContract/MyMethodResponse" message="tns:IContract_MyMethod_InputCallbackMessage" />
+    <wsdl:operation name="AdminCommand">
+      <wsdl:output wsaw:Action="http://tempuri.org/IContract/AdminCommand" message="tns:IContract_AdminCommand_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IContract/AdminCommandResponse" message="tns:IContract_AdminCommand_InputCallbackMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WSDualHttpBinding_IContract" type="tns:IContract">
@@ -462,14 +462,14 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="LaunchToggle">
-      <soap12:operation soapAction="http://tempuri.org/IContract/LaunchToggle" style="document" />
+    <wsdl:operation name="AdminCommands">
+      <soap12:operation soapAction="http://tempuri.org/IContract/AdminCommands" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IContract_LaunchToggle_Input_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IContract_AdminCommands_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IContract_LaunchToggle_output_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IContract_AdminCommands_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
@@ -506,14 +506,14 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="MyMethod">
-      <soap12:operation soapAction="http://tempuri.org/IContract/MyMethod" style="document" />
+    <wsdl:operation name="AdminCommand">
+      <soap12:operation soapAction="http://tempuri.org/IContract/AdminCommand" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IContract_MyMethod_Input_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IContract_AdminCommand_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IContract_MyMethod_output_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IContract_AdminCommand_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>

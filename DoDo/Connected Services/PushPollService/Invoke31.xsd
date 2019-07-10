@@ -13,7 +13,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="LaunchToggle">
+  <xs:element name="AdminCommands">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/IISHost" minOccurs="0" name="control" type="q1:LaunchControl" />
@@ -21,7 +21,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="LaunchToggleResponse">
+  <xs:element name="AdminCommandsResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
@@ -63,15 +63,14 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="MyMethod">
+  <xs:element name="AdminCommand">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/IISHost" minOccurs="0" name="control" type="q7:LaunchControl" />
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/IISHost" minOccurs="0" name="metaData" nillable="true" type="q8:MetaData" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="MyMethodResponse">
+  <xs:element name="AdminCommandResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>

@@ -23,22 +23,24 @@ namespace IISHost
             return "Connection confirmed";
         }
 
-        public void LaunchToggle(LaunchControl control, MetaData metaData)
+        public void AdminCommands(AdminCommand control, MetaData metaData)
         {
             switch (control)
             {
-                case LaunchControl.Play:
+                case AdminCommand.Play:
                     {
                         callback.PlayVideo(metaData, control);
                         break;
                     }
-                case LaunchControl.Stop:
-                case LaunchControl.Pause:
-                case LaunchControl.Hop:
-                case LaunchControl.Start:
+                case AdminCommand.Listen:
+                case AdminCommand.StopListen:
+                case AdminCommand.Launch:
+                case AdminCommand.Pause:
+                case AdminCommand.Hop:
+                case AdminCommand.Stop:
                 default:
                     {
-                        callback.MyMethod(control, metaData);
+                        callback.AdminCommand(control);
                         break;
                     }
             }

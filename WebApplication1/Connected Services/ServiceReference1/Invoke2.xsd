@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://i01-4gthvf2.ciqhyd.com:9999/Invoke.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/IISHost" />
+  <xs:import schemaLocation="http://10.170.190.26:9999/IISHost/Invoke?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/IISHost" />
   <xs:element name="GetConnectionConfirmation">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="connect" type="xs:boolean" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetConnectionConfirmationResponse">

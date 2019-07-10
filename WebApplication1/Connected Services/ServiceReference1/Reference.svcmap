@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:9999/Invoke.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://10.170.190.26:9999/IISHost/Invoke" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Invoke3.xsd" MetadataType="Schema" ID="0688fa93-bae1-4dbf-88f4-0a82aa0699ef" SourceId="1" SourceUrl="http://i01-4gthvf2.ciqhyd.com:9999/Invoke.svc?xsd=xsd0" />
-    <MetadataFile FileName="Invoke1.disco" MetadataType="Disco" ID="054bb2f8-baa7-4998-b4d5-aac499725db6" SourceId="1" SourceUrl="http://i01-4gthvf2.ciqhyd.com:9999/Invoke.svc?disco" />
-    <MetadataFile FileName="Invoke31.xsd" MetadataType="Schema" ID="731e5822-dbc7-49ed-810a-041f950bca58" SourceId="1" SourceUrl="http://i01-4gthvf2.ciqhyd.com:9999/Invoke.svc?xsd=xsd2" />
-    <MetadataFile FileName="Invoke.wsdl" MetadataType="Wsdl" ID="45239f0e-301b-4298-838f-588154d4df58" SourceId="1" SourceUrl="http://i01-4gthvf2.ciqhyd.com:9999/Invoke.svc?wsdl" />
-    <MetadataFile FileName="Invoke32.xsd" MetadataType="Schema" ID="f38bdd8e-99dc-4c41-a12f-af86acb0a2d6" SourceId="1" SourceUrl="http://i01-4gthvf2.ciqhyd.com:9999/Invoke.svc?xsd=xsd1" />
+    <MetadataFile FileName="Invoke.xsd" MetadataType="Schema" ID="dfc78a46-9b01-4d43-94fb-aa386c8063ff" SourceId="1" SourceUrl="http://10.170.190.26:9999/IISHost/Invoke?xsd=xsd1" />
+    <MetadataFile FileName="Invoke1.wsdl" MetadataType="Wsdl" ID="998c08d8-19ff-4654-add1-74109b97e02e" SourceId="1" SourceUrl="http://10.170.190.26:9999/IISHost/Invoke?wsdl" />
+    <MetadataFile FileName="Invoke1.xsd" MetadataType="Schema" ID="b44c5b73-e4da-4eba-bcf1-e70f7313ba87" SourceId="1" SourceUrl="http://10.170.190.26:9999/IISHost/Invoke?xsd=xsd0" />
+    <MetadataFile FileName="Invoke2.xsd" MetadataType="Schema" ID="05bd810f-4db0-44f4-aac3-df16309240e0" SourceId="1" SourceUrl="http://10.170.190.26:9999/IISHost/Invoke?xsd=xsd2" />
+    <MetadataFile FileName="Invoke.disco" MetadataType="Disco" ID="d5948b4a-c9dd-4ca7-87f1-f291431e76cc" SourceId="1" SourceUrl="http://10.170.190.26:9999/IISHost/Invoke?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

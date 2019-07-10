@@ -13,7 +13,7 @@ namespace IISHost
     public interface IContract
     {
         [OperationContract]
-        string GetConnectionConfirmation();
+        string GetConnectionConfirmation(bool connect);
 
         [OperationContract]
         void AdminCommands(AdminCommand control, MetaData metaData);

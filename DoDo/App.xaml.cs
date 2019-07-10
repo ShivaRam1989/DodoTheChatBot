@@ -14,6 +14,7 @@ using System.IO;
 using DoDo.Mock;
 using DoDo.Models;
 using DoDo.Commands;
+using System.Diagnostics;
 
 namespace DoDo
 {
@@ -37,7 +38,7 @@ namespace DoDo
             IContractCallback contractCallback = new CallBk();
             InstanceContext cntxt = new InstanceContext(contractCallback);
             ContractClient client = new ContractClient(cntxt);
-            MessageBox.Show(client.GetConnectionConfirmation(), "Status Check", MessageBoxButton.OKCancel);
+            MessageBox.Show(client.GetConnectionConfirmation(true), "Status Check", MessageBoxButton.OKCancel);
         }
     }
 
@@ -61,12 +62,12 @@ namespace DoDo
                 case "Hello Dodo":
                     metaData.VideoId = "5";
                     metaData.Interval = "0";
-                    PlayVideo(metaData, LaunchControl.Play);
+                  //  PlayVideo(metaData, LaunchControl.Play);
                     break;
                 case "Play the video":
                     metaData.VideoId = "6";
                     metaData.Interval = "0";
-                    PlayVideo(metaData, LaunchControl.Play);
+                   // PlayVideo(metaData, LaunchControl.Play);
                     break;
                 default:
                     break;
@@ -102,7 +103,20 @@ namespace DoDo
             }
             if (control == LaunchControl.StopListen)
             {
-                speechRecognize.StartListening();
+                speechRecognize.Stop();
+            }
+            if (control == LaunchControl.Pause)
+            {
+                MetaData metaData = new MetaData();
+                metaData.VideoId = "0";
+                PlayVideo(metaData, control);
+            }
+            if (control == LaunchControl.Stop)
+            {
+                MetaData metaData = new MetaData();
+                metaData.VideoId = "0";
+                metaData.Interval = "0";
+                PlayVideo(metaData, control);
             }
         }
 
@@ -139,7 +153,7 @@ namespace DoDo
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Ppt Closed");
+                   // MessageBox.Show("Ppt Closed");
                 }
             }
             else
@@ -150,6 +164,14 @@ namespace DoDo
 
         public void PlayVideo(MetaData metaData, LaunchControl control)
         {
+            Process[] pros = Process.GetProcesses();
+            for (int i = 0; i < pros.Count(); i++)
+            {
+                if (pros[i].ProcessName.ToLower().Contains("powerpnt"))
+                {
+                    pros[i].Kill();
+                }
+            }
             Application.Current.Dispatcher.InvokeAsync(() => { MediaPlayerAction(metaData,control); });
         }
 

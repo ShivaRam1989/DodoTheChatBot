@@ -177,7 +177,7 @@ namespace DoDo.ViewModels
             {
                 if (value)
                 {
-                    speechRecognizeForsearch = new SpeechRecognize();
+                   // speechRecognizeForsearch = new SpeechRecognize();
                 }
                 else
                 {

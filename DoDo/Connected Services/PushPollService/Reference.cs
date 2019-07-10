@@ -121,10 +121,10 @@ namespace DoDo.PushPollService {
     public interface IContract {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/GetConnectionConfirmation", ReplyAction="http://tempuri.org/IContract/GetConnectionConfirmationResponse")]
-        string GetConnectionConfirmation();
+        string GetConnectionConfirmation(bool connect);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/GetConnectionConfirmation", ReplyAction="http://tempuri.org/IContract/GetConnectionConfirmationResponse")]
-        System.Threading.Tasks.Task<string> GetConnectionConfirmationAsync();
+        System.Threading.Tasks.Task<string> GetConnectionConfirmationAsync(bool connect);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/AdminCommands", ReplyAction="http://tempuri.org/IContract/AdminCommandsResponse")]
         void AdminCommands(DoDo.PushPollService.LaunchControl control, DoDo.PushPollService.MetaData metaData);
@@ -180,12 +180,12 @@ namespace DoDo.PushPollService {
                 base(callbackInstance, binding, remoteAddress) {
         }
         
-        public string GetConnectionConfirmation() {
-            return base.Channel.GetConnectionConfirmation();
+        public string GetConnectionConfirmation(bool connect) {
+            return base.Channel.GetConnectionConfirmation(connect);
         }
         
-        public System.Threading.Tasks.Task<string> GetConnectionConfirmationAsync() {
-            return base.Channel.GetConnectionConfirmationAsync();
+        public System.Threading.Tasks.Task<string> GetConnectionConfirmationAsync(bool connect) {
+            return base.Channel.GetConnectionConfirmationAsync(connect);
         }
         
         public void AdminCommands(DoDo.PushPollService.LaunchControl control, DoDo.PushPollService.MetaData metaData) {

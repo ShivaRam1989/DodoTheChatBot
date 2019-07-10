@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebAppli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IISHost", "IISHost\IISHost.csproj", "{D18B65F8-7F97-4A1E-9C7A-94C53B7CDE7F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host Service", "Host Service\Host Service.csproj", "{32D488B2-907F-400D-8E94-10782E42FE80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D18B65F8-7F97-4A1E-9C7A-94C53B7CDE7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D18B65F8-7F97-4A1E-9C7A-94C53B7CDE7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D18B65F8-7F97-4A1E-9C7A-94C53B7CDE7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32D488B2-907F-400D-8E94-10782E42FE80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32D488B2-907F-400D-8E94-10782E42FE80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32D488B2-907F-400D-8E94-10782E42FE80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32D488B2-907F-400D-8E94-10782E42FE80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

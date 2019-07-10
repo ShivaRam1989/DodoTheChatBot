@@ -14,9 +14,9 @@ namespace IISHost
 
         public static IContractCallback callback = null;
 
-        public string GetConnectionConfirmation()
+        public string GetConnectionConfirmation(bool connect)
         {
-            if (callback == null)
+            if (callback == null && connect == true)
             {
                 callback = OperationContext.Current.GetCallbackChannel<IContractCallback>();
             }

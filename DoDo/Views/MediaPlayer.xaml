@@ -4,7 +4,7 @@
 	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	  xmlns:local="clr-namespace:DoDo.Views"
-	  mc:Ignorable="d" WindowState="Maximized" WindowStyle="none" BorderThickness="1" Background="Black"  >
+	  mc:Ignorable="d" WindowState="Maximized" WindowStyle="none" BorderThickness="1" Topmost="True" Background="Black"  >
 
 	<Grid>		
 		<!--<Grid Grid.Row="0">

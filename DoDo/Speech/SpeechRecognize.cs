@@ -10,6 +10,11 @@ using System.Threading.Tasks;
 
 namespace DoDo.Speech
 {
+    public enum SpeechTextOptions
+        {
+        PauseVideo= 0,
+        ContinueVideo 
+    }
     public class SpeechRecognize
     {
         SpeechRecognitionEngine speechRecognitionEngine = null;
@@ -27,7 +32,7 @@ namespace DoDo.Speech
 
             try
             {
-                StartListening();
+                //StartListening();
             }
             catch (Exception ex)
             {
@@ -38,14 +43,13 @@ namespace DoDo.Speech
         public void StartListening()
         {
             speechRecognitionEngine = createSpeechEngine("en-US");
-            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Hi Dodo"))); // load a "test" grammar
-            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Hey Dodo"))); // load a "test" grammar
-            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Hello Dodo"))); // load a "test" grammar
-
-            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Thank you"))); // load a "test" grammar
-            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Play the video"))); // load a "test" grammar
-
-
+            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Next Slide Please"))); // load a "test" grammar
+            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Previous Slide Please"))); // load a "test" grammar
+            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Pause Video"))); // load a "test" grammar
+            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Continue video"))); // load a "test" grammar
+            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Forward video")));
+            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Backward video")));
+            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Stop video")));
 
             speechRecognitionEngine.SpeechRecognized += engine_SpeechRecognized; // if speech is recognized, call the specified method
 

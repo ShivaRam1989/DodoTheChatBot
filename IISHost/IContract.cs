@@ -45,6 +45,8 @@ namespace IISHost
         [EnumMember]
         Pause,
         [EnumMember]
+        PlayAfterPause,
+        [EnumMember]
         Stop,
         [EnumMember]
         Hop,
@@ -58,11 +60,11 @@ namespace IISHost
     public class MetaData
     {
         [DataMember]
-        public string VideoId { get; set; }
+        public int VideoId { get; set; }
         [DataMember]
         public string Interval { get; set; }
         [DataMember]
-        public string PptId { get; set; }
+        public int PptId { get; set; }
 
     }
 }

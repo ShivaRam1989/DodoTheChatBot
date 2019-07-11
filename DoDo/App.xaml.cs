@@ -60,12 +60,12 @@ namespace DoDo
                 case "Hi Dodo":
                 case "Hey Dodo":
                 case "Hello Dodo":
-                    metaData.VideoId = "5";
+                    metaData.VideoId = 5;
                     metaData.Interval = "0";
                   //  PlayVideo(metaData, LaunchControl.Play);
                     break;
                 case "Play the video":
-                    metaData.VideoId = "6";
+                    metaData.VideoId = 6;
                     metaData.Interval = "0";
                    // PlayVideo(metaData, LaunchControl.Play);
                     break;
@@ -93,7 +93,7 @@ namespace DoDo
             if (control == LaunchControl.Launch)
             {
                 MetaData metaData = new MetaData();
-                metaData.VideoId = "0";
+                metaData.VideoId = 0;
                 metaData.Interval = "0";
                 PlayVideo(metaData, control);
             }
@@ -108,13 +108,13 @@ namespace DoDo
             if (control == LaunchControl.Pause)
             {
                 MetaData metaData = new MetaData();
-                metaData.VideoId = "0";
+                metaData.VideoId = 0;
                 PlayVideo(metaData, control);
             }
             if (control == LaunchControl.Stop)
             {
                 MetaData metaData = new MetaData();
-                metaData.VideoId = "0";
+                metaData.VideoId = 0;
                 metaData.Interval = "0";
                 PlayVideo(metaData, control);
             }
@@ -122,45 +122,46 @@ namespace DoDo
 
         public void OpenPPT(MetaData metaData)
         {
-            Task.Run(()=> { PptAction(metaData); });
-        }
-        public void PptAction(MetaData metaData)
-        {
-            PptDetails pptDetails = PptCollection.Find(x => x.Id == metaData.PptId);
-            if (pptDetails != null)
-            {
-                try
-                {
-                    powerpointinterop.Application ppApp = new powerpointinterop.Application();
-                    ppApp.Visible = MsoTriState.msoTrue;
-                    powerpointinterop.Presentations ppPresens = ppApp.Presentations;
-                    string pptName = pptDetails.Name;
-                    string pptPath = System.IO.Path.Combine(Mocker.debugPath, "Ppts", pptName);
+             PptDetails pptDetails = PptCollection.Find(x => x.Id == metaData.PptId);
 
-                    powerpointinterop.Presentation objPres = ppPresens.Open(pptPath, MsoTriState.msoFalse, MsoTriState.msoTrue, MsoTriState.msoTrue);
-                    powerpointinterop.Slides objSlides = objPres.Slides;
-                    Microsoft.Office.Interop.PowerPoint.SlideShowWindows objSSWs;
-                    Microsoft.Office.Interop.PowerPoint.SlideShowSettings objSSS;
-                    //Run the Slide show
-                    objSSS = objPres.SlideShowSettings;
-                    objSSS.Run();
-                    objSSWs = ppApp.SlideShowWindows;
-                    while (objSSWs.Count >= 1)
-                        System.Threading.Thread.Sleep(100);
-                    //Close the presentation without saving changes and quit PowerPoint
-                    objPres.Close();
-                    ppApp.Quit();
-                }
-                catch (Exception)
-                {
-                   // MessageBox.Show("Ppt Closed");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Media Not Found");
-            }
+            mediaPlayer.PptAction(pptDetails); 
         }
+        //public void PptAction(MetaData metaData)
+        //{
+        //    if (pptDetails != null)
+        //    {
+        //        try
+        //        {
+        //            powerpointinterop.Application ppApp = new powerpointinterop.Application();
+        //            ppApp.Visible = MsoTriState.msoTrue;
+        //            powerpointinterop.Presentations ppPresens = ppApp.Presentations;
+        //            string pptName = pptDetails.Name;
+        //            string pptPath = System.IO.Path.Combine(Mocker.debugPath, "Ppts", pptName);
+
+        //            powerpointinterop.Presentation objPres = ppPresens.Open(pptPath, MsoTriState.msoFalse, MsoTriState.msoTrue, MsoTriState.msoTrue);
+        //            powerpointinterop.Slides objSlides = objPres.Slides;
+        //            Microsoft.Office.Interop.PowerPoint.SlideShowWindows objSSWs;
+        //            Microsoft.Office.Interop.PowerPoint.SlideShowSettings objSSS;
+        //            //Run the Slide show
+        //            objSSS = objPres.SlideShowSettings;
+        //            objSSS.Run();
+        //            objSSWs = ppApp.SlideShowWindows;
+        //            while (objSSWs.Count >= 1)
+        //                System.Threading.Thread.Sleep(100);
+        //            //Close the presentation without saving changes and quit PowerPoint
+        //            objPres.Close();
+        //            ppApp.Quit();
+        //        }
+        //        catch (Exception)
+        //        {
+        //           // MessageBox.Show("Ppt Closed");
+        //        }
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Media Not Found");
+        //    }
+        //}
 
         public void PlayVideo(MetaData metaData, LaunchControl control)
         {
@@ -184,11 +185,11 @@ namespace DoDo
                 {
                     case LaunchControl.Launch:
                     case LaunchControl.Play:
-                        mediaPlayer.PlayVideo(videoOrPptDetails.Name);
+                        mediaPlayer.PlayVideo(videoOrPptDetails);
                         break;
-                    //case LaunchControl.Hop:
-                    //    mediaPlayer.PositionVideo(metaData.Interval);
-                    //    break;
+                    case LaunchControl.PlayAfterPause:
+                        mediaPlayer.PlayAfterPauseVideo();
+                        break;
                     case LaunchControl.Pause:
                         mediaPlayer.PauseVideo();
                         break;

@@ -5,6 +5,7 @@
       <xs:enumeration value="Launch" />
       <xs:enumeration value="Play" />
       <xs:enumeration value="Pause" />
+      <xs:enumeration value="PlayAfterPause" />
       <xs:enumeration value="Stop" />
       <xs:enumeration value="Hop" />
       <xs:enumeration value="Listen" />
@@ -15,8 +16,8 @@
   <xs:complexType name="MetaData">
     <xs:sequence>
       <xs:element minOccurs="0" name="Interval" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="PptId" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="VideoId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PptId" type="xs:int" />
+      <xs:element minOccurs="0" name="VideoId" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="MetaData" nillable="true" type="tns:MetaData" />

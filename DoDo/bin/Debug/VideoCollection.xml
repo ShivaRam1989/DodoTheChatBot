@@ -11,23 +11,23 @@
     </VideoDetails>
     <VideoDetails>
       <Id>2</Id>
-      <Name>2_thanksazadtorpastart.mp4</Name>
+      <Name>2_AzadPratikaExitAndRPAEntry.mp4</Name>
     </VideoDetails>
     <VideoDetails>
       <Id>3</Id>
-      <Name>3_RPAThanksToGaurdexVideoEnd.mp4</Name>
+      <Name>3_RPAVideo.mp4</Name>
     </VideoDetails>
     <VideoDetails>
       <Id>4</Id>
-      <Name>4_MarketDataStart.mp4</Name>
+      <Name>4_gaurdxstart.mp4</Name>
     </VideoDetails>
     <VideoDetails>
       <Id>5</Id>
-      <Name>5_HiShiva.mp4</Name>
+      <Name>5_gaurdxvideo.mp4</Name>
     </VideoDetails>
     <VideoDetails>
       <Id>6</Id>
-      <Name>6_TechVideoPlay.mp4</Name>
+      <Name>6_marketdata.mp4</Name>
     </VideoDetails>
     <VideoDetails>
       <Id>7</Id>
@@ -43,7 +43,15 @@
     </VideoDetails>
     <VideoDetails>
       <Id>10</Id>
-      <Name>10_AnyQuestions.mp4</Name>
+      <Name>10_techvideo.mp4</Name>
+    </VideoDetails>
+    <VideoDetails>
+      <Id>11</Id>
+      <Name>11_anyquestions.mp4</Name>
+    </VideoDetails>
+    <VideoDetails>
+      <Id>12</Id>
+      <Name>12_thankyou.mp4</Name>
     </VideoDetails>
   </VideoCollection>
 </VideoDataAccess>

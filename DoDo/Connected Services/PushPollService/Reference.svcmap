@@ -22,11 +22,11 @@
     <MetadataSource Address="http://10.170.190.26:9999/IISHost/Invoke" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Invoke.xsd" MetadataType="Schema" ID="ba95691a-3594-45f1-b140-ed6ecb24c3d2" SourceId="1" SourceUrl="http://10.170.190.26:9999/IISHost/Invoke?xsd=xsd1" />
-    <MetadataFile FileName="Invoke1.wsdl" MetadataType="Wsdl" ID="ca9ea979-069c-419d-92ad-417448a08f77" SourceId="1" SourceUrl="http://10.170.190.26:9999/IISHost/Invoke?wsdl" />
-    <MetadataFile FileName="Invoke1.xsd" MetadataType="Schema" ID="c415f321-9180-4892-817b-43616c09c77c" SourceId="1" SourceUrl="http://10.170.190.26:9999/IISHost/Invoke?xsd=xsd0" />
-    <MetadataFile FileName="Invoke2.xsd" MetadataType="Schema" ID="c52aef96-9838-4ba7-9f83-bbc937318f56" SourceId="1" SourceUrl="http://10.170.190.26:9999/IISHost/Invoke?xsd=xsd2" />
-    <MetadataFile FileName="Invoke.disco" MetadataType="Disco" ID="7e35797e-4779-444a-af55-5206b6ab4395" SourceId="1" SourceUrl="http://10.170.190.26:9999/IISHost/Invoke?disco" />
+    <MetadataFile FileName="Invoke3.xsd" MetadataType="Schema" ID="86e1478b-6253-4cb7-a126-0b9e13fa7f9b" SourceId="1" SourceUrl="http://10.170.190.26:9999/IISHost/Invoke?xsd=xsd1" />
+    <MetadataFile FileName="Invoke.wsdl" MetadataType="Wsdl" ID="8747372d-76ec-433a-917a-cfaeb1b0391c" SourceId="1" SourceUrl="http://10.170.190.26:9999/IISHost/Invoke?wsdl" />
+    <MetadataFile FileName="Invoke31.xsd" MetadataType="Schema" ID="cd73ae80-9976-48bd-a0e1-4097b5020e84" SourceId="1" SourceUrl="http://10.170.190.26:9999/IISHost/Invoke?xsd=xsd0" />
+    <MetadataFile FileName="Invoke32.xsd" MetadataType="Schema" ID="50613130-3289-4a0d-88e3-d2286c5f3abf" SourceId="1" SourceUrl="http://10.170.190.26:9999/IISHost/Invoke?xsd=xsd2" />
+    <MetadataFile FileName="Invoke1.disco" MetadataType="Disco" ID="d7daec88-fc85-44a7-8764-31139fdc76bd" SourceId="1" SourceUrl="http://10.170.190.26:9999/IISHost/Invoke?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

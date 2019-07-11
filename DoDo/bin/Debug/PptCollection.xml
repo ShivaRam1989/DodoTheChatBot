@@ -7,19 +7,19 @@
     </PptDetails>
     <PptDetails>
       <Id>2</Id>
-      <Name>2_RPA_CARE.pptx</Name>
+      <Name>2_RPA.pptx</Name>
     </PptDetails>
     <PptDetails>
       <Id>3</Id>
-      <Name>3_Guardx.pptx</Name>
+      <Name>3_GaurdX.pptx</Name>
     </PptDetails>
     <PptDetails>
       <Id>4</Id>
-      <Name>4_MarketData.pptx</Name>
+      <Name>4_MarketDataPart1.pptx</Name>
     </PptDetails>
     <PptDetails>
       <Id>5</Id>
-      <Name>5_QA.pptx</Name>
+      <Name>5_MarketDataPart2.pptx</Name>
     </PptDetails>
   </PptCollection>
 </PptDataAccess>

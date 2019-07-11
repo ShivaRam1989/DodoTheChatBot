@@ -27,16 +27,19 @@ namespace WebApplication1.ServiceReference1 {
         Pause = 2,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Stop = 3,
+        PlayAfterPause = 3,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Hop = 4,
+        Stop = 4,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Listen = 5,
+        Hop = 5,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        StopListen = 6,
+        Listen = 6,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        StopListen = 7,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -52,10 +55,10 @@ namespace WebApplication1.ServiceReference1 {
         private string IntervalField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PptIdField;
+        private int PptIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string VideoIdField;
+        private int VideoIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -81,12 +84,12 @@ namespace WebApplication1.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PptId {
+        public int PptId {
             get {
                 return this.PptIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.PptIdField, value) != true)) {
+                if ((this.PptIdField.Equals(value) != true)) {
                     this.PptIdField = value;
                     this.RaisePropertyChanged("PptId");
                 }
@@ -94,12 +97,12 @@ namespace WebApplication1.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string VideoId {
+        public int VideoId {
             get {
                 return this.VideoIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.VideoIdField, value) != true)) {
+                if ((this.VideoIdField.Equals(value) != true)) {
                     this.VideoIdField = value;
                     this.RaisePropertyChanged("VideoId");
                 }

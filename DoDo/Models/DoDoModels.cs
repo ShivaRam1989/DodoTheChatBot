@@ -71,7 +71,7 @@ namespace DoDo.Models
     [Serializable]
     public class VideoDetails
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         public string Name { get; set; }
 
@@ -79,7 +79,7 @@ namespace DoDo.Models
     [Serializable]
     public class PptDetails
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         public string Name { get; set; }
 

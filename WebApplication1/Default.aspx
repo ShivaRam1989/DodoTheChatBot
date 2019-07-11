@@ -7,7 +7,7 @@
     <title></title>
     <style type="text/css">
         .styleBody {
-            background-image: url('/Content/IQ-launch-screen-1024x768.png');
+            background-image: url('/Content/IQ-launch-screen-1024x768-V2.png');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
@@ -48,7 +48,7 @@
         </div>
         <br/>
         <br />
-        <asp:ImageButton ID="img_fun" class="img" runat="server" ImageUrl="~/Images/thankyou.gif" OnClick="img_fun_Click" Visible="false"/>
+        <asp:ImageButton ID="img_fun" class="img" runat="server" ImageUrl="~/Images/thanks.jpg" OnClick="img_fun_Click" Visible="false"/>
     </form>
 </body>
 </html>

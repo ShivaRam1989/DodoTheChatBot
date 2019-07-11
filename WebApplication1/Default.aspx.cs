@@ -42,7 +42,7 @@ namespace WebApplication1
         {
             client.AdminCommandsAsync(launchControl, new MetaData()
             {
-                VideoId = "1",
+                VideoId = 0,
                 Interval = ConfigurationManager.AppSettings["defaultTimeInterval"]
             });
             launchControl = LaunchControl.Launch;

@@ -24,58 +24,53 @@ namespace WebApplication1
 
         private void SetDefaultVideoId()
         {
-            txt_videoId.Text = ConfigurationManager.AppSettings["defaultVideoId"];
+            //txt_videoId.Text = ConfigurationManager.AppSettings["defaultVideoId"];
         }
 
         private void SetDefaultTimeJump()
         {
-            txt_timeJump.Text = ConfigurationManager.AppSettings["defaultTimeInterval"];
+           // txt_timeJump.Text = ConfigurationManager.AppSettings["defaultTimeInterval"];
         }
 
         private void SetDefaultPptToShow()
         {
-            txt_ppt.Text = ConfigurationManager.AppSettings["defaultPptId"];
+           // txt_ppt.Text = ConfigurationManager.AppSettings["defaultPptId"];
         }
 
         protected void btn_video_play_Click(object sender, EventArgs e)
         {
-            if (txt_videoId.Text == "") { SetDefaultVideoId(); }
-            launchControl = LaunchControl.Play;
+            launchControl = LaunchControl.PlayAfterPause;
             client.AdminCommandsAsync(launchControl, new MetaData()
             {
-                VideoId = txt_videoId.Text
+                VideoId = 1
             });
         }
 
         protected void btn_pause_Click(object sender, EventArgs e)
         {
-            if (txt_videoId.Text == "") { SetDefaultVideoId(); }
             launchControl = LaunchControl.Pause;
             client.AdminCommandsAsync(launchControl, new MetaData()
             {
-                VideoId = txt_videoId.Text
+                VideoId = 1
             });
         }
 
         protected void btn_stop_Click(object sender, EventArgs e)
         {
-            if (txt_videoId.Text == "") { SetDefaultVideoId(); }
             launchControl = LaunchControl.Stop;
             client.AdminCommandsAsync(launchControl, new MetaData()
             {
-                VideoId = txt_videoId.Text
+                VideoId = 1
             });
         }
 
         protected void btn_timeJump_Click(object sender, EventArgs e)
         {
-            if (txt_videoId.Text == "") { SetDefaultVideoId(); }
-            if (txt_timeJump.Text == "") { SetDefaultTimeJump(); }
             launchControl = LaunchControl.Hop;
             client.AdminCommandsAsync(launchControl, new MetaData()
             {
-                VideoId = txt_videoId.Text,
-                Interval = txt_timeJump.Text
+                VideoId = 1,
+                Interval = "2"
             });
         }
 
@@ -84,17 +79,8 @@ namespace WebApplication1
             launchControl = LaunchControl.Launch;
             client.AdminCommandsAsync(launchControl, new MetaData()
             {
-                VideoId = ConfigurationManager.AppSettings["defaultVideoId"],
+                VideoId = 0,
                 Interval = ConfigurationManager.AppSettings["defaultTimeInterval"]
-            });
-        }
-
-        protected void btn_ppt_Click(object sender, EventArgs e)
-        {
-            if (txt_ppt.Text == "") { SetDefaultPptToShow(); }
-            client.ShowPptAsync(new MetaData()
-            {
-                PptId = txt_ppt.Text
             });
         }
 
@@ -104,7 +90,7 @@ namespace WebApplication1
             client.AdminCommandsAsync(launchControl, new MetaData()
             {
                 //dummy not using these
-                VideoId = ConfigurationManager.AppSettings["defaultVideoId"],
+                VideoId = 0,
                 Interval = ConfigurationManager.AppSettings["defaultTimeInterval"]
             });
         }
@@ -115,9 +101,109 @@ namespace WebApplication1
             client.AdminCommandsAsync(launchControl, new MetaData()
             {
                 //dummy not using these
-                VideoId = ConfigurationManager.AppSettings["defaultVideoId"],
+                VideoId = 0,
                 Interval = ConfigurationManager.AppSettings["defaultTimeInterval"]
             });
+        }
+
+        protected void btn_1_EntryVideo_Click(object sender, EventArgs e)
+        {
+            PlayVideo(1);
+        }
+        private void PlayVideo(int videoId)
+        {
+            launchControl = LaunchControl.Play;
+            client.AdminCommandsAsync(launchControl, new MetaData()
+            {
+                VideoId = videoId
+            });
+        }
+        private void StartPpt(int pptId)
+        {
+            client.ShowPptAsync(new MetaData()
+            {
+                PptId = pptId
+            });
+        }
+
+        protected void btn_2_AzadPratikaEntry_Click(object sender, EventArgs e)
+        {
+            PlayVideo(2);
+        }
+
+        protected void btn_3_gaurdxstart_Click(object sender, EventArgs e)
+        {
+            PlayVideo(3);
+        }
+
+        protected void btn_4_gaurdxvideo_Click(object sender, EventArgs e)
+        {
+            PlayVideo(4);
+        }
+
+        protected void btn_5_marketdata_Click(object sender, EventArgs e)
+        {
+            PlayVideo(5);
+        }
+
+        protected void btn_6_techvideo_Click(object sender, EventArgs e)
+        {
+            PlayVideo(6);
+        }
+
+        protected void btn_7_MD1_Click(object sender, EventArgs e)
+        {
+            PlayVideo(7);
+        }
+
+        protected void btn_8_MD2_Click(object sender, EventArgs e)
+        {
+            PlayVideo(8);
+        }
+
+        protected void btn_9_MD3_Click(object sender, EventArgs e)
+        {
+            PlayVideo(9);
+        }
+
+        protected void btn_10_anyquestions_Click(object sender, EventArgs e)
+        {
+            PlayVideo(10);
+        }
+
+        protected void btn_11_thankyou_Click(object sender, EventArgs e)
+        {
+            PlayVideo(11);
+        }
+
+        protected void btn_12_RPAVideo_Click(object sender, EventArgs e)
+        {
+            PlayVideo(12);
+        }
+
+        protected void btn_1_AzadPpt_Click(object sender, EventArgs e)
+        {
+            StartPpt(1);
+        }
+
+        protected void btn_2_RPAPpt_Click(object sender, EventArgs e)
+        {
+            StartPpt(2);
+        }
+
+        protected void btn_3_GaurdxPpt_Click(object sender, EventArgs e)
+        {
+            StartPpt(3);
+        }
+
+        protected void btn_4_MarketDataPpt_Click(object sender, EventArgs e)
+        {
+            StartPpt(4);
+        }
+
+        protected void btn_5_DummyPpt_Click(object sender, EventArgs e)
+        {
+            StartPpt(5);
         }
     }
 }

@@ -31,24 +31,6 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.Button btn_launch;
         
         /// <summary>
-        /// lbl_video control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_video;
-        
-        /// <summary>
-        /// txt_videoId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_videoId;
-        
-        /// <summary>
         /// btn_video_play control.
         /// </summary>
         /// <remarks>
@@ -76,58 +58,157 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.Button btn_stop;
         
         /// <summary>
-        /// lbl_timeJump control.
+        /// btn_1_EntryVideo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_timeJump;
+        protected global::System.Web.UI.WebControls.Button btn_1_EntryVideo;
         
         /// <summary>
-        /// txt_timeJump control.
+        /// btn_2_AzadPratikaEntry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_timeJump;
+        protected global::System.Web.UI.WebControls.Button btn_2_AzadPratikaEntry;
         
         /// <summary>
-        /// btn_timeJump control.
+        /// btn_3_gaurdxstart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_timeJump;
+        protected global::System.Web.UI.WebControls.Button btn_3_gaurdxstart;
         
         /// <summary>
-        /// lbl_ppt control.
+        /// btn_4_gaurdxvideo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_ppt;
+        protected global::System.Web.UI.WebControls.Button btn_4_gaurdxvideo;
         
         /// <summary>
-        /// txt_ppt control.
+        /// btn_5_marketdata control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_ppt;
+        protected global::System.Web.UI.WebControls.Button btn_5_marketdata;
         
         /// <summary>
-        /// btn_ppt control.
+        /// btn_6_techvideo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_ppt;
+        protected global::System.Web.UI.WebControls.Button btn_6_techvideo;
+        
+        /// <summary>
+        /// btn_7_MD1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_7_MD1;
+        
+        /// <summary>
+        /// btn_8_MD2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_8_MD2;
+        
+        /// <summary>
+        /// btn_9_MD3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_9_MD3;
+        
+        /// <summary>
+        /// btn_10_anyquestions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_10_anyquestions;
+        
+        /// <summary>
+        /// btn_11_thankyou control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_11_thankyou;
+        
+        /// <summary>
+        /// btn_12_RPAVideo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_12_RPAVideo;
+        
+        /// <summary>
+        /// btn_1_AzadPpt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_1_AzadPpt;
+        
+        /// <summary>
+        /// btn_2_RPAPpt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_2_RPAPpt;
+        
+        /// <summary>
+        /// btn_3_GaurdxPpt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_3_GaurdxPpt;
+        
+        /// <summary>
+        /// btn_4_MarketDataPpt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_4_MarketDataPpt;
+        
+        /// <summary>
+        /// btn_5_DummyPpt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_5_DummyPpt;
         
         /// <summary>
         /// StartListening control.

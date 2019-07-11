@@ -16,39 +16,59 @@ namespace IISHost
 
         public string GetConnectionConfirmation(bool connect)
         {
-            if (callback == null && connect == true)
+            try
             {
-                callback = OperationContext.Current.GetCallbackChannel<IContractCallback>();
+                if (callback == null && connect == true)
+                {
+                    callback = OperationContext.Current.GetCallbackChannel<IContractCallback>();
+                }
+            }
+            catch (Exception)
+            {
+                  
             }
             return "Connection confirmed";
         }
 
         public void AdminCommands(AdminCommand control, MetaData metaData)
         {
-            switch (control)
+            try
             {
-                case AdminCommand.Play:
-                    {
-                        callback.PlayVideo(metaData, control);
-                        break;
-                    }
-                case AdminCommand.Listen:
-                case AdminCommand.StopListen:
-                case AdminCommand.Launch:
-                case AdminCommand.Pause:
-                case AdminCommand.Hop:
-                case AdminCommand.Stop:
-                default:
-                    {
-                        callback.AdminCommand(control);
-                        break;
-                    }
+                switch (control)
+                {
+                    case AdminCommand.Play:
+                        {
+                            callback.PlayVideo(metaData, control);
+                            break;
+                        }
+                    case AdminCommand.Listen:
+                    case AdminCommand.StopListen:
+                    case AdminCommand.Launch:
+                    case AdminCommand.Pause:
+                    case AdminCommand.Hop:
+                    case AdminCommand.Stop:
+                    default:
+                        {
+                            callback.AdminCommand(control);
+                            break;
+                        }
+                }
+            }
+            catch (Exception)
+            {
+
             }
         }
 
         public void ShowPpt(MetaData metaData)
         {
-            callback.OpenPPT(metaData);
+            try
+            {
+                callback.OpenPPT(metaData);
+            }
+            catch (Exception)
+            {
+            }
         }
     }
 }

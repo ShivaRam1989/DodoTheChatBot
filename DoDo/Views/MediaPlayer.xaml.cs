@@ -46,7 +46,6 @@ namespace DoDo.Views
         public MediaPlayer()
         {
             InitializeComponent();
-            subscription = EventAggregator.getInstance().Subscribe<Speech.Speech>(SubscribedMessage);
             speechRecognize.StartListening();
         }
         private void SubscribedMessage(Speech.Speech spokenText)
@@ -252,6 +251,7 @@ namespace DoDo.Views
         }
         private void DodoMediaPlayer_MediaEnded(object sender, RoutedEventArgs e)
         {
+            subscription = EventAggregator.getInstance().Subscribe<Speech.Speech>(SubscribedMessage);
             VideoDetails videoDetails = null;
             PptDetails pptDetails = null;
             this.Hide();

@@ -97,6 +97,13 @@ namespace DoDo
                 metaData.Interval = "0";
                 PlayVideo(metaData, control);
             }
+            if (control == LaunchControl.PlayAfterPause)
+            {
+                MetaData metaData = new MetaData();
+                metaData.VideoId = 0;
+                metaData.Interval = "0";
+                PlayVideo(metaData, control);
+            }
             if (control == LaunchControl.Listen)
             {
                 speechRecognize.StartListening();
@@ -165,14 +172,6 @@ namespace DoDo
 
         public void PlayVideo(MetaData metaData, LaunchControl control)
         {
-            Process[] pros = Process.GetProcesses();
-            for (int i = 0; i < pros.Count(); i++)
-            {
-                if (pros[i].ProcessName.ToLower().Contains("powerpnt"))
-                {
-                    pros[i].Kill();
-                }
-            }
             Application.Current.Dispatcher.InvokeAsync(() => { MediaPlayerAction(metaData,control); });
         }
 

@@ -21,6 +21,10 @@
       <Id>5</Id>
       <Name>5_MarketDataPart2.pptx</Name>
     </PptDetails>
+    <PptDetails>
+      <Id>6</Id>
+      <Name>6_QA.pptx</Name>
+    </PptDetails>
   </PptCollection>
 </PptDataAccess>
 

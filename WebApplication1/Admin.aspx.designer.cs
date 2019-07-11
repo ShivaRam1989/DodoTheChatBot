@@ -76,40 +76,40 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.Button btn_2_AzadPratikaEntry;
         
         /// <summary>
-        /// btn_3_gaurdxstart control.
+        /// btn_3_rpaVideo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_3_gaurdxstart;
+        protected global::System.Web.UI.WebControls.Button btn_3_rpaVideo;
         
         /// <summary>
-        /// btn_4_gaurdxvideo control.
+        /// btn_4_gaurdxstart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_4_gaurdxvideo;
+        protected global::System.Web.UI.WebControls.Button btn_4_gaurdxstart;
         
         /// <summary>
-        /// btn_5_marketdata control.
+        /// btn_5_gaurdxvideo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_5_marketdata;
+        protected global::System.Web.UI.WebControls.Button btn_5_gaurdxvideo;
         
         /// <summary>
-        /// btn_6_techvideo control.
+        /// btn_6_marketdata control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_6_techvideo;
+        protected global::System.Web.UI.WebControls.Button btn_6_marketdata;
         
         /// <summary>
         /// btn_7_MD1 control.
@@ -139,31 +139,40 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.Button btn_9_MD3;
         
         /// <summary>
-        /// btn_10_anyquestions control.
+        /// btn_10_techvideo1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_10_anyquestions;
+        protected global::System.Web.UI.WebControls.Button btn_10_techvideo1;
         
         /// <summary>
-        /// btn_11_thankyou control.
+        /// btn_11_techvideo2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_11_thankyou;
+        protected global::System.Web.UI.WebControls.Button btn_11_techvideo2;
         
         /// <summary>
-        /// btn_12_RPAVideo control.
+        /// btn_12_thankyou control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_12_RPAVideo;
+        protected global::System.Web.UI.WebControls.Button btn_12_thankyou;
+        
+        /// <summary>
+        /// btn_13_RPAVideo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_13_RPAVideo;
         
         /// <summary>
         /// btn_1_AzadPpt control.
@@ -202,13 +211,22 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.Button btn_4_MarketDataPpt;
         
         /// <summary>
-        /// btn_5_DummyPpt control.
+        /// btn_5_MarketDataPart2ppt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_5_DummyPpt;
+        protected global::System.Web.UI.WebControls.Button btn_5_MarketDataPart2ppt;
+        
+        /// <summary>
+        /// btn_6_QAppt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_6_QAppt;
         
         /// <summary>
         /// StartListening control.

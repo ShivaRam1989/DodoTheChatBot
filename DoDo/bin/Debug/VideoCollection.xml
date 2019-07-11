@@ -47,11 +47,15 @@
     </VideoDetails>
     <VideoDetails>
       <Id>11</Id>
-      <Name>11_anyquestions.mp4</Name>
+      <Name>11_techvideo.mp4</Name>
     </VideoDetails>
     <VideoDetails>
       <Id>12</Id>
-      <Name>12_thankyou.mp4</Name>
+      <Name>12_anyquestions.mp4</Name>
+    </VideoDetails>
+    <VideoDetails>
+      <Id>13</Id>
+      <Name>13_thankyou.mp4</Name>
     </VideoDetails>
   </VideoCollection>
 </VideoDataAccess>

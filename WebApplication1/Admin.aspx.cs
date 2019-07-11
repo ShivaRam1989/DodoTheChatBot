@@ -131,22 +131,22 @@ namespace WebApplication1
             PlayVideo(2);
         }
 
-        protected void btn_3_gaurdxstart_Click(object sender, EventArgs e)
+        protected void btn_3_rpaVideo_Click(object sender, EventArgs e)
         {
             PlayVideo(3);
         }
 
-        protected void btn_4_gaurdxvideo_Click(object sender, EventArgs e)
+        protected void btn_4_gaurdxstart_Click(object sender, EventArgs e)
         {
             PlayVideo(4);
         }
 
-        protected void btn_5_marketdata_Click(object sender, EventArgs e)
+        protected void btn_5_gaurdxvideo_Click(object sender, EventArgs e)
         {
             PlayVideo(5);
         }
 
-        protected void btn_6_techvideo_Click(object sender, EventArgs e)
+        protected void btn_6_marketdata_Click(object sender, EventArgs e)
         {
             PlayVideo(6);
         }
@@ -166,19 +166,24 @@ namespace WebApplication1
             PlayVideo(9);
         }
 
-        protected void btn_10_anyquestions_Click(object sender, EventArgs e)
+        protected void btn_10_techvideo1_Click(object sender, EventArgs e)
         {
             PlayVideo(10);
         }
 
-        protected void btn_11_thankyou_Click(object sender, EventArgs e)
+        protected void btn_11_techvideo2_Click(object sender, EventArgs e)
         {
             PlayVideo(11);
         }
 
-        protected void btn_12_RPAVideo_Click(object sender, EventArgs e)
+        protected void btn_12_thankyou_Click(object sender, EventArgs e)
         {
             PlayVideo(12);
+        }
+
+        protected void btn_13_RPAVideo_Click(object sender, EventArgs e)
+        {
+            PlayVideo(13);
         }
 
         protected void btn_1_AzadPpt_Click(object sender, EventArgs e)
@@ -201,9 +206,14 @@ namespace WebApplication1
             StartPpt(4);
         }
 
-        protected void btn_5_DummyPpt_Click(object sender, EventArgs e)
+        protected void btn_5_MarketDataPart2ppt_Click(object sender, EventArgs e)
         {
             StartPpt(5);
+        }
+
+        protected void btn_6_QAppt_Click(object sender, EventArgs e)
+        {
+            StartPpt(6);
         }
     }
 }

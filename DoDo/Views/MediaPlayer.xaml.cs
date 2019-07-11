@@ -47,6 +47,7 @@ namespace DoDo.Views
         {
             InitializeComponent();
             speechRecognize.StartListening();
+            subscription = EventAggregator.getInstance().Subscribe<Speech.Speech>(SubscribedMessage);
         }
         private void SubscribedMessage(Speech.Speech spokenText)
         {
@@ -61,7 +62,7 @@ namespace DoDo.Views
                         }
                     }
                     break;
-                case "Pause Video":
+                case "Pause the Video":
                     System.Windows.Application.Current.Dispatcher.InvokeAsync(() => {
                         PauseVideo();
                     });
@@ -102,8 +103,6 @@ namespace DoDo.Views
                         StopVideo();
                     });
 
-                    break;
-                default:
                     break;
 
             }
@@ -244,14 +243,13 @@ namespace DoDo.Views
                     break;
                 case 6:
                     //Q&A ppt
-                    videoDetails = VideoCollection.Find(x => x.Id == 12);
+                    videoDetails = VideoCollection.Find(x => x.Id == 13);
                     System.Windows.Application.Current.Dispatcher.InvokeAsync(() => { PlayVideo(videoDetails); });
                     break;
             }
         }
         private void DodoMediaPlayer_MediaEnded(object sender, RoutedEventArgs e)
         {
-            subscription = EventAggregator.getInstance().Subscribe<Speech.Speech>(SubscribedMessage);
             VideoDetails videoDetails = null;
             PptDetails pptDetails = null;
             this.Hide();
@@ -316,11 +314,16 @@ namespace DoDo.Views
                     PlayVideo(videoDetails);
                     break;
                 case 11:
+                    //tech video part 2
+                    videoDetails = VideoCollection.Find(x => x.Id == 12);
+                    PlayVideo(videoDetails);
+                    break;
+                case 12:
                     //tech video 
                     pptDetails = PptCollection.Find(x => x.Id == 6);
                     PptAction(pptDetails);
                     break;
-                case 12:
+                case 13:
                     this.Close();
                     break;
             }

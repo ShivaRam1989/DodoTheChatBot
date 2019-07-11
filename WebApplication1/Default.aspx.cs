@@ -29,13 +29,16 @@ namespace WebApplication1
     }
     public partial class _Default : Page
     {
-        private ContractClient client;
+        private static ContractClient client;
         private static LaunchControl launchControl;
         protected void Page_Load(object sender, EventArgs e)
         {
-            IContractCallback contractCallback = new CallBk();
-            InstanceContext cntxt = new InstanceContext(contractCallback);
-            client = new ContractClient(cntxt, "WSDualHttpBinding_IContract");
+            if (!IsPostBack)
+            {
+                IContractCallback contractCallback = new CallBk();
+                InstanceContext cntxt = new InstanceContext(contractCallback);
+                client = new ContractClient(cntxt, "WSDualHttpBinding_IContract");
+            }
         }
 
         protected void btn_launch_Click(object sender, EventArgs e)

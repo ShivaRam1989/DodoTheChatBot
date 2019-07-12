@@ -46,66 +46,71 @@ namespace DoDo.Views
         public MediaPlayer()
         {
             InitializeComponent();
-            //speechRecognize.StartListening();
-            subscription = EventAggregator.getInstance().Subscribe<Speech.Speech>(SubscribedMessage);
+
         }
         private void SubscribedMessage(Speech.Speech spokenText)
         {
             switch (spokenText.TextSpoken)
             {
-                case "Next Slide Please":
-                    if(objPresSet!=null)
-                    {
-                        if(objPresSet.Count>0)
-                        {
-                            objPres.SlideShowWindow.View.Next();
-                        }
-                    }
+                case "Thank you Dodo":
+                    Speech.SpeechSynthezier speechSynthezier = new Speech.SpeechSynthezier();
+                    speechSynthezier.Speak("Your welcome and thanks to giving me this oppurtunity");
+                  VideoDetails  videoDetails = VideoCollection.Find(x => x.Id == 13);
+                    System.Windows.Application.Current.Dispatcher.InvokeAsync(() => { PlayVideo(videoDetails); });
                     break;
-                case "Pause the Video":
-                    System.Windows.Application.Current.Dispatcher.InvokeAsync(() => {
-                        PauseVideo();
-                    });
+                //case "Pause the Video Dodo":
+                //    System.Windows.Application.Current.Dispatcher.InvokeAsync(() => {
+                //        PauseVideo();
+                //    });
 
-                    break;
-                case "Continue video":
-                    System.Windows.Application.Current.Dispatcher.InvokeAsync(() => {
-                        PlayAfterPauseVideo();
-                    });
+                //    break;
+                //case "Continue video Dodo":
+                //    System.Windows.Application.Current.Dispatcher.InvokeAsync(() => {
+                //        PlayAfterPauseVideo();
+                //    });
 
-                    break;
-                case "Forward video":
-                    System.Windows.Application.Current.Dispatcher.InvokeAsync(() => {
-                        PositionForwardVideo();
-                    });
+                //    break;
+                //case "Start gaurdx presentation":
+                //    System.Windows.Application.Current.Dispatcher.InvokeAsync(() => {
+                //        PptDetails details = PptCollection.Find(x => x.Id == 3);
+                //        PptAction(details);
+                //    });
 
-                    break;
-                case "Backward video":
-                    System.Windows.Application.Current.Dispatcher.InvokeAsync(() => {
-                        PositionBackVideo();
-                    });
+                //    break;
+                //case "Backward video":
+                //    System.Windows.Application.Current.Dispatcher.InvokeAsync(() => {
+                //        PositionBackVideo();
+                //    });
 
-                    break;
-                case "Previous Slide Please":
-                    System.Windows.Application.Current.Dispatcher.InvokeAsync(() => {
-                        if (objPresSet != null)
-                        {
-                            if (objPresSet.Count > 0)
-                            {
-                                objPres.SlideShowWindow.View.Previous();
-                            }
-                        }
-                    });
+                //    break;
+                //case "Previous Slide Dodo":
+                //    System.Windows.Application.Current.Dispatcher.InvokeAsync(() => {
+                //        if (objPresSet != null)
+                //        {
+                //            if (objPresSet.Count > 0)
+                //            {
+                //                objPres.SlideShowWindow.View.Previous();
+                //            }
+                //        }
+                //    });
 
-                    break;
-                case "Stop video":
-                    System.Windows.Application.Current.Dispatcher.InvokeAsync(() => {
-                        StopVideo();
-                    });
+                //    break;
+                //case "Stop video":
+                //    System.Windows.Application.Current.Dispatcher.InvokeAsync(() => {
+                //        StopVideo();
+                //    });
 
-                    break;
+                //    break;
 
             }
+        }
+        //public void StartListening()
+        //{
+        //    //speechRecognize.StartListening();
+        //}
+        public void StopListening()
+        {
+            speechRecognize.Stop();
         }
         public void PositionForwardVideo()
         {
@@ -167,6 +172,8 @@ namespace DoDo.Views
         public void PptAction(PptDetails pptDetails)
         {
             pptDetailsMain = pptDetails;
+            DodoMediaPlayer.Stop();
+            this.Hide();
             if (pptDetails != null)
             {
                 try
@@ -242,9 +249,8 @@ namespace DoDo.Views
                     });
                     break;
                 case 6:
-                    //Q&A ppt
-                    videoDetails = VideoCollection.Find(x => x.Id == 13);
-                    System.Windows.Application.Current.Dispatcher.InvokeAsync(() => { PlayVideo(videoDetails); });
+                    speechRecognize.StartListening();
+                    subscription = EventAggregator.getInstance().Subscribe<Speech.Speech>(SubscribedMessage);
                     break;
             }
         }
@@ -326,6 +332,7 @@ namespace DoDo.Views
                     this.Close();
                     break;
             }
+
         }
     }
 }

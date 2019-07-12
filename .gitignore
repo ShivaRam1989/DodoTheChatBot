@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 /ngrok.exe
+/DoDo/Connected Services/PushPollService

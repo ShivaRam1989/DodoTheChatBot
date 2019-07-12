@@ -43,13 +43,7 @@ namespace DoDo.Speech
         public void StartListening()
         {
             speechRecognitionEngine = createSpeechEngine("en-US");
-            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Next Slide Please"))); // load a "test" grammar
-            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Previous Slide Please"))); // load a "test" grammar
-            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Pause Video"))); // load a "test" grammar
-            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Continue video"))); // load a "test" grammar
-            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Forward video")));
-            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Backward video")));
-            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Stop video")));
+            speechRecognitionEngine.LoadGrammar(new Grammar(new GrammarBuilder("Thank you Dodo"))); // load a "test" grammar
 
             speechRecognitionEngine.SpeechRecognized += engine_SpeechRecognized; // if speech is recognized, call the specified method
 
@@ -59,27 +53,6 @@ namespace DoDo.Speech
             speechRecognitionEngine.SetInputToDefaultAudioDevice(); // set the input to the default audio device
 
             speechRecognitionEngine.RecognizeAsync(RecognizeMode.Multiple); // recognize speech asynchronous
-        }
-
-        static void _recognizeSpeechAndWriteToConsole_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
-        {
-            switch (e.Result.Text)
-            {
-                case "Hi Dodo":
-                case "Hey Dodo":
-                case "Hello Dodo":
-
-                    break;
-                case "Thank you":
-                    break;
-                case "Play the video":
-                    break;
-                default:
-                    break;
-
-            }
-
-
         }
 
         static void _recognizeSpeechAndWriteToConsole_SpeechRecognitionRejected(object sender, SpeechRecognitionRejectedEventArgs e)

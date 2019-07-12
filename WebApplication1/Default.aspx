@@ -7,7 +7,7 @@
     <title></title>
     <style type="text/css">
         .styleBody {
-            background-image: url('/Content/IQ-launch-screen-1024x768-V2.png');
+            background-image: url('/Content/IQ-launch-screen-1024x768-V2.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;

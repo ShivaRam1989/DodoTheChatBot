@@ -46,7 +46,7 @@ namespace DoDo.Views
         public MediaPlayer()
         {
             InitializeComponent();
-            speechRecognize.StartListening();
+            //speechRecognize.StartListening();
             subscription = EventAggregator.getInstance().Subscribe<Speech.Speech>(SubscribedMessage);
         }
         private void SubscribedMessage(Speech.Speech spokenText)
@@ -280,11 +280,10 @@ namespace DoDo.Views
                     //start gaurdx demo video
                     videoDetails = VideoCollection.Find(x => x.Id == 5);
                     PlayVideo(videoDetails);
+                    PauseVideo();
                     break;
                 case 5:
                     //open gaurdx ppt
-                    System.Diagnostics.Process.Start("http://www.google.com");
-                    System.Diagnostics.Process.Start("http://www.google.com");
                     //pptDetails = PptCollection.Find(x => x.Id == 3);
                     //PptAction(pptDetails);
                     break;
